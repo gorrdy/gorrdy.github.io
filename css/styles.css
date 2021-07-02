@@ -10,3 +10,9 @@ img {
   margin: auto;
   display: block;
 }
+
+.fact {
+  margin:10ex;
+  padding 2ex;
+  background-color:#f2f0ff;
+}
