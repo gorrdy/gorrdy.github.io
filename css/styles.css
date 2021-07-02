@@ -1,7 +1,8 @@
 body {
-  width:800px;
   align:center;
   display:inline-block;
+  max-width: 800px;
+  margin: auto;
 }
 h1 {
   text-align:center;
