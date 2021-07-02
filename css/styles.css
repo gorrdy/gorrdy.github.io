@@ -1,9 +1,11 @@
 body {
   align:center;
   display:inline-block;
-  max-width: 800px;
-  margin: auto;
 }
 h1 {
   text-align:center;
+}
+.content {
+  max-width: 800px;
+  margin: auto;
 }
