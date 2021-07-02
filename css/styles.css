@@ -5,3 +5,8 @@ h1 {
   max-width: 800px;
   margin: auto;
 }
+
+img {
+  margin: auto;
+  display: block;
+}
