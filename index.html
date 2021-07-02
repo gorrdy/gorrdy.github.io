@@ -1,82 +1,84 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-	<title>Víte, že ...</title>
-	<meta charset="UTF-8" />
-	<link rel="stylesheet" href="./css/styles.css"> </head>
-
-<body class="content">
-	<h1>Víte, že ...</h1>
-	<div class="fact">
-		<h2>Bitcoinů nebude 21 milionů?</h2>
-		<p> Víte, že nikdy nebude celých 21,000,000 bitcoinů? Bitcoin funguje tak, že se s každým blokem do oběhu dostane nejdřív bitcoinů 50, 25, 12.5, 6.25, 3.125 ... až budou všechny v roce cca 2140 vytěženy (budou dotěženy spíše dříve). </p>
-		<p> V součtu tyhle jednotlivé zůstatky za každý blok dají ale jen 20,999,999.9769. To znamená, že 21,000,000 opravdu nikdy nebudeme mít k dispozici, i kdybychom každý jeden bitcoin střežili jako oko v hlavě. </p>
-		<p> V bitcoinové síti ale kvůli různým chybám, experimentům nebo flexení došlo k transakcím, které odeslaly nějaké bitcoiny na neplatné nebo neznámé adresy. </p>
-		<p> Uživatel MidnightMagic si zámerně vyplatil odměnu za vytěžený blok č. 124724 o 1 satoshi nižší, než mohl (1). V bloku 501,726 zase jeden těžař špatným vytvořením transakce spálil celou odměnu za tento blok, což bylo 12.5 BTC. Těchto transakcí lze po internetu dohledat spousta, např. blok č. 150,951 jich obsahuje poměrně dost (2). Tyhle bitcoiny tedy nejdou utratit, protože k nim nejsou vygenerovatelné privátní klíče a nebo ani nebyly vytvořeny. Např. zde spálených skoro 500 BTC (3) </p>
-		<p>Celkový počet takto spálených bitcoinů je asi 2,733.9. (4)</p>
-		<p> Ztracné bitcoiny, kterými myslím opravdu ztracené privátní klíče, tudíž také bez možnosti obnovy se odhaduje, že by mohlo být spousta. Satoshiho mince, začátky Bitcoinu nikdo nebral vážně, bude tam spousta mincí ležet do konce věků. Studie uvádějí, že těch ztracených mincí bude něco okolo 2,304,824 (5). Další mince jsou Satoshiho, odhadem 980,000 bitcoinů. </p>
-		<p> Jen tenhle předpoklad nám tedy dává 20,999,999.9769 - 2,304,824 - 980,000 = 17,715,175.9749 je maximální počet vytěžených bitcoinů, pokud by se nám je dařilo neztrácet. 17,7 milionu místo původních ~21 milionů. Ztracených mincí tedy může být 18-20% z celkového počtu. </p>
-		<p> Čísla mohou být trochu nepřesná, ale řádově to takto bude. Každý milion ztracených mincí by se měl projevit jako 4-5% nárůst hodnoty bitcoinů zbývajích. Můžete tyhle mince tedy vnímat jako donejt všem. </p>
-		<p> Zdroje:
-			<br /> 1) Ztracený Satoshi - <a href="https://mempool.space/tx/5d80a29be1609db91658b401f85921a86ab4755969729b65257651bb9fd2c10d">mempool.space</a
-   ><br />
-   2) Hodně spálených bitcoinů v jednom bloku -
-   <a href="https://bitcointalk.org/index.php?topic=50206.0">bitcointalk.org</a
-   ><br />
-   3) Skoro 500 spálených bitcoinů v jedné transakci -
-   <a
-    href="https://mempool.space/tx/03acfae47d1e0b7674f1193237099d1553d3d8a93ecc85c18c4bec37544fe386"
-    >mempool.space</a
-   ><br />
-   4) Celkový pošet spálených bitcoinů -
-   <a href="https://bitcoinwhoswho.com/blog/2016/12/21/btc-burn-addresses/"
-    >bitcoinwhoswho.com</a
-   ><br />
-   5) Ztracené mince uživatelů -
-   <a href="https://ritholtz.com/2017/11/lost-bitcoins/">ritholtz.com</a> </p>
-	</div>
-	<div class="fact">
-		<h2>V blockchainu se ztratil Satoshi?</h2>
-		<p> Víte, že těžař, jenž vytěžil blok č. 124,724 si záměrně vyplatil méně*, než 50 BTC? Připravil se tedy jen o 1 satoshi (stomiliontina bitcoinu, nejmenší bitcoinová jednotka), takže asi moc neutrpěl, ale tento "1 chybějící satoshi" má symbolicky vzdát hold skutečnému Satoshimu Nakamotovi, jenž zmizel z veřejného prostoru a už jsme o něm nikdy neslyšeli. </p>
-		<p> * Těžař si může při vytěžení určit, kolik dostane. 50 BTC byla tehdy horní hranice. </p>
-		<p> "Missing Satoshi" transakce: <a href="https://bitcoinexplorer.org/tx/5d80a29be1609db91658b401f85921a86ab4755969729b65257651bb9fd2c10d">bitcoinexplorer.org</a
-   >
-  </p>
-  </div>
-  <div class="fact">
-  <h2>Transakce s nulovým poplatkem jsou out?</h2>
-  <p>Víte, že dnes již nelze poslat transakci s nulovým poplatkem (0 sat/B)?</p>
-  <p>
-   Dříve to bylo běžné, protože Bitcoin nikdo nepoužíval a často vás těžař
-   zahrnul do svého bloku, protože chtěl pomoct síti a udělal to dobrovolně.
-   Dnes je to téměř nemožné. Bitcoinové uzly tyto "transakce zdarma" neposílají
-   dál, protože takových transakcí by se najednou objevily tisíce, desetitisíce,
-   možná statisíce, což by mohlo zaspamovat síť.
-  </p>
-  <p>
-   Tyto transakce by se téměř jistě nikdy nepovedlo vytěžit, takže je vlastně
-   zbytečné je brát v úvahu dlouhodobě.
-  </p>
-  </div>
-  <div class="fact">
-  <h2>Příjmat Lightning network je velice snadné</h2>
-  <p>
-   Víte, že můžete příjmat Lightningové satoshi úplně jednoduše (ikdyž
-   custodial), aniž byste se museli starat o nějaké QR faktury pro příjem satů?
-   :slight_smile: Tyto satoshi si můžete kdykoliv ze služby vybrat. Tohle si
-   můžete rozchodit i u sebe doma tak, aby to custodial nebylo, už to chce ale
-   trochu nastavování a vlastní full node. Jedná se o tzv. LN-URL, která je
-   vlastně takovou "lightningovou adresou s malými poplatky".
-  </p>
-  <p><a target="_blank" href="https://lnbits.com/">lnbits.com</a></p>
-		<p>PS: Uložte si URL odkaz peněženky, je to v podstatě váš přístupový kód.</p> <img alt="QR platba" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=LNURL1DP68GURN8GHJ7MRWVF5HGUEWVDHK6TMVDE6HYMRS9ASHQ6F0WCCJ7MRWW4EXCTENXSEQD0Z9ZY" /> </div>
-	<div class="fact">
-		<h2>Jsou tu limity pro bitcoinové účty a adresy? Ale jsou obrovské.</h2>
-		<p> Víte, že na jednom seedu můžete mít víc než 2.1 mld bitcoinových účtů, a na každém z těch účtů přes 2.1 mld adres? Není tedy důvod nepoužívat stále nové. </p>
-		<p> <a target="_blank" href="https://btc-slovnik.cz/pages/wallet.html">btc-slovnik.cz</a
-   >
-  </p>
-  </div>
- </body>
+   <head>
+      <title>Víte, že ...</title>
+      <meta charset="UTF-8" />
+      <link rel="stylesheet" href="./css/styles.css">
+   </head>
+   <body class="content">
+      <h1>Víte, že ...</h1>
+      <div class="fact">
+         <h2>Bitcoinů nikdy nebude 21 milionů.</h2>
+         <p> Víte, že nikdy nebude celých 21,000,000 bitcoinů? Bitcoin funguje tak, že se s každým blokem do oběhu dostane nejdřív bitcoinů 50, 25, 12.5, 6.25, 3.125 ... až budou všechny v roce cca 2140 vytěženy (budou dotěženy spíše dříve). </p>
+         <p> V součtu tyhle jednotlivé zůstatky za každý blok dají ale jen 20,999,999.9769. To znamená, že 21,000,000 opravdu nikdy nebudeme mít k dispozici, i kdybychom každý jeden bitcoin střežili jako oko v hlavě. </p>
+         <p> V bitcoinové síti ale kvůli různým chybám, experimentům nebo flexení došlo k transakcím, které odeslaly nějaké bitcoiny na neplatné nebo neznámé adresy. </p>
+         <p> Uživatel MidnightMagic si zámerně vyplatil odměnu za vytěžený blok č. 124724 o 1 satoshi nižší, než mohl (1). V bloku 501,726 zase jeden těžař špatným vytvořením transakce spálil celou odměnu za tento blok, což bylo 12.5 BTC. Těchto transakcí lze po internetu dohledat spousta, např. blok č. 150,951 jich obsahuje poměrně dost (2). Tyhle bitcoiny tedy nejdou utratit, protože k nim nejsou vygenerovatelné privátní klíče a nebo ani nebyly vytvořeny. Např. zde spálených skoro 500 BTC (3) </p>
+         <p>Celkový počet takto spálených bitcoinů je asi 2,733.9. (4)</p>
+         <p> Ztracné bitcoiny, kterými myslím opravdu ztracené privátní klíče, tudíž také bez možnosti obnovy se odhaduje, že by mohlo být spousta. Satoshiho mince, začátky Bitcoinu nikdo nebral vážně, bude tam spousta mincí ležet do konce věků. Studie uvádějí, že těch ztracených mincí bude něco okolo 2,304,824 (5). Další mince jsou Satoshiho, odhadem 980,000 bitcoinů. </p>
+         <p> Jen tenhle předpoklad nám tedy dává 20,999,999.9769 - 2,304,824 - 980,000 = 17,715,175.9749 je maximální počet vytěžených bitcoinů, pokud by se nám je dařilo neztrácet. 17,7 milionu místo původních ~21 milionů. Ztracených mincí tedy může být 18-20% z celkového počtu. </p>
+         <p> Čísla mohou být trochu nepřesná, ale řádově to takto bude. Každý milion ztracených mincí by se měl projevit jako 4-5% nárůst hodnoty bitcoinů zbývajích. Můžete tyhle mince tedy vnímat jako donejt všem. </p>
+         <p> Zdroje:
+            <br /> 1) Ztracený Satoshi - <a href="https://mempool.space/tx/5d80a29be1609db91658b401f85921a86ab4755969729b65257651bb9fd2c10d">mempool.space</a
+               ><br />
+            2) Hodně spálených bitcoinů v jednom bloku -
+            <a href="https://bitcointalk.org/index.php?topic=50206.0">bitcointalk.org</a
+               ><br />
+            3) Skoro 500 spálených bitcoinů v jedné transakci -
+            <a
+               href="https://mempool.space/tx/03acfae47d1e0b7674f1193237099d1553d3d8a93ecc85c18c4bec37544fe386"
+               >mempool.space</a
+               ><br />
+            4) Celkový pošet spálených bitcoinů -
+            <a href="https://bitcoinwhoswho.com/blog/2016/12/21/btc-burn-addresses/"
+               >bitcoinwhoswho.com</a
+               ><br />
+            5) Ztracené mince uživatelů -
+            <a href="https://ritholtz.com/2017/11/lost-bitcoins/">ritholtz.com</a> 
+         </p>
+      </div>
+      <div class="fact">
+         <h2>Satoshi se ztratil v blockchainu</h2>
+         <p> Víte, že těžař, jenž vytěžil blok č. 124,724 si záměrně vyplatil méně*, než 50 BTC? Připravil se tedy jen o 1 satoshi (stomiliontina bitcoinu, nejmenší bitcoinová jednotka), takže asi moc neutrpěl, ale tento "1 chybějící satoshi" má symbolicky vzdát hold skutečnému Satoshimu Nakamotovi, jenž zmizel z veřejného prostoru a už jsme o něm nikdy neslyšeli. </p>
+         <p> * Těžař si může při vytěžení určit, kolik dostane. 50 BTC byla tehdy horní hranice. </p>
+         <p> "Missing Satoshi" transakce: <a href="https://bitcoinexplorer.org/tx/5d80a29be1609db91658b401f85921a86ab4755969729b65257651bb9fd2c10d">bitcoinexplorer.org</a
+            >
+         </p>
+      </div>
+      <div class="fact">
+         <h2>Transakce s nulovým poplatkem jsou out</h2>
+         <p>Víte, že dnes již nelze poslat transakci s nulovým poplatkem (0 sat/B)?</p>
+         <p>
+            Dříve to bylo běžné, protože Bitcoin nikdo nepoužíval a často vás těžař
+            zahrnul do svého bloku, protože chtěl pomoct síti a udělal to dobrovolně.
+            Dnes je to téměř nemožné. Bitcoinové uzly tyto "transakce zdarma" neposílají
+            dál, protože takových transakcí by se najednou objevily tisíce, desetitisíce,
+            možná statisíce, což by mohlo zaspamovat síť.
+         </p>
+         <p>
+            Tyto transakce by se téměř jistě nikdy nepovedlo vytěžit, takže je vlastně
+            zbytečné je brát v úvahu dlouhodobě.
+         </p>
+      </div>
+      <div class="fact">
+         <h2>Příjmat Lightning network je velice snadné</h2>
+         <p>
+            Víte, že můžete příjmat Lightningové satoshi úplně jednoduše (ikdyž
+            custodial), aniž byste se museli starat o nějaké QR faktury pro příjem satů?
+            :slight_smile: Tyto satoshi si můžete kdykoliv ze služby vybrat. Tohle si
+            můžete rozchodit i u sebe doma tak, aby to custodial nebylo, už to chce ale
+            trochu nastavování a vlastní full node. Jedná se o tzv. LN-URL, která je
+            vlastně takovou "lightningovou adresou s malými poplatky".
+         </p>
+         <p><a target="_blank" href="https://lnbits.com/">lnbits.com</a></p>
+         <p>PS: Uložte si URL odkaz peněženky, je to v podstatě váš přístupový kód.</p>
+         <img alt="QR platba" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=LNURL1DP68GURN8GHJ7MRWVF5HGUEWVDHK6TMVDE6HYMRS9ASHQ6F0WCCJ7MRWW4EXCTENXSEQD0Z9ZY" /> 
+      </div>
+      <div class="fact">
+         <h2>Jsou tu limity pro bitcoinové účty a adresy, ale jsou obrovské</h2>
+         <p> Víte, že na jednom seedu můžete mít víc než 2.1 mld bitcoinových účtů, a na každém z těch účtů přes 2.1 mld adres? Není tedy důvod nepoužívat stále nové. </p>
+         <p> <a target="_blank" href="https://btc-slovnik.cz/pages/wallet.html">btc-slovnik.cz</a
+            >
+         </p>
+      </div>
+   </body>
 </html>
