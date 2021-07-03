@@ -18,15 +18,18 @@ img {
 	margin: 0;
 	padding: 0;
 	max-width: 100%;
-	margin:auto;
 	padding:2ex;
+	height:40px;
 }
 
 .nav-item, .nav-item-right {
 	display:inline;
 	float:left;
 	font-size:2ex;
-	padding:1ex;
+	padding-left:3ex;
+	padding-right:3ex;
+	padding-top:2ex;
+	padding-bottom:2ex;
 	list-style-type: none;
 	margin-right:10px;
 	margin-left:10px;
