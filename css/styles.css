@@ -9,14 +9,17 @@ h1 {
 	text-decoration:none;
 }
 
-img {
+.center-div {
 	margin: auto;
-	display: block;
+	padding: 10px;
+}
+
+.center-text {
+	text-align:center;
 }
 
 a {
 	color:lightblue;
-	
 }
 
 footer {
@@ -62,16 +65,8 @@ footer {
 	margin: auto;
 }
 
-.center-block {
-	margin: auto;
-	display: block;
-}
-
 .fact {
 	margin:2ex;
 	padding:5ex;
 }
 
-.column {
-
-}
