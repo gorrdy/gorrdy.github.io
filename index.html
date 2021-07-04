@@ -15,7 +15,40 @@
 
         <br />
         <hr />
+        
+        <div class="fact">
+            <h2>V blockchainu je ukrytá "minihra". A nejen jedna, je jich vlastně pět."</h2>
+            <p>V blockchainu se vyskytuje několik adres, kde jsou přichystané bitcoiny pro člověka, který najde alespoň jeden případ kolize hashů jakýchkoliv dat. Programu stačí dát jakýkoliv text a on by vám měl vytvořit jeho unikátní otisk, a my hledáme jeden případ, kdy bude otisk stejný (dojde ke kolizi). <br>
 
+                <br>SHA1
+                <br>SHA256
+                <br>RIPEMD160
+                <br>RIPEMD160(SHA256())
+                <br>SHA256(SHA256())
+            </p>
+            <p>
+                Zkusit si to můžete sami třeba zde , ale nebudu vám tahat, ručně se vám to nejspíš nepovede. Najdete zde i konkrétní popis všech funkcí.
+https://learnmeabitcoin.com/technical/hash-function
+            </p> 
+            <p>
+                Jedna z "miniher" už je dohraná. První kolize byla opravdu nalezena pro funkci SHA1, jenž už je prakticky odepsaný algoritmus, protože se podařilo nalézt v něm chyby, a už přes 15 let ji lidé považují za nepraktickou. Přesto tuto kolizi hashů někdo vyrobil až v roce 2017 a bitcoiny si z adresy vybral. Nicméně odhaduje se, že najít takovou kolizi mělo vyjít na cca 2.3 milionů dolarů, proto asi nikdo nebyl až tak motivován tuto odměnu vybírat.
+<a href="https://bitcoinexplorer.org/address/37k7toV1Nv4DfmQbmZ8KuZDQCYK9x5KpzP">bitcoinexplorer.org</a>
+            </p> 
+            <p>
+                SHA256 už bude větší oříšek. Číslo 2²⁵⁶ >>2¹²⁸. I kdybychom hádali pouze 2¹²⁸ možností (což není polovina, polovina z 2²⁵⁶ je 2²⁵⁵), trvalo by to pravděpodobně 3.6 × 10¹³ let při aktuálním výkonu celé bitcoinové sítě. Nicméně pokud se na to cítíte, běžte do toho.
+<a href="https://bitcoinexplorer.org/address/35Snmmy3uhaer2gTboc81ayCip4m9DT4ko">bitcoinexplorer.org</a>
+            </p> 
+            <p>
+                Pro další 2 případy je to vlastně obdobné, zatím se žádný příklad další kolize, kromě SHA1 nepodařilo demonstrovat. 
+RIPEMD160
+<a href="https://bitcoinexplorer.org/address/3KyiQEGqqdb4nqfhUzGKN6KPhXmQsLNpay">bitcoinexplorer.org</a>
+RIPEMD160(SHA256())
+<a href="https://bitcoinexplorer.org/address/39VXyuoc6SXYKp9TcAhoiN1mb4ns6z3Yu6">bitcoinexplorer.org</a>
+            </p>
+            <p>
+                Tohle je vlastně geniální ukazatel bezpečnosti těchto algoritmů. Pokud se vám podaří najít jeden případ, můžete si tyto odměny vybrat na jakoukoliv adresu. Pokud by někdo "porazil" tyto algoritmy v efektivním čase a za efektivní cenu, první na řadě budou tyto prostředky, protože jsou to jednoduše free money. Dokud tam ty zůstatky jsou, můžete být v klidu.
+            </p>
+        </div>
         <div class="fact">
             <h2>Nemůžete posílat jen část svých bitcoinů, ale musíte odeslat všechny?</h2>
             <p>
