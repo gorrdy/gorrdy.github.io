@@ -17,14 +17,17 @@
         <hr />
         
         <div class="fact">
-            <h2>V blockchainu je ukrytá "minihra". A nejen jedna, je jich vlastně pět."</h2>
-            <p>V blockchainu se vyskytuje několik adres, kde jsou přichystané bitcoiny pro člověka, který najde alespoň jeden případ kolize hashů jakýchkoliv dat. Programu stačí dát jakýkoliv text a on by vám měl vytvořit jeho unikátní otisk, a my hledáme jeden případ, kdy bude otisk stejný (dojde ke kolizi). <br>
+            <h2>V blockchainu je ukrytá "minihra". A nejen jedna, je jich vlastně pět.</h2>
+            <p>V blockchainu se vyskytuje několik adres, kde jsou přichystané bitcoiny pro člověka, který najde alespoň jeden případ kolize hashů jakýchkoliv dat. Programu stačí dát jakýkoliv text a on by vám měl vytvořit jeho unikátní otisk, a my hledáme jeden případ, kdy bude otisk stejný (dojde ke kolizi). <br><br>
 
-                <br>SHA1
-                <br>SHA256
-                <br>RIPEMD160
-                <br>RIPEMD160(SHA256())
-                <br>SHA256(SHA256())
+                SHA1<br>
+                SHA256<br>
+                RIPEMD160<br>
+                RIPEMD160(SHA256())<br>
+                SHA256(SHA256())<br><br>
+                
+				SHA funkce (<a href="https://cs.wikipedia.org/wiki/Secure_Hash_Algorithm">cs.wikipedia.org</a>)<br>
+                RIPEMD funkce (<a href="https://cs.wikipedia.org/wiki/RIPEMD">cs.wikipedia.org</a>)
             </p>
             <p>
                 Zkusit si to můžete sami třeba zde , ale nebudu vám tahat, ručně se vám to nejspíš nepovede. Najdete zde i konkrétní popis všech funkcí.
@@ -35,13 +38,13 @@
 <a href="https://bitcoinexplorer.org/address/37k7toV1Nv4DfmQbmZ8KuZDQCYK9x5KpzP">bitcoinexplorer.org</a>
             </p> 
             <p>
-                SHA256 už bude větší oříšek. Číslo 2²⁵⁶ >>2¹²⁸. I kdybychom hádali pouze 2¹²⁸ možností (což není polovina, polovina z 2²⁵⁶ je 2²⁵⁵), trvalo by to pravděpodobně 3.6 × 10¹³ let při aktuálním výkonu celé bitcoinové sítě. Nicméně pokud se na to cítíte, běžte do toho.
+                SHA256 už bude větší oříšek. Číslo 2<sup>256</sup> >>2<sup>128</sup>. I kdybychom hádali pouze 2<sup>128</sup> možností (což není polovina, polovina z 2<sup>256</sup> je 2<sup>255</sup>), trvalo by to pravděpodobně 3.6 × 10<sup>13</sup> let při aktuálním výkonu celé bitcoinové sítě. Nicméně pokud se na to cítíte, běžte do toho.
 <a href="https://bitcoinexplorer.org/address/35Snmmy3uhaer2gTboc81ayCip4m9DT4ko">bitcoinexplorer.org</a>
             </p> 
             <p>
-                Pro další 2 případy je to vlastně obdobné, zatím se žádný příklad další kolize, kromě SHA1 nepodařilo demonstrovat. 
+                Pro další 2 případy je to vlastně obdobné, zatím se žádný příklad další kolize, kromě SHA1 nepodařilo demonstrovat. <br>
 RIPEMD160
-<a href="https://bitcoinexplorer.org/address/3KyiQEGqqdb4nqfhUzGKN6KPhXmQsLNpay">bitcoinexplorer.org</a>
+<a href="https://bitcoinexplorer.org/address/3KyiQEGqqdb4nqfhUzGKN6KPhXmQsLNpay">bitcoinexplorer.org</a><br>
 RIPEMD160(SHA256())
 <a href="https://bitcoinexplorer.org/address/39VXyuoc6SXYKp9TcAhoiN1mb4ns6z3Yu6">bitcoinexplorer.org</a>
             </p>
