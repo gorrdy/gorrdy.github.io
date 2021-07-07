@@ -15,6 +15,13 @@
 
         <br />
 	<div class="fact">
+		<h2>Platební (lightningový) kanál je jenom adresa kterou kontrolují dvě protistrany</h2>
+		<p>Platební kanál totiž není nic jiného, než že se Alice dohodne s Bobem a vytvoří trošku složitější adresu, jejíž zůstatek lze utratit, jen pokud to schválí oba. Platba na lightning network je potom jenom změna stavu "účtů". Dejme tomu, že na začátku má Alice i Bob každý 0.5 BTC, který zamknou do platebního kanálu. V tuhle chvíli vzniknul tedy platební kanál o kapacitě 1 BTC a každý z nich má v tuhle chvíli stejnou část, tedy 0.5 BTC, což si obě strany schválily a podepsaly transakci, která by každému z nich poslala adekvátní část na jinou, svoji, bitcoinovou adresu. </p>
+		<p>Alice si bude chtít od Boba koupit telefon, a Bob jí ho tedy chce prodat za 0.1 BTC. Alice i Bob tedy vytvoří a podepíší transakci, ve které je napsáno, že Alice dostane 0.4 BTC a BoB 0.6 BTC (0.1 BTC se vlastně "přesunulo" od Alice k Bobovi, i když se fyzicky nic nepohnulo), ale nepošlou ji do bitcoinové sítě, jen si ji nechají u sebe. Oba tuhle transakci drží a kdokoliv z nich by ji poslal do sítě, tak bude platná a zůstatky se vypořádají, i kdyby Bob spadnul do Macochy.</p>
+		<p>Alice s Bobem takto mezi sebou obchodují další měsíce a roky, podepisují další a další transakce, které neposílají do blockchainu, ale kdyby chtěli, tak mohou (uzavřeli by tak platební kanál, na té multisig adrese by nezbylo nic).</p>
+		<p>Bob se rozhodne odstěhovat do Austrálie, a tak udržovat platební kanál s Alicí přestane mít smysl. Mohou se tedy dohodnout a platební kanál uzavřít (vypořádat si zůstatky k sobě na své adresy). V součtu je to tedy stálo dvě on-chain transakce. Jednu, ve které tento kanál "nabili" zůstatkem a druhou, ve které si zůstatek rozdělili mezi sebe. Mezitím mohla proběhnout klidně miliarda malých nebo mikro transakcí, o kteých žádný blockchain nemá ani tušení. Na blockchain se potom jen zapíše koncový stav.</p>
+	</div>
+	<div class="fact">
 		<h2>Odměna 50 BTC z prvního bloku nejde utratit</h2>
 		<p>Transakce totiž není zahrnutá v databázi transakcí, i když v blockchainu samotném je. Což občas způsobuje drobné trable, když někdo vyvíjí třeba průzkumníka blockchainu.</p>
 
