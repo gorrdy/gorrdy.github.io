@@ -10,11 +10,10 @@
 <hr />
         <ul class="nav">
             <a href="index.html"><li class="nav-item">Domů</li></a>
-            <a href="o_mne.html"><li class="nav-item-right">O projektu</li></a>
+            <a href="o_projektu.html"><li class="nav-item-right">O projektu</li></a>
         </ul>
 
         <br />
-<<<<<<< HEAD
 	<div class="fact">
     	<h2>Těžení je jen hádání, není to žádný složitý matematický výpočet</h2>
     	<p>Aby těžař dostal odměnu za blok, musí vzít data předchozího bloku, zkombinovat s transakcemi, které čekají na potvrzení (nejspíš ty s nejvyšším poplatkem), k tomu přidat číslo od 0 do 4,294,967,295 (0 - ffffffff) a aplikovat na tohle celé hashovací funkci (hashovací funkce vám udělá z libovolného množství dat unikátní otisk o zavedené délce, takže je pak jednodušší porovnávat tyto otisky, než celá data). </p>
@@ -53,14 +52,14 @@
 		<h2>Odměna 50 BTC z prvního bloku nejde utratit</h2>
 		<p>Transakce totiž není zahrnutá v databázi transakcí, i když v blockchainu samotném je. Což občas způsobuje drobné trable, když někdo vyvíjí třeba průzkumníka blockchainu.</p>
 
-		<p>Nevíme, jestli to Satoshi udělal úmyslně či neúmyslně, nicméně prvních 50 BTC je zabetonováno na adrese <a href="https://mempool.space/address/1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa">1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa</a>, protože nody by blok s transakcí, jejíž předchůdce není v databázi, odmítnuly.</p>
+		<p>Nevíme, jestli to Satoshi udělal úmyslně či neúmyslně, nicméně prvních 50 BTC je zabetonováno na adrese <a target="_blank" href="https://mempool.space/address/1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa">1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa</a>, protože nody by blok s transakcí, jejíž předchůdce není v databázi, odmítnuly.</p>
 
 		<p>Ostatní UTXO (neutracené výstupy) by měly jít odeslat z této adresy dál. Ale je nepravděpodobné, že privátní klíč k této adrese vůbec existuje, resp. jestli jej někdy Satoshi vůbec někam zaznamenal nebo zálohoval.</p>
 	</div>
         <div class="fact">
 		<h2>V blockchainu je uložený celý bitcoinový whitepaper bitcoin.pdf</h2>
 
-<p>Do transakce <a href="https://bitcoinexplorer.org/tx/54e48e5f5c656b26c3bca14a8c95aa583d07ebe84dde3b7dd4a78f4e4186e713">54e48e...86e713</a> byl zapsál kompletní bitcoinový whitepaper tak, jak ho publikoval Satoshi Nakamoto. Tato transakce stála neuvěřitelných 0.596 BTC na poplatku, ale výsledkem je absolutně decentralizované uložení významného dokumentu. Nemůže se tedy stát, že by jej někdo úspěšně zcenzuroval, protože kdokoliv s bitcoinovým plným uzlem si jej může z této transakce vyexportovat.</p>
+<p>Do transakce <a target="_blank" href="https://bitcoinexplorer.org/tx/54e48e5f5c656b26c3bca14a8c95aa583d07ebe84dde3b7dd4a78f4e4186e713">54e48e...86e713</a> byl zapsál kompletní bitcoinový whitepaper tak, jak ho publikoval Satoshi Nakamoto. Tato transakce stála neuvěřitelných 0.596 BTC na poplatku, ale výsledkem je absolutně decentralizované uložení významného dokumentu. Nemůže se tedy stát, že by jej někdo úspěšně zcenzuroval, protože kdokoliv s bitcoinovým plným uzlem si jej může z této transakce vyexportovat.</p>
 
 <p>Na linuxu s plným uzlem jej můžete získat tímto způsobem pomocí bitcoin-cli.<br />
 <code style="word-wrap: break-word;">./bitcoin-cli getrawtransaction 54e48e5f5c656b26c3bca14a8c95aa583d07ebe84dde3b7dd4a78f4e4186e713 0 00000000000000ecbbff6bafb7efa2f7df05b227d5c73dca8f2635af32a2e949 | sed s/0100000000000000/n/g | tail -n +2 | cut -c7-136,139-268,271-400 | tr -d n | cut -c17-368600 | xxd -p -r > bitcoin.pdf</code></p>
@@ -68,11 +67,11 @@
 umbrel@umbrel:~/umbrel/bin $ sha256sum bitcoin.pdf<br />
 <b style="word-wrap: break-word;">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</b>  bitcoin.pdf</p>
 
-<p>Pokud provozujete bitcoinový uzel, tak stačí nainstalovat <a href="https://github.com/janoside/btc-rpc-explorer">Bitcoin RPC Explorer</a>, který vám jej dekóduje.
+<p>Pokud provozujete bitcoinový uzel, tak stačí nainstalovat <a target="_blank" href="https://github.com/janoside/btc-rpc-explorer">Bitcoin RPC Explorer</a>, který vám jej dekóduje.
 </p>
 
-<p>Poté si jej stáhnete nebo přečtete přímo v prohlížeči, např. na adrese <a href="#">https://192.168.1.111:3002/bitcoin-whitepaper</a> (nahraďte IP/port vašeho node).<br />
-<a href="https://bitcoinexplorer.org/bitcoin-whitepaper">Ukázka na veřejném bitcoinexplorer.org</a></p>
+<p>Poté si jej stáhnete nebo přečtete přímo v prohlížeči, např. na adrese <a target="_blank" href="#">https://192.168.1.111:3002/bitcoin-whitepaper</a> (nahraďte IP/port vašeho node).<br />
+<a target="_blank" href="https://bitcoinexplorer.org/bitcoin-whitepaper">Ukázka na veřejném bitcoinexplorer.org</a></p>
         </div>
         <div class="fact">
             <h2>V blockchainu je ukrytá "minihra". A nejen jedna, je jich vlastně pět</h2>
@@ -84,29 +83,29 @@ umbrel@umbrel:~/umbrel/bin $ sha256sum bitcoin.pdf<br />
                 RIPEMD160(SHA256())<br>
                 SHA256(SHA256())<br><br>
                 
-				SHA funkce (<a href="https://cs.wikipedia.org/wiki/Secure_Hash_Algorithm">cs.wikipedia.org</a>)<br>
-                RIPEMD funkce (<a href="https://cs.wikipedia.org/wiki/RIPEMD">cs.wikipedia.org</a>)
+				SHA funkce (<a target="_blank" href="https://cs.wikipedia.org/wiki/Secure_Hash_Algorithm">cs.wikipedia.org</a>)<br>
+                RIPEMD funkce (<a target="_blank" href="https://cs.wikipedia.org/wiki/RIPEMD">cs.wikipedia.org</a>)
             </p>
             <p>
                 Zkusit si to můžete sami třeba zde , ale nebudu vám tahat, ručně se vám to nejspíš nepovede. Najdete zde i konkrétní popis všech funkcí.
-<a href="https://learnmeabitcoin.com/technical/hash-function">learnmeabitcoin.com</a>
+<a target="_blank" href="https://learnmeabitcoin.com/technical/hash-function">learnmeabitcoin.com</a>
             </p> 
             <p>
                 Jedna z "miniher" už je dohraná. První kolize byla opravdu nalezena pro funkci SHA1, jenž už je prakticky odepsaný algoritmus, protože se podařilo nalézt v něm chyby, a už přes 15 let ji lidé považují za nepraktickou. Přesto tuto kolizi hashů někdo vyrobil až v roce 2017 a bitcoiny si z adresy vybral. Nicméně odhaduje se, že najít takovou kolizi mělo vyjít na cca 2.3 milionů dolarů, proto asi nikdo nebyl až tak motivován tuto odměnu vybírat.
-<a href="https://bitcoinexplorer.org/address/37k7toV1Nv4DfmQbmZ8KuZDQCYK9x5KpzP">bitcoinexplorer.org</a>
+<a target="_blank" href="https://bitcoinexplorer.org/address/37k7toV1Nv4DfmQbmZ8KuZDQCYK9x5KpzP">bitcoinexplorer.org</a>
             </p> 
             <p>
                 SHA256 už bude větší oříšek. Číslo 2<sup>256</sup> >> 2<sup>128</sup>. I kdybychom hádali pouze 2<sup>128</sup> možností (což není polovina, polovina z 2<sup>256</sup> je 2<sup>255</sup>), trvalo by to pravděpodobně 3.6 × 10<sup>13</sup> let při aktuálním výkonu celé bitcoinové sítě. Nicméně pokud se na to cítíte, běžte do toho.
-<a href="https://bitcoinexplorer.org/address/35Snmmy3uhaer2gTboc81ayCip4m9DT4ko">bitcoinexplorer.org</a>
+<a target="_blank" href="https://bitcoinexplorer.org/address/35Snmmy3uhaer2gTboc81ayCip4m9DT4ko">bitcoinexplorer.org</a>
             </p> 
             <p>
                 Pro další 3 případy je to vlastně obdobné, zatím se žádný příklad další kolize, kromě SHA1 nepodařilo demonstrovat. <br>
 RIPEMD160
-<a href="https://bitcoinexplorer.org/address/3KyiQEGqqdb4nqfhUzGKN6KPhXmQsLNpay">bitcoinexplorer.org</a><br>
+<a target="_blank" href="https://bitcoinexplorer.org/address/3KyiQEGqqdb4nqfhUzGKN6KPhXmQsLNpay">bitcoinexplorer.org</a><br>
 RIPEMD160(SHA256())
-<a href="https://bitcoinexplorer.org/address/39VXyuoc6SXYKp9TcAhoiN1mb4ns6z3Yu6">bitcoinexplorer.org</a><br>
+<a target="_blank" href="https://bitcoinexplorer.org/address/39VXyuoc6SXYKp9TcAhoiN1mb4ns6z3Yu6">bitcoinexplorer.org</a><br>
 SHA256(SHA256())
-<a href="https://bitcoinexplorer.org/address/3DUQQvz4t57Jy7jxE86kyFcNpKtURNf1VW">bitcoinexplorer.org</a><br>
+<a target="_blank" href="https://bitcoinexplorer.org/address/3DUQQvz4t57Jy7jxE86kyFcNpKtURNf1VW">bitcoinexplorer.org</a><br>
             </p>
             <p>
                 Tohle je vlastně geniální ukazatel bezpečnosti těchto algoritmů. Pokud se vám podaří najít jeden případ, můžete si tyto odměny vybrat na jakoukoliv adresu. Pokud by někdo "porazil" tyto algoritmy v efektivním čase a za efektivní cenu, první na řadě budou tyto prostředky, protože jsou to jednoduše free money. Dokud tam ty zůstatky jsou, můžete být v klidu.
@@ -161,15 +160,15 @@ SHA256(SHA256())
             <p>Čísla mohou být trochu nepřesná, ale řádově to takto bude. Každý milion ztracených mincí by se měl projevit jako 4-5% nárůst hodnoty bitcoinů zbývajích. Můžete tyhle mince tedy vnímat jako donejt všem.</p>
             <p>
                 Zdroje: <br />
-                1) Ztracený Satoshi - <a href="https://mempool.space/tx/5d80a29be1609db91658b401f85921a86ab4755969729b65257651bb9fd2c10d">mempool.space</a><br />
+                1) Ztracený Satoshi - <a target="_blank" href="https://mempool.space/tx/5d80a29be1609db91658b401f85921a86ab4755969729b65257651bb9fd2c10d">mempool.space</a><br />
                 2) Hodně spálených bitcoinů v jednom bloku -
-                <a href="https://bitcointalk.org/index.php?topic=50206.0">bitcointalk.org</a><br />
+                <a target="_blank" href="https://bitcointalk.org/index.php?topic=50206.0">bitcointalk.org</a><br />
                 3) Skoro 500 spálených bitcoinů v jedné transakci -
-                <a href="https://mempool.space/tx/03acfae47d1e0b7674f1193237099d1553d3d8a93ecc85c18c4bec37544fe386">mempool.space</a><br />
+                <a target="_blank" href="https://mempool.space/tx/03acfae47d1e0b7674f1193237099d1553d3d8a93ecc85c18c4bec37544fe386">mempool.space</a><br />
                 4) Celkový pošet spálených bitcoinů -
-                <a href="https://bitcoinwhoswho.com/blog/2016/12/21/btc-burn-addresses/">bitcoinwhoswho.com</a><br />
+                <a target="_blank" href="https://bitcoinwhoswho.com/blog/2016/12/21/btc-burn-addresses/">bitcoinwhoswho.com</a><br />
                 5) Ztracené mince uživatelů -
-                <a href="https://ritholtz.com/2017/11/lost-bitcoins/">ritholtz.com</a>
+                <a target="_blank" href="https://ritholtz.com/2017/11/lost-bitcoins/">ritholtz.com</a>
             </p>
         </div>
         <div class="fact">
@@ -179,7 +178,7 @@ SHA256(SHA256())
                 satoshi" má symbolicky vzdát hold skutečnému Satoshimu Nakamotovi, jenž zmizel z veřejného prostoru a už jsme o něm nikdy neslyšeli.
             </p>
             <p>* Těžař si může při vytěžení určit, kolik dostane. 50 BTC byla tehdy horní hranice.</p>
-            <p>"Missing Satoshi" transakce: <a href="https://bitcoinexplorer.org/tx/5d80a29be1609db91658b401f85921a86ab4755969729b65257651bb9fd2c10d">bitcoinexplorer.org</a></p>
+            <p>"Missing Satoshi" transakce: <a target="_blank" href="https://bitcoinexplorer.org/tx/5d80a29be1609db91658b401f85921a86ab4755969729b65257651bb9fd2c10d">bitcoinexplorer.org</a></p>
         </div>
         <div class="fact">
             <h2>Transakce s nulovým poplatkem jsou out</h2>
@@ -215,13 +214,13 @@ SHA256(SHA256())
                 © Gorrdy
                 <p>
                     Najdete mě zde: <br />
-                    <a href="https://discord.gg/8KPPRCj">Discord</a>, <a href="https://twitter.com/_Honza_Dvorak">Twitter</a>, <a href="https://github.com/gorrdy">Github</a>,
-                    <a href="mailto:dvorakh1997@gmail.com">E-mail</a>
+                    <a target="_blank" href="https://discord.gg/8KPPRCj">Discord</a>, <a target="_blank" href="https://twitter.com/_Honza_Dvorak">Twitter</a>, <a target="_blank" href="https://github.com/gorrdy">Github</a>,
+                    <a target="_blank" href="mailto:dvorakh1997@gmail.com">E-mail</a>
                 </p>
                 <p>
                     Další zajímavé projekty:<br />
-                    <a href="https://btc-slovnik.cz/">Bitcoinový slovníček pro mírně pokročilé</a>, <a href="https://www.kryptodoupe.cz/">Kryptodoupě.cz</a>,
-                    <a href="https://www.youtube.com/channel/UCCegl13nmUvxUKMJqng1S-A">Bitcoinovej kanál</a>
+                    <a target="_blank" href="https://btc-slovnik.cz/">Bitcoinový slovníček pro mírně pokročilé</a>, <a target="_blank" href="https://www.kryptodoupe.cz/">Kryptodoupě.cz</a>,
+                    <a target="_blank" href="https://www.youtube.com/channel/UCCegl13nmUvxUKMJqng1S-A">Bitcoinovej kanál</a>
                 </p>
                 <hr />
             </div>
