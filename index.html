@@ -19,8 +19,8 @@
     	<p>Aby těžař dostal odměnu za blok, musí vzít data předchozího bloku, zkombinovat s transakcemi, které čekají na potvrzení (nejspíš ty s nejvyšším poplatkem), k tomu přidat číslo od 0 do 4,294,967,295 (0 - ffffffff) a aplikovat na tohle celé hashovací funkci (hashovací funkce vám udělá z libovolného množství dat unikátní otisk o zavedené délce, takže je pak jednodušší porovnávat tyto otisky, než celá data). </p>
     	<p>Hash (výsledek) je potom úplně náhodné číslo, např. <p> <b style="color:green">00000000000000000000</b>706c7f21388b285414c4829ee3981398e0cac82e43e3.</p> Pokud je tohle číslo nižší, než je aktuální cíl těžby, např. <p><b style="color:red">0000000000000000000</b>cdf6f0000000000000000000000000000000000000000,</p>blok je platný (to zde splňujeme, viz zelené nuly, je jich víc než červených). Pokud je vyšší, tak ho těžař zahodí a zkouší znovu. I když nonce k hádání je přes 4 miliardy, těžaři už dnes mají k dispozici takový výkon, že tento počet kombinací vyzkouší na zlomek sekundy. Ale protože jakákoliv změna v bloku způsobí změnu i výsledného hashe, stačí prohodit pár transakcí a může opět zkoušet další 4 miliardy pokusů.</p>
     	<p>Tohle je extrémně náročné na výpočetní výkon, protože většina práce, co uděláte přijde "vniveč". Naopak ověření, že je hash menší než cíl obtížnosti je velice primitivní. Stačí vzít data z bloku, transakce a nonce, kterou vám poskytne těžař, který ji "trefil" a vyzkoušet si to. Tohle přesně dělají nody. Pokud je blok takto platný, zahrnou ho do svého blockchainu a kolečko se opakuje.  </p>
-	<p>https://btc-slovnik.cz/pages/block.html<br />
-	https://learnmeabitcoin.com/technical/mining</p>
+	    <p><a href="https://btc-slovnik.cz/pages/block.html">btc-slovnik.cz</a><br />
+	<a href="https://learnmeabitcoin.com/technical/mining">learnmeabitcoin.com</a></p>
         </div>
 	<div class="fact">
 		<h2>Platební (lightningový) kanál je jenom adresa kterou kontrolují dvě protistrany</h2>
