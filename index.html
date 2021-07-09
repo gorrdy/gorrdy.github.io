@@ -14,6 +14,7 @@
         </ul>
 
         <br />
+<<<<<<< HEAD
 	<div class="fact">
     	<h2>Těžení je jen hádání, není to žádný složitý matematický výpočet</h2>
     	<p>Aby těžař dostal odměnu za blok, musí vzít data předchozího bloku, zkombinovat s transakcemi, které čekají na potvrzení (nejspíš ty s nejvyšším poplatkem), k tomu přidat číslo od 0 do 4,294,967,295 (0 - ffffffff) a aplikovat na tohle celé hashovací funkci (hashovací funkce vám udělá z libovolného množství dat unikátní otisk o zavedené délce, takže je pak jednodušší porovnávat tyto otisky, než celá data). </p>
@@ -22,7 +23,26 @@
 	    <p><a href="https://btc-slovnik.cz/pages/block.html">btc-slovnik.cz</a><br />
 	<a href="https://learnmeabitcoin.com/technical/mining">learnmeabitcoin.com</a></p>
         </div>
-	<div class="fact">
+	<!--<div class="fact">
+        <h2>Máme 3 typy bitcoinových adres</h2>
+
+		<h3>Legacy</h3>
+		<h4>18cBEMRxXHqzWWCxZNtU91F5sbUNKhL5PX</h4>
+		<p>Adresa začínající "1" je nejstarší typ adresy, je taky nejdražší z ní utrácet, z technických důvodů. Dnes už ji nepoužívejte, pokud nemusíte</p>
+
+		<h3>Nested segwit</h3>
+		<h4>3HA5Nj1QJQc4GDR2fKxXHzeMTT2oNWJMvo</h4>
+		<p>Adresa začínající "3" je novější typ adresy, je výrazně levnější z ní poslat bitcoiny než z legacy adresy. Klidně ji dnes používejte.</p>
+		
+		<h3>Native segwit</h3>
+		<h4>bc1qfz5t6sq8z7lg4pefmt9w0r739e52jd4dy898wp</h4>
+		<p>Adresa začínající "bc1q" je novější typ adresy, posílat z ní bitcoiny je nejlevnější a doporučuje se používat ji dnes již primárně.</p>
+
+		<p>
+		
+		</p>
+        </div>-->
+	<!--<div class="fact">
 		<h2>Platební (lightningový) kanál je jenom adresa kterou kontrolují dvě protistrany</h2>
 		<p>Platební kanál totiž není nic jiného, než že se Alice dohodne s Bobem a vytvoří trošku složitější adresu, jejíž zůstatek lze utratit, jen pokud to schválí oba. Platba na lightning network je potom jenom změna stavu "účtů". Dejme tomu, že na začátku má Alice i Bob každý 0.5 BTC, který zamknou do platebního kanálu. V tuhle chvíli vzniknul tedy platební kanál o kapacitě 1 BTC a každý z nich má v tuhle chvíli stejnou část, tedy 0.5 BTC, což si obě strany schválily a podepsaly transakci, která by každému z nich poslala adekvátní část na jinou, svoji, bitcoinovou adresu. </p>
 		<p>Alice si bude chtít od Boba koupit telefon, a Bob jí ho tedy chce prodat za 0.1 BTC. Alice i Bob tedy vytvoří a podepíší transakci, ve které je napsáno, že Alice dostane 0.4 BTC a BoB 0.6 BTC (0.1 BTC se vlastně "přesunulo" od Alice k Bobovi, i když se fyzicky nic nepohnulo), ale nepošlou ji do bitcoinové sítě, jen si ji nechají u sebe. Oba tuhle transakci drží a kdokoliv z nich by ji poslal do sítě, tak bude platná a zůstatky se vypořádají, i kdyby Bob spadnul do Macochy.</p>
