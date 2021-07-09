@@ -1,216 +1,489 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Víte, že ...</title>
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" href="./css/styles.css" />
-    </head>
-    <body class="content">
-        <h1>Víte, že... <span style="color:orange">Bitcoin</span></h1>
-<hr />
-        <ul class="nav">
-            <a href="index.html"><li class="nav-item">Domů</li></a>
-            <a href="o_projektu.html"><li class="nav-item-right">O projektu</li></a>
-        </ul>
-
-        <br />
-    <!--<div class="fact">
-		<h2>Nově vytvořené bitcoiny, po vytěžení nejdou utratit po dobu 100 bloků</h2>
-		<p>
-			Jakmile se těžaři povede uhodnout blok, může si odměnu nechat vyplatit na svoji adresu. Nemůže ji však utratit po dobu 100 bloků, což je asi 17 hodin. Zabraňuje to komplikacím, kdyby se v blockchainové síti odehrála reorganizace pár posledních bloků, což není úplně výjimečný úkaz, ale i tak se o občas prostě stane (když dva těžaři vytěží stejný blok ve stejnou chvíli). Komplikací by byly právě již utracené nově vytvořené mince, protože není jednoduché vzít coinbase transakci a jen ji přesunout do jiného bloku, což s klasickými transakcemi, které utrácejí dávno vytisknuté mince, není problém. Nejčastější reogranizace jsou 1-2 bloky, vyjímečně se stane, že je reorganizace většího rozsahu, takže vypadá, že 100 bloků bohatě dostačuje jako rezerva. 
-		</p>
+ <head>
+  <title>Víte, že ...</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="./css/styles.css" />
+ </head>
+ <body class="content">
+  <h1>Víte, že... <span style="color:orange">Bitcoin</span></h1>
+  <hr />
+  <ul class="nav">
+   <a href="index.html"></a>
+   <li class="nav-item">Domů</li>
+   <a href="o_projektu.html"></a>
+   <li class="nav-item-right">O projektu</li>
+  </ul>
+  <br />
+  <!--<div class="fact">
+                <h2>Nově vytvořené bitcoiny, po vytěžení nejdou utratit po dobu 100 bloků</h2>
+                <p>
+                        Jakmile se těžaři povede uhodnout blok, může si odměnu nechat vyplatit na svoji adresu. Nemůže ji však utratit po dobu 100 bloků, což je asi 17 hodin. Zabraňuje to komplikacím, kdyby se v blockchainové síti odehrála reorganizace pár posledních bloků, což není úplně výjimečný úkaz, ale i tak se o občas prostě stane (když dva těžaři vytěží stejný blok ve stejnou chvíli). Komplikací by byly právě již utracené nově vytvořené mince, protože není jednoduché vzít coinbase transakci a jen ji přesunout do jiného bloku, což s klasickými transakcemi, které utrácejí dávno vytisknuté mince, není problém. Nejčastější reogranizace jsou 1-2 bloky, vyjímečně se stane, že je reorganizace většího rozsahu, takže vypadá, že 100 bloků bohatě dostačuje jako rezerva. 
+                </p>
     </div>-->
-	<div class="fact">
-    	<h2>Těžení je jen hádání, není to žádný složitý matematický výpočet</h2>
-    	<p>Aby těžař dostal odměnu za blok, musí vzít data předchozího bloku, zkombinovat s transakcemi, které čekají na potvrzení (nejspíš ty s nejvyšším poplatkem), k tomu přidat číslo od 0 do 4,294,967,295 (0 - ffffffff) a aplikovat na tohle celé hashovací funkci (hashovací funkce vám udělá z libovolného množství dat unikátní otisk o zavedené délce, takže je pak jednodušší porovnávat tyto otisky, než celá data). </p>
-    	<p>Hash (výsledek) je potom úplně náhodné číslo, např. <p> <b style="color:green">00000000000000000000</b>706c7f21388b285414c4829ee3981398e0cac82e43e3.</p> Pokud je tohle číslo nižší, než je aktuální cíl těžby, např. <p><b style="color:red">0000000000000000000</b>cdf6f0000000000000000000000000000000000000000,</p>blok je platný (to zde splňujeme, viz zelené nuly, je jich víc než červených). Pokud je vyšší, tak ho těžař zahodí a zkouší znovu. I když nonce k hádání je přes 4 miliardy, těžaři už dnes mají k dispozici takový výkon, že tento počet kombinací vyzkouší na zlomek sekundy. Ale protože jakákoliv změna v bloku způsobí změnu i výsledného hashe, stačí prohodit pár transakcí a může opět zkoušet další 4 miliardy pokusů.</p>
-    	<p>Tohle je extrémně náročné na výpočetní výkon, protože většina práce, co uděláte přijde "vniveč". Naopak ověření, že je hash menší než cíl obtížnosti je velice primitivní. Stačí vzít data z bloku, transakce a nonce, kterou vám poskytne těžař, který ji "trefil" a vyzkoušet si to. Tohle přesně dělají nody. Pokud je blok takto platný, zahrnou ho do svého blockchainu a kolečko se opakuje.  </p>
-	    <p><a href="https://btc-slovnik.cz/pages/block.html">btc-slovnik.cz</a><br />
-	<a href="https://learnmeabitcoin.com/technical/mining">learnmeabitcoin.com</a></p>
-        </div>
-	<div class="fact">
-		<h2>Platební (lightningový) kanál je jenom adresa kterou kontrolují dvě protistrany</h2>
-		<p>Platební kanál totiž není nic jiného, než že se Alice dohodne s Bobem a vytvoří trošku složitější adresu, jejíž zůstatek lze utratit, jen pokud to schválí oba. Platba na lightning network je potom jenom změna stavu "účtů". Dejme tomu, že na začátku má Alice i Bob každý 0.5 BTC, který zamknou do platebního kanálu. V tuhle chvíli vzniknul tedy platební kanál o kapacitě 1 BTC a každý z nich má v tuhle chvíli stejnou část, tedy 0.5 BTC, což si obě strany schválily a podepsaly transakci, která by každému z nich poslala adekvátní část na jinou, svoji, bitcoinovou adresu. </p>
-		<p>Alice si bude chtít od Boba koupit telefon, a Bob jí ho tedy chce prodat za 0.1 BTC. Alice i Bob tedy vytvoří a podepíší transakci, ve které je napsáno, že Alice dostane 0.4 BTC a BoB 0.6 BTC (0.1 BTC se vlastně "přesunulo" od Alice k Bobovi, i když se fyzicky nic nepohnulo), ale nepošlou ji do bitcoinové sítě, jen si ji nechají u sebe. Oba tuhle transakci drží a kdokoliv z nich by ji poslal do sítě, tak bude platná a zůstatky se vypořádají, i kdyby Bob spadnul do Macochy.</p>
-		<p>Alice s Bobem takto mezi sebou obchodují další měsíce a roky, podepisují další a další transakce, které neposílají do blockchainu, ale kdyby chtěli, tak mohou (uzavřeli by tak platební kanál, na té multisig adrese by nezbylo nic).</p>
-		<p>Bob se rozhodne odstěhovat do Austrálie, a tak udržovat platební kanál s Alicí přestane mít smysl. Mohou se tedy dohodnout a platební kanál uzavřít (vypořádat si zůstatky k sobě na své adresy). V součtu je to tedy stálo dvě on-chain transakce. Jednu, ve které tento kanál "nabili" zůstatkem a druhou, ve které si zůstatek rozdělili mezi sebe. Mezitím mohla proběhnout klidně miliarda malých nebo mikro transakcí, o kteých žádný blockchain nemá ani tušení. Na blockchain se potom jen zapíše koncový stav.</p>
-	</div>
-	<div class="fact">
-		<h2>Odměna 50 BTC z prvního bloku nejde utratit</h2>
-		<p>Transakce totiž není zahrnutá v databázi transakcí, i když v blockchainu samotném je. Což občas způsobuje drobné trable, když někdo vyvíjí třeba průzkumníka blockchainu.</p>
-
-		<p>Nevíme, jestli to Satoshi udělal úmyslně či neúmyslně, nicméně prvních 50 BTC je zabetonováno na adrese <a target="_blank" href="https://mempool.space/address/1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa">1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa</a>, protože nody by blok s transakcí, jejíž předchůdce není v databázi, odmítnuly.</p>
-
-		<p>Ostatní UTXO (neutracené výstupy) by měly jít odeslat z této adresy dál. Ale je nepravděpodobné, že privátní klíč k této adrese vůbec existuje, resp. jestli jej někdy Satoshi vůbec někam zaznamenal nebo zálohoval.</p>
-	</div>
-        <div class="fact">
-		<h2>V blockchainu je uložený celý bitcoinový whitepaper bitcoin.pdf</h2>
-
-<p>Do transakce <a target="_blank" href="https://bitcoinexplorer.org/tx/54e48e5f5c656b26c3bca14a8c95aa583d07ebe84dde3b7dd4a78f4e4186e713">54e48e...86e713</a> byl zapsál kompletní bitcoinový whitepaper tak, jak ho publikoval Satoshi Nakamoto. Tato transakce stála neuvěřitelných 0.596 BTC na poplatku, ale výsledkem je absolutně decentralizované uložení významného dokumentu. Nemůže se tedy stát, že by jej někdo úspěšně zcenzuroval, protože kdokoliv s bitcoinovým plným uzlem si jej může z této transakce vyexportovat.</p>
-
-<p>Na linuxu s plným uzlem jej můžete získat tímto způsobem pomocí bitcoin-cli.<br />
-<code style="word-wrap: break-word;">./bitcoin-cli getrawtransaction 54e48e5f5c656b26c3bca14a8c95aa583d07ebe84dde3b7dd4a78f4e4186e713 0 00000000000000ecbbff6bafb7efa2f7df05b227d5c73dca8f2635af32a2e949 | sed s/0100000000000000/n/g | tail -n +2 | cut -c7-136,139-268,271-400 | tr -d n | cut -c17-368600 | xxd -p -r > bitcoin.pdf</code></p>
-<p>SHA256SUM mého bitcoin.pdf<br />
-umbrel@umbrel:~/umbrel/bin $ sha256sum bitcoin.pdf<br />
-<b style="word-wrap: break-word;">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</b>  bitcoin.pdf</p>
-
-<p>Pokud provozujete bitcoinový uzel, tak stačí nainstalovat <a target="_blank" href="https://github.com/janoside/btc-rpc-explorer">Bitcoin RPC Explorer</a>, který vám jej dekóduje.
-</p>
-
-<p>Poté si jej stáhnete nebo přečtete přímo v prohlížeči, např. na adrese <a target="_blank" href="#">https://192.168.1.111:3002/bitcoin-whitepaper</a> (nahraďte IP/port vašeho node).<br />
-<a target="_blank" href="https://bitcoinexplorer.org/bitcoin-whitepaper">Ukázka na veřejném bitcoinexplorer.org</a></p>
-        </div>
-        <div class="fact">
-            <h2>V blockchainu je ukrytá "minihra". A nejen jedna, je jich vlastně pět</h2>
-            <p>V blockchainu se vyskytuje několik adres, kde jsou přichystané bitcoiny pro člověka, který najde alespoň jeden případ kolize hashů jakýchkoliv dat. Programu stačí dát jakýkoliv text a on by vám měl vytvořit jeho unikátní otisk, a my hledáme jeden případ, kdy bude otisk stejný (dojde ke kolizi). <br><br>
-
-                SHA1 (dohráno)<br>
-                SHA256<br>
-                RIPEMD160<br>
-                RIPEMD160(SHA256())<br>
-                SHA256(SHA256())<br><br>
-                
-				SHA funkce (<a target="_blank" href="https://cs.wikipedia.org/wiki/Secure_Hash_Algorithm">cs.wikipedia.org</a>)<br>
-                RIPEMD funkce (<a target="_blank" href="https://cs.wikipedia.org/wiki/RIPEMD">cs.wikipedia.org</a>)
-            </p>
-            <p>
-                Zkusit si to můžete sami třeba zde , ale nebudu vám tahat, ručně se vám to nejspíš nepovede. Najdete zde i konkrétní popis všech funkcí.
-<a target="_blank" href="https://learnmeabitcoin.com/technical/hash-function">learnmeabitcoin.com</a>
-            </p> 
-            <p>
-                Jedna z "miniher" už je dohraná. První kolize byla opravdu nalezena pro funkci SHA1, jenž už je prakticky odepsaný algoritmus, protože se podařilo nalézt v něm chyby, a už přes 15 let ji lidé považují za nepraktickou. Přesto tuto kolizi hashů někdo vyrobil až v roce 2017 a bitcoiny si z adresy vybral. Nicméně odhaduje se, že najít takovou kolizi mělo vyjít na cca 2.3 milionů dolarů, proto asi nikdo nebyl až tak motivován tuto odměnu vybírat.
-<a target="_blank" href="https://bitcoinexplorer.org/address/37k7toV1Nv4DfmQbmZ8KuZDQCYK9x5KpzP">bitcoinexplorer.org</a>
-            </p> 
-            <p>
-                SHA256 už bude větší oříšek. Číslo 2<sup>256</sup> >> 2<sup>128</sup>. I kdybychom hádali pouze 2<sup>128</sup> možností (což není polovina, polovina z 2<sup>256</sup> je 2<sup>255</sup>), trvalo by to pravděpodobně 3.6 × 10<sup>13</sup> let při aktuálním výkonu celé bitcoinové sítě. Nicméně pokud se na to cítíte, běžte do toho.
-<a target="_blank" href="https://bitcoinexplorer.org/address/35Snmmy3uhaer2gTboc81ayCip4m9DT4ko">bitcoinexplorer.org</a>
-            </p> 
-            <p>
-                Pro další 3 případy je to vlastně obdobné, zatím se žádný příklad další kolize, kromě SHA1 nepodařilo demonstrovat. <br>
-RIPEMD160
-<a target="_blank" href="https://bitcoinexplorer.org/address/3KyiQEGqqdb4nqfhUzGKN6KPhXmQsLNpay">bitcoinexplorer.org</a><br>
-RIPEMD160(SHA256())
-<a target="_blank" href="https://bitcoinexplorer.org/address/39VXyuoc6SXYKp9TcAhoiN1mb4ns6z3Yu6">bitcoinexplorer.org</a><br>
-SHA256(SHA256())
-<a target="_blank" href="https://bitcoinexplorer.org/address/3DUQQvz4t57Jy7jxE86kyFcNpKtURNf1VW">bitcoinexplorer.org</a><br>
-            </p>
-            <p>
-                Tohle je vlastně geniální ukazatel bezpečnosti těchto algoritmů. Pokud se vám podaří najít jeden případ, můžete si tyto odměny vybrat na jakoukoliv adresu. Pokud by někdo "porazil" tyto algoritmy v efektivním čase a za efektivní cenu, první na řadě budou tyto prostředky, protože jsou to jednoduše free money. Dokud tam ty zůstatky jsou, můžete být v klidu.
-            </p>
-        </div>
-        <div class="fact">
-            <h2>Nemůžete posílat jen část svých bitcoinů, musíte odeslat všechny</h2>
-            <p>
-                Běžnou bitcoinovou transakci si spousta lidí představí tak, že část svého zůstatku z peněženky pošle protistraně, jako když někomu posílá peníze na účet a tedy se jim odečte pouze odesílaná částka. Přesně takhle ... to ale
-                nefunguje. Ze své adresy musíte odeslat všechny svoje bitcoiny. Samozřejmě to neznamená, že když zaplatíte někde pivo, tak restauratér dostane všechny vaše bitcoiny, dostane pouze takovou část, kterou vypíšete, že chcete
-                zaplatit.
-            </p>
-            <p>
-                Nicméně platí, že transakce opravdu obsahuje celé vaše jmnění. Rozdíl mezi placenou částkou a celkovým zůstatkem se vám vrátí nazpět do peněženky, na novou, tzv. change adresu, kde opět bude tento výstup (zůstatek) čekat na
-                další utracení. Tomuto zůstatku se říká neutracený výstup, který má na první pohled strašidelnou anglickou ztratku UTXO [jů-tý-ex-ou] (unspent transaction output), ale na tu si rychle zvyknete. Je to snažší než říkat pořád
-                dokola "neutracený výstup bitcoinové transakce" :)
-            </p>
-            <p>
-                V předchozích odstavcích jsem trochu zalhal, schválně, pro zjednodušení. Utratit musíte pouze celý neutracený výstup (UTXO), nikoliv obsah celé adresy nebo dokonce peněženky. UTXO totiž vniká pokaždé, když na adresu dojdou
-                nějaké bitcoiny. Pokud si tedy 10x pošlu po 1 BTC z burzy, vytvoří se mi 10 UTXO, každé o hodnotě 1 BTC. Je jedno, jestli posílám na různé adresy nebo jen na jednu adresu. Nové UTXO vznikne i v případě, kdy už na adrese
-                nějaké jiné UTXO je, a tak jich tam bude prostě více.
-            </p>
-            <p>
-                Pokud máte 10 různých neutracených výstupů (ať už na jedné nebo více adresách) v hodnotě 1 BTC a chcete poslat 2.5 BTC, stačí tedy odeslat 3 BTC ze 3 UTXO (dva by bylo málo, více je zbytečné), a zbytek vám peněženka vrátí na
-                novou adresu, čímž vznikne nové UTXO o hodnotě asi 0.5 BTC (3 BTC odesílané minus 2.5 BTC minus poplatek, které posíláme protistraně). Plně jste tak využili dva výstupy, třetí sice jen z poloviny, ale musíme ho utratit celý
-                a vytvořit nový o hodnotě právě rozdílových 0.5 BTC na jiné, change adrese. Zbytku se dotknout nemusím a ty čekají na příští transakce. Pokud bych chtěl znovu zaplatit třeba 0.1 bitcoinu, tak se vezme pouze jeden z výstupů.
-                Který, to záleží na peněžence, ale měla by "ukrajovat" z nejmenších možných.
-            </p>
-        </div>
-        <div class="fact">
-            <h2>Bitcoinů nikdy nebude 21 milionů</h2>
-            <p>
-                Víte, že nikdy nebude celých 21,000,000 bitcoinů? Bitcoin funguje tak, že se s každým blokem do oběhu dostane nejdřív bitcoinů 50, 25, 12.5, 6.25, 3.125 ... až budou všechny v roce cca 2140 vytěženy (budou dotěženy spíše
-                dříve).
-            </p>
-            <p>V součtu tyhle jednotlivé zůstatky za každý blok dají ale jen 20,999,999.9769. To znamená, že 21,000,000 opravdu nikdy nebudeme mít k dispozici, i kdybychom každý jeden bitcoin střežili jako oko v hlavě.</p>
-            <p>V bitcoinové síti ale kvůli různým chybám, experimentům nebo flexení došlo k transakcím, které odeslaly nějaké bitcoiny na neplatné nebo neznámé adresy.</p>
-            <p>
-                Uživatel MidnightMagic si zámerně vyplatil odměnu za vytěžený blok č. 124724 o 1 satoshi nižší, než mohl (1). V bloku 501,726 zase jeden těžař špatným vytvořením transakce spálil celou odměnu za tento blok, což bylo 12.5
-                BTC. Těchto transakcí lze po internetu dohledat spousta, např. blok č. 150,951 jich obsahuje poměrně dost (2). Tyhle bitcoiny tedy nejdou utratit, protože k nim nejsou vygenerovatelné privátní klíče a nebo ani nebyly
-                vytvořeny. Např. zde spálených skoro 500 BTC (3)
-            </p>
-            <p>Celkový počet takto spálených bitcoinů je asi 2,733.9. (4)</p>
-            <p>
-                Ztracné bitcoiny, kterými myslím opravdu ztracené privátní klíče, tudíž také bez možnosti obnovy se odhaduje, že by mohlo být spousta. Satoshiho mince, začátky Bitcoinu nikdo nebral vážně, bude tam spousta mincí ležet do
-                konce věků. Studie uvádějí, že těch ztracených mincí bude něco okolo 2,304,824 (5). Další mince jsou Satoshiho, odhadem 980,000 bitcoinů.
-            </p>
-            <p>
-                Jen tenhle předpoklad nám tedy dává 20,999,999.9769 - 2,304,824 - 980,000 = 17,715,175.9749 je maximální počet vytěžených bitcoinů, pokud by se nám je dařilo neztrácet. 17.7 milionu místo původních ~21 milionů. Ztracených
-                mincí tedy může být 18-20% z celkového počtu.
-            </p>
-            <p>Čísla mohou být trochu nepřesná, ale řádově to takto bude. Každý milion ztracených mincí by se měl projevit jako 4-5% nárůst hodnoty bitcoinů zbývajích. Můžete tyhle mince tedy vnímat jako donejt všem.</p>
-            <p>
-                Zdroje: <br />
-                1) Ztracený Satoshi - <a target="_blank" href="https://mempool.space/tx/5d80a29be1609db91658b401f85921a86ab4755969729b65257651bb9fd2c10d">mempool.space</a><br />
-                2) Hodně spálených bitcoinů v jednom bloku -
-                <a target="_blank" href="https://bitcointalk.org/index.php?topic=50206.0">bitcointalk.org</a><br />
-                3) Skoro 500 spálených bitcoinů v jedné transakci -
-                <a target="_blank" href="https://mempool.space/tx/03acfae47d1e0b7674f1193237099d1553d3d8a93ecc85c18c4bec37544fe386">mempool.space</a><br />
-                4) Celkový pošet spálených bitcoinů -
-                <a target="_blank" href="https://bitcoinwhoswho.com/blog/2016/12/21/btc-burn-addresses/">bitcoinwhoswho.com</a><br />
-                5) Ztracené mince uživatelů -
-                <a target="_blank" href="https://ritholtz.com/2017/11/lost-bitcoins/">ritholtz.com</a>
-            </p>
-        </div>
-        <div class="fact">
-            <h2>Satoshi se ztratil v blockchainu</h2>
-            <p>
-                Víte, že těžař, jenž vytěžil blok č. 124,724 si záměrně vyplatil méně*, než 50 BTC? Připravil se tedy jen o 1 satoshi (stomiliontina bitcoinu, nejmenší bitcoinová jednotka), takže asi moc neutrpěl, ale tento "1 chybějící
-                satoshi" má symbolicky vzdát hold skutečnému Satoshimu Nakamotovi, jenž zmizel z veřejného prostoru a už jsme o něm nikdy neslyšeli.
-            </p>
-            <p>* Těžař si může při vytěžení určit, kolik dostane. 50 BTC byla tehdy horní hranice.</p>
-            <p>"Missing Satoshi" transakce: <a target="_blank" href="https://bitcoinexplorer.org/tx/5d80a29be1609db91658b401f85921a86ab4755969729b65257651bb9fd2c10d">bitcoinexplorer.org</a></p>
-        </div>
-        <div class="fact">
-            <h2>Transakce s nulovým poplatkem jsou out</h2>
-            <p>Víte, že dnes již nelze poslat transakci s nulovým poplatkem (0 sat/B)?</p>
-            <p>
-                Dříve to bylo běžné, protože Bitcoin nikdo nepoužíval a často vás těžař zahrnul do svého bloku, protože chtěl pomoct síti a udělal to dobrovolně. Dnes je to téměř nemožné. Bitcoinové uzly tyto "transakce zdarma" neposílají
-                dál, protože takových transakcí by se najednou objevily tisíce, desetitisíce, možná statisíce, což by mohlo zaspamovat síť.
-            </p>
-            <p>
-                Tyto transakce by se téměř jistě nikdy nepovedlo vytěžit, takže je vlastně zbytečné je brát v úvahu dlouhodobě.
-            </p>
-        </div>
-        <div class="fact">
-            <h2>Příjmat Lightning network je velice snadné</h2>
-            <p>
-                Víte, že můžete příjmat Lightningové satoshi úplně jednoduše (ikdyž custodial), aniž byste se museli starat o nějaké QR faktury pro příjem satů? Tyto satoshi si můžete kdykoliv ze služby vybrat. Tohle si můžete rozchodit i u
-                sebe doma tak, aby to custodial nebylo, už to chce ale trochu nastavování a vlastní full node. Jedná se o tzv. LNURL, která je vlastně takovou "lightningovou adresou s malými poplatky".
-            </p>
-            <p><a target="_blank" href="https://lnbits.com/">lnbits.com</a></p>
-            <p>PS: Uložte si URL odkaz peněženky, je to v podstatě váš přístupový kód.</p>
-			<div class="center-div" style="width:250px"> 
-            <img alt="QR platba" src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=LNURL1DP68GURN8GHJ7MRWVF5HGUEWVDHK6TMVDE6HYMRS9ASHQ6F0WCCJ7MRWW4EXCTENXSEQD0Z9ZY" /><br>
-            <div class="center-text">Příklad QR kódu LNURL</div>
-        </div>
-        <div class="fact">
-            <h2>Jsou tu limity pro bitcoinové účty a adresy, ale jsou obrovské</h2>
-            <p>Víte, že na jednom seedu můžete mít víc než 2.1 mld bitcoinových účtů, a na každém z těch účtů přes 2.1 mld adres? Není tedy důvod nepoužívat stále nové.</p>
-            <p><a target="_blank" href="https://btc-slovnik.cz/pages/wallet.html">btc-slovnik.cz</a></p>
-        </div>
-        <hr />
-        <footer>
-            <div class="center-blok">
-                © Gorrdy
-                <p>
-                    Najdete mě zde: <br />
-                    <a target="_blank" href="https://discord.gg/8KPPRCj">Discord</a>, <a target="_blank" href="https://twitter.com/_Honza_Dvorak">Twitter</a>, <a target="_blank" href="https://github.com/gorrdy">Github</a>,
-                    <a target="_blank" href="mailto:dvorakh1997@gmail.com">E-mail</a>
-                </p>
-                <p>
-                    Další zajímavé projekty:<br />
-                    <a target="_blank" href="https://btc-slovnik.cz/">Bitcoinový slovníček pro mírně pokročilé</a>, <a target="_blank" href="https://www.kryptodoupe.cz/">Kryptodoupě.cz</a>,
-                    <a target="_blank" href="https://www.youtube.com/channel/UCCegl13nmUvxUKMJqng1S-A">Bitcoinovej kanál</a>
-                </p>
-                <hr />
-            </div>
-        </footer>
-    </body>
+  <div class="fact">
+   <h2>Těžení je jen hádání, není to žádný složitý matematický výpočet</h2>
+   <p>
+    Aby těžař dostal odměnu za blok, musí vzít data předchozího bloku,
+    zkombinovat s transakcemi, které čekají na potvrzení (nejspíš ty s nejvyšším
+    poplatkem), k tomu přidat číslo od 0 do 4,294,967,295 (0 - ffffffff) a
+    aplikovat na tohle celé hashovací funkci (hashovací funkce vám udělá z
+    libovolného množství dat unikátní otisk o zavedené délce, takže je pak
+    jednodušší porovnávat tyto otisky, než celá data).
+   </p>
+   <p>Hash (výsledek) je potom úplně náhodné číslo, např.</p>
+   <p>
+    <b style="color:green">00000000000000000000</b
+    >706c7f21388b285414c4829ee3981398e0cac82e43e3.
+   </p>
+   Pokud je tohle číslo nižší, než je aktuální cíl těžby, např.
+   <p>
+    <b style="color:red">0000000000000000000</b
+    >cdf6f0000000000000000000000000000000000000000,
+   </p>
+   blok je platný (to zde splňujeme, viz zelené nuly, je jich víc než
+   červených). Pokud je vyšší, tak ho těžař zahodí a zkouší znovu. I když nonce
+   k hádání je přes 4 miliardy, těžaři už dnes mají k dispozici takový výkon, že
+   tento počet kombinací vyzkouší na zlomek sekundy. Ale protože jakákoliv změna
+   v bloku způsobí změnu i výsledného hashe, stačí prohodit pár transakcí a může
+   opět zkoušet další 4 miliardy pokusů.
+   <p>
+    Tohle je extrémně náročné na výpočetní výkon, protože většina práce, co
+    uděláte přijde "vniveč". Naopak ověření, že je hash menší než cíl obtížnosti
+    je velice primitivní. Stačí vzít data z bloku, transakce a nonce, kterou vám
+    poskytne těžař, který ji "trefil" a vyzkoušet si to. Tohle přesně dělají
+    nody. Pokud je blok takto platný, zahrnou ho do svého blockchainu a kolečko
+    se opakuje.
+   </p>
+   <p>
+    <a href="https://btc-slovnik.cz/pages/block.html">btc-slovnik.cz</a><br />
+    <a href="https://learnmeabitcoin.com/technical/mining"
+     >learnmeabitcoin.com</a
+    >
+   </p>
+  </div>
+  <div class="fact">
+   <h2>
+    Platební (lightningový) kanál je jenom adresa kterou kontrolují dvě
+    protistrany
+   </h2>
+   <p>
+    Platební kanál totiž není nic jiného, než že se Alice dohodne s Bobem a
+    vytvoří trošku složitější adresu, jejíž zůstatek lze utratit, jen pokud to
+    schválí oba. Platba na lightning network je potom jenom změna stavu "účtů".
+    Dejme tomu, že na začátku má Alice i Bob každý 0.5 BTC, který zamknou do
+    platebního kanálu. V tuhle chvíli vzniknul tedy platební kanál o kapacitě 1
+    BTC a každý z nich má v tuhle chvíli stejnou část, tedy 0.5 BTC, což si obě
+    strany schválily a podepsaly transakci, která by každému z nich poslala
+    adekvátní část na jinou, svoji, bitcoinovou adresu.
+   </p>
+   <p>
+    Alice si bude chtít od Boba koupit telefon, a Bob jí ho tedy chce prodat za
+    0.1 BTC. Alice i Bob tedy vytvoří a podepíší transakci, ve které je napsáno,
+    že Alice dostane 0.4 BTC a BoB 0.6 BTC (0.1 BTC se vlastně "přesunulo" od
+    Alice k Bobovi, i když se fyzicky nic nepohnulo), ale nepošlou ji do
+    bitcoinové sítě, jen si ji nechají u sebe. Oba tuhle transakci drží a
+    kdokoliv z nich by ji poslal do sítě, tak bude platná a zůstatky se
+    vypořádají, i kdyby Bob spadnul do Macochy.
+   </p>
+   <p>
+    Alice s Bobem takto mezi sebou obchodují další měsíce a roky, podepisují
+    další a další transakce, které neposílají do blockchainu, ale kdyby chtěli,
+    tak mohou (uzavřeli by tak platební kanál, na té multisig adrese by nezbylo
+    nic).
+   </p>
+   <p>
+    Bob se rozhodne odstěhovat do Austrálie, a tak udržovat platební kanál s
+    Alicí přestane mít smysl. Mohou se tedy dohodnout a platební kanál uzavřít
+    (vypořádat si zůstatky k sobě na své adresy). V součtu je to tedy stálo dvě
+    on-chain transakce. Jednu, ve které tento kanál "nabili" zůstatkem a druhou,
+    ve které si zůstatek rozdělili mezi sebe. Mezitím mohla proběhnout klidně
+    miliarda malých nebo mikro transakcí, o kteých žádný blockchain nemá ani
+    tušení. Na blockchain se potom jen zapíše koncový stav.
+   </p>
+  </div>
+  <div class="fact">
+   <h2>Odměna 50 BTC z prvního bloku nejde utratit</h2>
+   <p>
+    Transakce totiž není zahrnutá v databázi transakcí, i když v blockchainu
+    samotném je. Což občas způsobuje drobné trable, když někdo vyvíjí třeba
+    průzkumníka blockchainu.
+   </p>
+   <p>
+    Nevíme, jestli to Satoshi udělal úmyslně či neúmyslně, nicméně prvních 50
+    BTC je zabetonováno na adrese
+    <a
+     target="_blank"
+     href="https://mempool.space/address/1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
+     >1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa</a
+    >, protože nody by blok s transakcí, jejíž předchůdce není v databázi,
+    odmítnuly.
+   </p>
+   <p>
+    Ostatní UTXO (neutracené výstupy) by měly jít odeslat z této adresy dál. Ale
+    je nepravděpodobné, že privátní klíč k této adrese vůbec existuje, resp.
+    jestli jej někdy Satoshi vůbec někam zaznamenal nebo zálohoval.
+   </p>
+  </div>
+  <div class="fact">
+   <h2>V blockchainu je uložený celý bitcoinový whitepaper bitcoin.pdf</h2>
+   <p>
+    Do transakce
+    <a
+     target="_blank"
+     href="https://bitcoinexplorer.org/tx/54e48e5f5c656b26c3bca14a8c95aa583d07ebe84dde3b7dd4a78f4e4186e713"
+     >54e48e...86e713</a
+    >
+    byl zapsál kompletní bitcoinový whitepaper tak, jak ho publikoval Satoshi
+    Nakamoto. Tato transakce stála neuvěřitelných 0.596 BTC na poplatku, ale
+    výsledkem je absolutně decentralizované uložení významného dokumentu. Nemůže
+    se tedy stát, že by jej někdo úspěšně zcenzuroval, protože kdokoliv s
+    bitcoinovým plným uzlem si jej může z této transakce vyexportovat.
+   </p>
+   <p>
+    Na linuxu s plným uzlem jej můžete získat tímto způsobem pomocí
+    bitcoin-cli.<br />
+    <code style="word-wrap: break-word;"
+     >./bitcoin-cli getrawtransaction
+     54e48e5f5c656b26c3bca14a8c95aa583d07ebe84dde3b7dd4a78f4e4186e713 0
+     00000000000000ecbbff6bafb7efa2f7df05b227d5c73dca8f2635af32a2e949 | sed
+     s/0100000000000000/n/g | tail -n +2 | cut -c7-136,139-268,271-400 | tr -d n
+     | cut -c17-368600 | xxd -p -r &gt; bitcoin.pdf</code
+    >
+   </p>
+   <p>
+    SHA256SUM mého bitcoin.pdf<br />
+    umbrel@umbrel:~/umbrel/bin $ sha256sum bitcoin.pdf<br />
+    <b style="word-wrap: break-word;"
+     >e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</b
+    >
+    bitcoin.pdf
+   </p>
+   <p>
+    Pokud provozujete bitcoinový uzel, tak stačí nainstalovat
+    <a target="_blank" href="https://github.com/janoside/btc-rpc-explorer"
+     >Bitcoin RPC Explorer</a
+    >, který vám jej dekóduje.
+   </p>
+   <p>
+    Poté si jej stáhnete nebo přečtete přímo v prohlížeči, např. na adrese
+    <a target="_blank" href="#"
+     >https://192.168.1.111:3002/bitcoin-whitepaper</a
+    >
+    (nahraďte IP/port vašeho node).<br />
+    <a target="_blank" href="https://bitcoinexplorer.org/bitcoin-whitepaper"
+     >Ukázka na veřejném bitcoinexplorer.org</a
+    >
+   </p>
+  </div>
+  <div class="fact">
+   <h2>
+    V blockchainu je ukrytá "minihra". A nejen jedna, je jich vlastně pět
+   </h2>
+   <p>
+    V blockchainu se vyskytuje několik adres, kde jsou přichystané bitcoiny pro
+    člověka, který najde alespoň jeden případ kolize hashů jakýchkoliv dat.
+    Programu stačí dát jakýkoliv text a on by vám měl vytvořit jeho unikátní
+    otisk, a my hledáme jeden případ, kdy bude otisk stejný (dojde ke
+    kolizi).<br />
+    <br />
+    SHA1 (dohráno)<br />
+    SHA256<br />
+    RIPEMD160<br />
+    RIPEMD160(SHA256())<br />
+    SHA256(SHA256())<br />
+    <br />
+    SHA funkce (<a
+     target="_blank"
+     href="https://cs.wikipedia.org/wiki/Secure_Hash_Algorithm"
+     >cs.wikipedia.org</a
+    >)<br />
+    RIPEMD funkce (<a
+     target="_blank"
+     href="https://cs.wikipedia.org/wiki/RIPEMD"
+     >cs.wikipedia.org</a
+    >)
+   </p>
+   <p>
+    Zkusit si to můžete sami třeba zde , ale nebudu vám tahat, ručně se vám to
+    nejspíš nepovede. Najdete zde i konkrétní popis všech funkcí.
+    <a
+     target="_blank"
+     href="https://learnmeabitcoin.com/technical/hash-function"
+     >learnmeabitcoin.com</a
+    >
+   </p>
+   <p>
+    Jedna z "miniher" už je dohraná. První kolize byla opravdu nalezena pro
+    funkci SHA1, jenž už je prakticky odepsaný algoritmus, protože se podařilo
+    nalézt v něm chyby, a už přes 15 let ji lidé považují za nepraktickou.
+    Přesto tuto kolizi hashů někdo vyrobil až v roce 2017 a bitcoiny si z adresy
+    vybral. Nicméně odhaduje se, že najít takovou kolizi mělo vyjít na cca 2.3
+    milionů dolarů, proto asi nikdo nebyl až tak motivován tuto odměnu vybírat.
+    <a
+     target="_blank"
+     href="https://bitcoinexplorer.org/address/37k7toV1Nv4DfmQbmZ8KuZDQCYK9x5KpzP"
+     >bitcoinexplorer.org</a
+    >
+   </p>
+   <p>
+    SHA256 už bude větší oříšek. Číslo 2<sup>256</sup> &gt;&gt; 2<sup>128</sup>.
+    I kdybychom hádali pouze 2<sup>128</sup> možností (což není polovina,
+    polovina z 2<sup>256</sup> je 2<sup>255</sup>), trvalo by to pravděpodobně
+    3.6 × 10<sup>13</sup> let při aktuálním výkonu celé bitcoinové sítě. Nicméně
+    pokud se na to cítíte, běžte do toho.
+    <a
+     target="_blank"
+     href="https://bitcoinexplorer.org/address/35Snmmy3uhaer2gTboc81ayCip4m9DT4ko"
+     >bitcoinexplorer.org</a
+    >
+   </p>
+   <p>
+    Pro další 3 případy je to vlastně obdobné, zatím se žádný příklad další
+    kolize, kromě SHA1 nepodařilo demonstrovat.<br />
+    RIPEMD160
+    <a
+     target="_blank"
+     href="https://bitcoinexplorer.org/address/3KyiQEGqqdb4nqfhUzGKN6KPhXmQsLNpay"
+     >bitcoinexplorer.org</a
+    ><br />
+    RIPEMD160(SHA256())
+    <a
+     target="_blank"
+     href="https://bitcoinexplorer.org/address/39VXyuoc6SXYKp9TcAhoiN1mb4ns6z3Yu6"
+     >bitcoinexplorer.org</a
+    ><br />
+    SHA256(SHA256())
+    <a
+     target="_blank"
+     href="https://bitcoinexplorer.org/address/3DUQQvz4t57Jy7jxE86kyFcNpKtURNf1VW"
+     >bitcoinexplorer.org</a
+    ><br />
+   </p>
+   <p>
+    Tohle je vlastně geniální ukazatel bezpečnosti těchto algoritmů. Pokud se
+    vám podaří najít jeden případ, můžete si tyto odměny vybrat na jakoukoliv
+    adresu. Pokud by někdo "porazil" tyto algoritmy v efektivním čase a za
+    efektivní cenu, první na řadě budou tyto prostředky, protože jsou to
+    jednoduše free money. Dokud tam ty zůstatky jsou, můžete být v klidu.
+   </p>
+  </div>
+  <div class="fact">
+   <h2>Nemůžete posílat jen část svých bitcoinů, musíte odeslat všechny</h2>
+   <p>
+    Běžnou bitcoinovou transakci si spousta lidí představí tak, že část svého
+    zůstatku z peněženky pošle protistraně, jako když někomu posílá peníze na
+    účet a tedy se jim odečte pouze odesílaná částka. Přesně takhle ... to ale
+    nefunguje. Ze své adresy musíte odeslat všechny svoje bitcoiny. Samozřejmě
+    to neznamená, že když zaplatíte někde pivo, tak restauratér dostane všechny
+    vaše bitcoiny, dostane pouze takovou část, kterou vypíšete, že chcete
+    zaplatit.
+   </p>
+   <p>
+    Nicméně platí, že transakce opravdu obsahuje celé vaše jmnění. Rozdíl mezi
+    placenou částkou a celkovým zůstatkem se vám vrátí nazpět do peněženky, na
+    novou, tzv. change adresu, kde opět bude tento výstup (zůstatek) čekat na
+    další utracení. Tomuto zůstatku se říká neutracený výstup, který má na první
+    pohled strašidelnou anglickou ztratku UTXO [jů-tý-ex-ou] (unspent
+    transaction output), ale na tu si rychle zvyknete. Je to snažší než říkat
+    pořád dokola "neutracený výstup bitcoinové transakce" :)
+   </p>
+   <p>
+    V předchozích odstavcích jsem trochu zalhal, schválně, pro zjednodušení.
+    Utratit musíte pouze celý neutracený výstup (UTXO), nikoliv obsah celé
+    adresy nebo dokonce peněženky. UTXO totiž vniká pokaždé, když na adresu
+    dojdou nějaké bitcoiny. Pokud si tedy 10x pošlu po 1 BTC z burzy, vytvoří se
+    mi 10 UTXO, každé o hodnotě 1 BTC. Je jedno, jestli posílám na různé adresy
+    nebo jen na jednu adresu. Nové UTXO vznikne i v případě, kdy už na adrese
+    nějaké jiné UTXO je, a tak jich tam bude prostě více.
+   </p>
+   <p>
+    Pokud máte 10 různých neutracených výstupů (ať už na jedné nebo více
+    adresách) v hodnotě 1 BTC a chcete poslat 2.5 BTC, stačí tedy odeslat 3 BTC
+    ze 3 UTXO (dva by bylo málo, více je zbytečné), a zbytek vám peněženka vrátí
+    na novou adresu, čímž vznikne nové UTXO o hodnotě asi 0.5 BTC (3 BTC
+    odesílané minus 2.5 BTC minus poplatek, které posíláme protistraně). Plně
+    jste tak využili dva výstupy, třetí sice jen z poloviny, ale musíme ho
+    utratit celý a vytvořit nový o hodnotě právě rozdílových 0.5 BTC na jiné,
+    change adrese. Zbytku se dotknout nemusím a ty čekají na příští transakce.
+    Pokud bych chtěl znovu zaplatit třeba 0.1 bitcoinu, tak se vezme pouze jeden
+    z výstupů. Který, to záleží na peněžence, ale měla by "ukrajovat" z
+    nejmenších možných.
+   </p>
+  </div>
+  <div class="fact">
+   <h2>Bitcoinů nikdy nebude 21 milionů</h2>
+   <p>
+    Víte, že nikdy nebude celých 21,000,000 bitcoinů? Bitcoin funguje tak, že se
+    s každým blokem do oběhu dostane nejdřív bitcoinů 50, 25, 12.5, 6.25, 3.125
+    ... až budou všechny v roce cca 2140 vytěženy (budou dotěženy spíše dříve).
+   </p>
+   <p>
+    V součtu tyhle jednotlivé zůstatky za každý blok dají ale jen
+    20,999,999.9769. To znamená, že 21,000,000 opravdu nikdy nebudeme mít k
+    dispozici, i kdybychom každý jeden bitcoin střežili jako oko v hlavě.
+   </p>
+   <p>
+    V bitcoinové síti ale kvůli různým chybám, experimentům nebo flexení došlo k
+    transakcím, které odeslaly nějaké bitcoiny na neplatné nebo neznámé adresy.
+   </p>
+   <p>
+    Uživatel MidnightMagic si zámerně vyplatil odměnu za vytěžený blok č. 124724
+    o 1 satoshi nižší, než mohl (1). V bloku 501,726 zase jeden těžař špatným
+    vytvořením transakce spálil celou odměnu za tento blok, což bylo 12.5 BTC.
+    Těchto transakcí lze po internetu dohledat spousta, např. blok č. 150,951
+    jich obsahuje poměrně dost (2). Tyhle bitcoiny tedy nejdou utratit, protože
+    k nim nejsou vygenerovatelné privátní klíče a nebo ani nebyly vytvořeny.
+    Např. zde spálených skoro 500 BTC (3)
+   </p>
+   <p>Celkový počet takto spálených bitcoinů je asi 2,733.9. (4)</p>
+   <p>
+    Ztracné bitcoiny, kterými myslím opravdu ztracené privátní klíče, tudíž také
+    bez možnosti obnovy se odhaduje, že by mohlo být spousta. Satoshiho mince,
+    začátky Bitcoinu nikdo nebral vážně, bude tam spousta mincí ležet do konce
+    věků. Studie uvádějí, že těch ztracených mincí bude něco okolo 2,304,824
+    (5). Další mince jsou Satoshiho, odhadem 980,000 bitcoinů.
+   </p>
+   <p>
+    Jen tenhle předpoklad nám tedy dává 20,999,999.9769 - 2,304,824 - 980,000 =
+    17,715,175.9749 je maximální počet vytěžených bitcoinů, pokud by se nám je
+    dařilo neztrácet. 17.7 milionu místo původních ~21 milionů. Ztracených mincí
+    tedy může být 18-20% z celkového počtu.
+   </p>
+   <p>
+    Čísla mohou být trochu nepřesná, ale řádově to takto bude. Každý milion
+    ztracených mincí by se měl projevit jako 4-5% nárůst hodnoty bitcoinů
+    zbývajích. Můžete tyhle mince tedy vnímat jako donejt všem.
+   </p>
+   <p>
+    Zdroje:<br />
+    1) Ztracený Satoshi -
+    <a
+     target="_blank"
+     href="https://mempool.space/tx/5d80a29be1609db91658b401f85921a86ab4755969729b65257651bb9fd2c10d"
+     >mempool.space</a
+    ><br />
+    2) Hodně spálených bitcoinů v jednom bloku -
+    <a target="_blank" href="https://bitcointalk.org/index.php?topic=50206.0"
+     >bitcointalk.org</a
+    ><br />
+    3) Skoro 500 spálených bitcoinů v jedné transakci -
+    <a
+     target="_blank"
+     href="https://mempool.space/tx/03acfae47d1e0b7674f1193237099d1553d3d8a93ecc85c18c4bec37544fe386"
+     >mempool.space</a
+    ><br />
+    4) Celkový pošet spálených bitcoinů -
+    <a
+     target="_blank"
+     href="https://bitcoinwhoswho.com/blog/2016/12/21/btc-burn-addresses/"
+     >bitcoinwhoswho.com</a
+    ><br />
+    5) Ztracené mince uživatelů -
+    <a target="_blank" href="https://ritholtz.com/2017/11/lost-bitcoins/"
+     >ritholtz.com</a
+    >
+   </p>
+  </div>
+  <div class="fact">
+   <h2>Satoshi se ztratil v blockchainu</h2>
+   <p>
+    Víte, že těžař, jenž vytěžil blok č. 124,724 si záměrně vyplatil méně*, než
+    50 BTC? Připravil se tedy jen o 1 satoshi (stomiliontina bitcoinu, nejmenší
+    bitcoinová jednotka), takže asi moc neutrpěl, ale tento "1 chybějící
+    satoshi" má symbolicky vzdát hold skutečnému Satoshimu Nakamotovi, jenž
+    zmizel z veřejného prostoru a už jsme o něm nikdy neslyšeli.
+   </p>
+   <p>
+    * Těžař si může při vytěžení určit, kolik dostane. 50 BTC byla tehdy horní
+    hranice.
+   </p>
+   <p>
+    "Missing Satoshi" transakce:
+    <a
+     target="_blank"
+     href="https://bitcoinexplorer.org/tx/5d80a29be1609db91658b401f85921a86ab4755969729b65257651bb9fd2c10d"
+     >bitcoinexplorer.org</a
+    >
+   </p>
+  </div>
+  <div class="fact">
+   <h2>Transakce s nulovým poplatkem jsou out</h2>
+   <p>
+    Víte, že dnes již nelze poslat transakci s nulovým poplatkem (0 sat/B)?
+   </p>
+   <p>
+    Dříve to bylo běžné, protože Bitcoin nikdo nepoužíval a často vás těžař
+    zahrnul do svého bloku, protože chtěl pomoct síti a udělal to dobrovolně.
+    Dnes je to téměř nemožné. Bitcoinové uzly tyto "transakce zdarma" neposílají
+    dál, protože takových transakcí by se najednou objevily tisíce,
+    desetitisíce, možná statisíce, což by mohlo zaspamovat síť.
+   </p>
+   <p>
+    Tyto transakce by se téměř jistě nikdy nepovedlo vytěžit, takže je vlastně
+    zbytečné je brát v úvahu dlouhodobě.
+   </p>
+  </div>
+  <div class="fact">
+   <h2>Příjmat Lightning network je velice snadné</h2>
+   <p>
+    Víte, že můžete příjmat Lightningové satoshi úplně jednoduše (ikdyž
+    custodial), aniž byste se museli starat o nějaké QR faktury pro příjem satů?
+    Tyto satoshi si můžete kdykoliv ze služby vybrat. Tohle si můžete rozchodit
+    i u sebe doma tak, aby to custodial nebylo, už to chce ale trochu
+    nastavování a vlastní full node. Jedná se o tzv. LNURL, která je vlastně
+    takovou "lightningovou adresou s malými poplatky".
+   </p>
+   <p><a target="_blank" href="https://lnbits.com/">lnbits.com</a></p>
+   <p>
+    PS: Uložte si URL odkaz peněženky, je to v podstatě váš přístupový kód.
+   </p>
+   <div class="center-div" style="width:250px">
+    <img
+     alt="QR platba"
+     src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&amp;data=LNURL1DP68GURN8GHJ7MRWVF5HGUEWVDHK6TMVDE6HYMRS9ASHQ6F0WCCJ7MRWW4EXCTENXSEQD0Z9ZY"
+    /><br />
+    <div class="center-text">Příklad QR kódu LNURL</div>
+   </div>
+   <div class="fact">
+    <h2>Jsou tu limity pro bitcoinové účty a adresy, ale jsou obrovské</h2>
+    <p>
+     Víte, že na jednom seedu můžete mít víc než 2.1 mld bitcoinových účtů, a na
+     každém z těch účtů přes 2.1 mld adres? Není tedy důvod nepoužívat stále
+     nové.
+    </p>
+    <p>
+     <a target="_blank" href="https://btc-slovnik.cz/pages/wallet.html"
+      >btc-slovnik.cz</a
+     >
+    </p>
+   </div>
+   <hr />
+   <footer>
+    <div class="center-blok">
+     © Gorrdy
+     <p>
+      Najdete mě zde:<br />
+      <a target="_blank" href="https://discord.gg/8KPPRCj">Discord</a>,
+      <a target="_blank" href="https://twitter.com/_Honza_Dvorak">Twitter</a>,
+      <a target="_blank" href="https://github.com/gorrdy">Github</a>,
+      <a target="_blank" href="mailto:dvorakh1997@gmail.com">E-mail</a>
+     </p>
+     <p>
+      Další zajímavé projekty:<br />
+      <a target="_blank" href="https://btc-slovnik.cz/"
+       >Bitcoinový slovníček pro mírně pokročilé</a
+      >,
+      <a target="_blank" href="https://www.kryptodoupe.cz/">Kryptodoupě.cz</a>,
+      <a
+       target="_blank"
+       href="https://www.youtube.com/channel/UCCegl13nmUvxUKMJqng1S-A"
+       >Bitcoinovej kanál</a
+      >
+     </p>
+     <hr />
+    </div>
+   </footer>
+  </div>
+ </body>
 </html>
