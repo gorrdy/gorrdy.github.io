@@ -14,6 +14,12 @@
         </ul>
 
         <br />
+    <!--<div class="fact">
+		<h2>Nově vytvořené bitcoiny, po vytěžení nejdou utratit po dobu 100 bloků</h2>
+		<p>
+			Jakmile se těžaři povede uhodnout blok, může si odměnu nechat vyplatit na svoji adresu. Nemůže ji však utratit po dobu 100 bloků, což je asi 17 hodin. Zabraňuje to komplikacím, kdyby se v blockchainové síti odehrála reorganizace pár posledních bloků, což není úplně výjimečný úkaz, ale i tak se o občas prostě stane (když dva těžaři vytěží stejný blok ve stejnou chvíli). Komplikací by byly právě již utracené nově vytvořené mince, protože není jednoduché vzít coinbase transakci a jen ji přesunout do jiného bloku, což s klasickými transakcemi, které utrácejí dávno vytisknuté mince, není problém. Nejčastější reogranizace jsou 1-2 bloky, vyjímečně se stane, že je reorganizace většího rozsahu, takže vypadá, že 100 bloků bohatě dostačuje jako rezerva. 
+		</p>
+    </div>-->
 	<div class="fact">
     	<h2>Těžení je jen hádání, není to žádný složitý matematický výpočet</h2>
     	<p>Aby těžař dostal odměnu za blok, musí vzít data předchozího bloku, zkombinovat s transakcemi, které čekají na potvrzení (nejspíš ty s nejvyšším poplatkem), k tomu přidat číslo od 0 do 4,294,967,295 (0 - ffffffff) a aplikovat na tohle celé hashovací funkci (hashovací funkce vám udělá z libovolného množství dat unikátní otisk o zavedené délce, takže je pak jednodušší porovnávat tyto otisky, než celá data). </p>
