@@ -14,7 +14,26 @@
    <a href="o_projektu.html"> <li class="nav-item-right">O projektu</li> </a>
   
   </ul>
-  <br />
+  <div class="fact">
+   <h2>Nikdy nezadávat seed z Trezoru do softwarové peněženky, ani naopak</h2>
+
+<p>Vygenerovat si bezpečně seed na počítači nebo telefonu je docela oříšek. Jak zjistíte, že si nestahujete škodlivou aplikaci, která si váš seed přepošle, a jakmile si na peněženku nahrajete dost vysoký obnos, a nepřesune ho z vaší peněženky do té svojí? Nemusí to být hned škodlivá aplikace, stačí, aby v ní byla chyba (nebo chyba v operačním systému). Pak se může stát, že si všichni uživatelé budou generovat stejný seed. A to opravdu nechcete.</p>
+
+<p>Váš seed je tak bezpečný, jako zařízení, kde byl vytvořen. Žebříček těchto zařízení podle bezpečnosti může vypadat např. takto (od nejvíce bezpečných shora).</p>
+
+<p>Hardwarová (HW) peněženka(Trezor, Ledger) <br />
+iPhone <br />
+Android telefon<br />
+Mac/PC<br />
+PC v kavárně<br />
+ PC kamaráda, který si holduje v různorodém obsahu na internetu</p>
+
+<p>Po tomhle žebříku se neleze nahoru, pouze dolů. Jestliže si vygenerujete seed na kamarádově zavirovaném počítači, pravděpodobně tam už bude mít pár virů, které scanují každý krok. Zadat takovýto seed potom do HW peněženky je z pohledu bezpečnosti k ničemu, protože mohl uniknout jinou, snazší cestou. Vygenerování v HW peněžence je naopak extrémně bezpečné, protože tento mini-počítač dělá jen to, k čemu byl vytvořen a nemůžete ho nijak infikovat nebo hacknout.</p>
+
+<p>Opačně to taky smysl nedává. Seed vygenerovaný v HW peněžence nesmím zadat do jakéhokoliv méně bezpečného zařízení (maximálně do jiné HW peněženky, to je ok), třeba právě počítače někde v kavárně (sestoupit na žebříku níž). Ve chvíli, co bych to udělal není sice zvýšená šance, že mi někdo hackne můj Trezor/Ledger, ten je stále stejně bezpečný, ale ten útočník nepotřebuje. Mu stačí pouze seed, který jste zadali na počítači, kde číhá jeho virus a hledá.</p>
+
+<p>Takže seed ze SW peněženky nezádáváme do Trezoru, protože tím ztrácí pořízení Trezoru smysl (to už jsem mohl používat rovnou tu SW peněženku). A nikdy nezadáváme seed z Trezoru do jakékoliv SW peněženky (android, ios, pc...), protože tak sestoupíme na žebříku bezpečnosti dolů a v tu chvíli je Trezor opět naprosto neužitečný, protože šance na prozrazení seedu se ohromně zvýšila.</p>
+  </div>
   <div class="fact">
                 <h2>Nově vytvořené bitcoiny, po vytěžení, nejdou utratit dřív než po 100 blocích</h2>
                 <p>Jakmile se těžaři povede uhodnout blok, může si odměnu nechat vyplatit na svoji adresu. Nemůže ji však utratit po 100 bloků, což je asi 17 hodin. Zabraňuje to komplikacím, kdyby se v bitcoinové síti odehrála reorganizace vrcholu blockchainu, což není úplně výjimečný úkaz, občas se to prostě stane (když dva těžaři vytěží stejný blok ve stejnou chvíli).</p>
