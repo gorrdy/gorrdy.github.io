@@ -15,6 +15,22 @@
   
   </ul>
   <div class="fact">
+	  <h2>Blok <a href="https://mempool.space/block/000000000000000003dd2fdbb484d6d9c349d644d8bbb3cbfa5e67f639a465fe">364292</a> obsahoval transakci tak velkou, že se tam už žádná další nevlezla</h2>
+    <p>Popravdě, blok obsahoval transakce dvě, coinbase (mincetvornou, za kterou si připsal F2Pool 25 BTC) a k tomu mega-transakci, která zaplnila zbytek bloku. Uzlům trvalo neuvěřitelných 25 sekund ověřit jenom tuto transakci. Zde se můžete podívat na tento blok a jeho 2 transakce. <br /> 
+    <a href="https://mempool.space/block/000000000000000003dd2fdbb484d6d9c349d644d8bbb3cbfa5e67f639a465fe">mempool.space</a></p>
+
+<p>Mega-transakce měla neuvěřitelných 5570 vstupů (neutracených UTXO z předchozích transakcí), všechny tyto vstupy pochází ze 3 adres. Protože si ji F2Pool vytěžil sám, nemusel zaplatit žádný poplatek za její zpracování. Otázkou je, jestli se to vyplatilo. Objem, který takto F2Pool zachránil byl 0.0556 BTC, tehdy asi $15, v dnešní hodnotě je to sice asi $2,000, ale připravil se tak o "běžné" poplatky z běžných transakcí. Bloky s odměnou z poplatků přes 0.5 BTC (dnes přes $17,000) nebyly výjimkou. Pokud bychom kalkulovali s tímto rozdílem, připravil se tehdy F2Pool o dnešních asi $15,000.</p>
+
+<p>Nicméně motivací mohl být zrovna prázdný mempool a příležitost zachránit malá UTXO z těchto adres "zdarma" (nebyla alternativa jiných transakcí). Zajímavým faktem je, že to nebyly prostředky F2Poolu, ale nezabezpečených brainwallets (to je když si vygeneruji peněženku třeba ze 3-4 vlastních slov, které zadám do nějakého programu, který mi z nich vygeneruje seed - tohle je extrémně nebezpečné, je pak strašně snadné odhadnout jen pár slov). Další motivací by mohlo být vytvoření největší transakce a "zapsat se do historie".</p>
+
+<p>Z finančního hlediska mi tahle "konsolidace" ale nedává smysl, protože prostě mohli těch $15 nechat být, odepsat a vzít si odměnu z klasických transakcí v daleko větší hodnotě. Ale něco mi říká, že to udělali, protože mohli. Je to tedy dokonalý příklad, že nechávat si na adresách zůstatky po pár korunách nebo centech není dobré řešení. V podstatě jsou nadobro ztraceny, protože utratit je stojí více než je jejich zůstatek.</p>
+<p>
+<a href="https://rusty.ozlabs.org/?p=522">rusty.ozlabs.org</a> <br />
+
+
+</p>
+  </div>
+  <div class="fact">
    <h2>Nikdy nezadávat seed z Trezoru do softwarové peněženky, ani naopak</h2>
 
 <p>Vygenerovat si bezpečně seed na počítači nebo telefonu je docela oříšek. Jak zjistíte, že si nestahujete škodlivou aplikaci, která si váš seed přepošle, a jakmile si na peněženku nahrajete dost vysoký obnos, a nepřesune ho z vaší peněženky do té svojí? Nemusí to být hned škodlivá aplikace, stačí, aby v ní byla chyba (nebo chyba v operačním systému). Pak se může stát, že si všichni uživatelé budou generovat stejný seed. A to opravdu nechcete.</p>
