@@ -2,6 +2,7 @@ body {
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 	background-color: black;
 	color:white;
+	word-wrap:break-word;
 }
 
 h1 {
@@ -25,6 +26,7 @@ a {
 footer {
 	margin:auto;
 	display:block;
+	word-wrap:break-word;
 }
 
 .nav{
