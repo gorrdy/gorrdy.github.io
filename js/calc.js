@@ -23,7 +23,6 @@ function GetBtcPrice () {
     var usd = $.getJSON( url2 , function() {
       var usdczk = usd.responseJSON.middle
       var price_btc = test.responseJSON.bpi[date]
-
       var price_btc_czk = price_btc * usdczk
       price_btc = round(price_btc, 0)
       price_btc_czk = round(price_btc_czk, 0)
@@ -48,7 +47,6 @@ function GetCurrentBtcPrice () {
     var price_btc_current_usd = round(response.responseJSON.bpi.USD.rate_float, 0)
     var price_btc_current_czk = round(response.responseJSON.bpi.CZK.rate_float, 0)
     $("#currentbtcpriceusd").html(price_btc_current_usd)
-    console.log(price_btc_current_usd)
     $("#currentbtcpriceczk").html(price_btc_current_czk)
   })
 }
