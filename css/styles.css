@@ -14,6 +14,11 @@ code {
 	word-wrap:break-word;
 }
 
+h1 a {
+	text-decoration:none;
+	color:white;
+}
+
 .center-div {
 	margin: auto;
 	padding: 10px;
@@ -32,7 +37,6 @@ code {
 	width:25%;
 	font-size:22px;
 	text-align:center;
-	
 }
 
 .center-form label {
