@@ -15,6 +15,23 @@
   
   </ul>
   <div class="fact">
+	  <h2>Hardwarová peněženka je jen generátor náhodného čísla</h2>
+
+<p>Umí to tedy extrémně bezpečně, aniž by se tohle číslo dostalo někam ven ze samotné peněženky, ale váš seed je opravdu jen jedno číslo od 0 do 2²⁵⁶ (pro představu je to číslice 1 a dalších 77 míst).</p>
+
+<p>Tohle číslo lze zapsat binárně jako 256 po sobě jdoucích jedniček nebo nul. Pokud chcete, můžete si vyzkoušet tohle číslo vygenerovat třeba hody mincí.</p>
+
+<p>Stačí 256× hodit mincí a zapisovat si, na kterou stranu padla jako 1 nebo 0. Jakmile budete mít zapsané všechny hody a všech 256 jedniček nebo nul, rozdělte je do skupin po 11. Každá skupina číslic (převedeno do desítkové soustavy + přičteme číslo 1) potom reprezentuje index slova v bitcoinovém slovníku https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt.</p>
+
+<p>Jakmile máme těch 24 slov, všechno, co potom peněženka dělá už je předem dané a žádné další náhodné jevy se nepoužívají. Tzn. že kdokoliv disponuje seedem, disponuje všemi prostředky, které se na adresy jím vygenerované kdy pošlou.</p>
+
+<p>*tohle platí pro 24 slovný seed, pro 12 slovný se počítá s 128 hody místo 256</p>
+
+<p>Přesný postup pro fajnšmekry, kteří si to chtějí vyzkoušet: <a href="https://btc-slovnik.cz/pages/wallet.html">btc-slovnik.cz</a></p>
+  </div>
+	 
+	 
+  <div class="fact">
 	  <h2>Blok <a href="https://mempool.space/block/000000000000000003dd2fdbb484d6d9c349d644d8bbb3cbfa5e67f639a465fe">364292</a> obsahoval transakci tak velkou, že se tam už žádná další nevlezla</h2>
     <p>Popravdě, blok obsahoval transakce dvě, coinbase (mincetvornou, za kterou si připsal F2Pool 25 BTC) a k tomu mega-transakci, která zaplnila zbytek bloku. Uzlům trvalo neuvěřitelných 25 sekund ověřit jenom tuto transakci. Zde se můžete podívat na tento blok a jeho 2 transakce. <br /> 
     <a href="https://mempool.space/block/000000000000000003dd2fdbb484d6d9c349d644d8bbb3cbfa5e67f639a465fe">mempool.space</a></p>
