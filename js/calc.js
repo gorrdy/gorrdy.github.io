@@ -20,6 +20,7 @@ function GetBtcPrice (name) {
     var price_sats_czk = price_sats * usd_czk
     price_sats = round(price_sats, 1)
     price_sats_czk = round(price_sats_czk, 1)
+    $("#satscount").html(sats)
     $("#satsprice").html(price_sats)
     $("#satspriceczk").html(price_sats_czk)
 
