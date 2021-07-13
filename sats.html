@@ -7,17 +7,13 @@
   <link rel="icon" type="image/png" href="images/bitcoin-black.png"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
   <script src="js/calc.js" type="text/javascript"></script>
+  <script src="js/menu.js" type="text/javascript"></script>
  </head>
  
  <body class="content">
  <h1><a href="index.html">Víte, že... <span style="color:orange">Bitcoin</span></a></h1>
   <hr />
-  <ul class="nav">
-   <a href="index.html"><li class="nav-item">Domů</li></a>
-   <a href="sats.html"><li class="nav-item">Kalkulačka</li></a>
-   <a href="o_projektu.html"> <li class="nav-item-right">O projektu</li> </a>
-  
-  </ul>
+  <div id="navigation"></div>
   <div class="box">
     <h2 class="center-paragraph">Aktuální cena BTC </h2>
     <form class="center-form" onsubmit="GetCurrentBtcPrice(); myFunction();return false;">

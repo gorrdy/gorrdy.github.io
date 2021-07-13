@@ -6,17 +6,12 @@
   <link rel="stylesheet" href="./css/styles.css" />
   <link rel="icon" type="image/png" href="images/bitcoin-black.png"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
-  <script src="js/calc.js" type="text/javascript"></script>
+  <script src="js/menu.js" type="text/javascript"></script>
  </head>
  <body class="content">
  <h1><a href="index.html">Víte, že... <span style="color:orange">Bitcoin</span></a></h1>
   <hr />
-  <ul class="nav">
-   <a href="index.html"><li class="nav-item">Domů</li></a>
-   <a href="sats.html"><li class="nav-item">Kalkulačka</li></a>
-   <a href="o_projektu.html"> <li class="nav-item-right">O projektu</li> </a>
-  
-  </ul>
+  <div id="navigation"></div>
   <div class="fact">
 	  <h2>Hardwarová peněženka je jen generátor náhodného čísla</h2>
 
@@ -489,15 +484,15 @@ PC v kavárně<br />
     nastavování a vlastní full node. Jedná se o tzv. LNURL, která je vlastně
     takovou "lightningovou adresou s malými poplatky".
    </p>
-   <p><a target="_blank" href="https://lnbits.com/">lnbits.com</a></p>
+   <p>lnurl1dp68gurn8ghj7mrwvf5hguewvdhk6tmvde6hymrs9ashq6f0wccj7mrww4exctenxseqd0z9zy <br /> <a onclick="insertQr(); return false;" href="#donate" >Ukázat QR</a></p>
+   
    <p>
     PS: Uložte si URL odkaz peněženky, je to v podstatě váš přístupový kód.
    </p>
+   <p><a target="_blank" href="https://lnbits.com/">lnbits.com</a></p>
+   
   </div>
-   <div class="center-div" style="width:250px">
-    <img alt="QR platba" src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&amp;data=LNURL1DP68GURN8GHJ7MRWVF5HGUEWVDHK6TMVDE6HYMRS9ASHQ6F0WCCJ7MRWW4EXCTENXSEQD0Z9ZY" /><br />
-    <div class="center-text">Příklad QR kódu LNURL</div>
-   </div>
+   
    <div class="fact">
     <h2>Jsou tu limity pro bitcoinové účty a adresy, ale jsou obrovské</h2>
     <p>
@@ -527,7 +522,7 @@ PC v kavárně<br />
       <a target="_blank" href="https://www.youtube.com/channel/UCCegl13nmUvxUKMJqng1S-A">Bitcoinovej kanál</a>
      </p>
      <p>
- 	<a href="" onclick="insertQr(); return false;">Příspěvek</button><br />
+ 	<a id="donate" href="#" onclick="insertQr(); return false;">Příspěvek</a><br />
 	<div id="lnurl"></div>
      </p>
 
