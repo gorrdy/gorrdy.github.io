@@ -1,54 +1,75 @@
-<!--- diky downete! -->
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Víte, že ...</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+  <script src="js/calc.js" type="text/javascript"></script>
+ </head>
+ 
 
-<html class=" jigpbgebnt idc0_331"><head>
-    <meta charset="utf-8">
-    <title>Bitcoin Ticker</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <style>
-    * {
-    box-sizing: border-box;
-    }
-    body{
-        background-color: #000;
-        text-align: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-    #container {
-        max-width: 900px;
-        margin: 0 auto;
-        text-align: center;
-    }
-    #btcprice {
-        margin: 0 auto;
-        color: #fff;
-        font-size: 10vw;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    </style>
-</head>
-<body>
 
-<div id="container">
-    <div id="btcprice"></div>
-</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
-    <script>
-        $(document).ready(function(){
-            $.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd', function(data) {
-                    var price = `${data.bitcoin.usd}`
-                    $("#btcprice").html(price);
-            });
-            setInterval(function(){
-                $.getJSON('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd', function(data) {
-                    var price = `${data.bitcoin.usd}`
-                    $("#btcprice").html(price);
-                });
-            }, 60000);
-        });
-    </script>
+ <body class="content">
+  <h1>Víte, že... <span style="color:orange">Bitcoin</span></h1>
+  <hr />
+  <ul class="nav">
+   <a href="index.html"><li class="nav-item">Domů</li></a>
+   
+   <a href="o_projektu.html"> <li class="nav-item-right">O projektu</li> </a>
+  
+  </ul>
 
-</body></html>
+  <form onsubmit="GetBtcPrice();return false;">
+    <label for="date">Datum:</label><br>
+    <input type="date" id="date" name="date" min="2010-07-18"><br>
+    <label for="amount">Počet satoshi:</label><br>
+    <input type="number" id="amount" name="amount"><br><br>
+    <input type="submit" value="Submit">
+    <div><p>Cena dne <span id="den_datum">*zadejte datum*</span> </p>
+	    Bitcoin: $ <span id="btcprice">0</span> (<span id="btcpriceczk">0</span> Kč)<br />
+	    Satoshi: $ <span id="satsprice">0</span> (<span id="satspriceczk">0</span> Kč)
+   <hr />
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <footer>
+    <div class="center-blok">
+     © Gorrdy
+     <p>
+      Najdete mě zde:<br />
+      <a target="_blank" href="https://discord.gg/8KPPRCj">Discord</a>,
+      <a target="_blank" href="https://twitter.com/_Honza_Dvorak">Twitter</a>,
+      <a target="_blank" href="https://github.com/gorrdy">Github</a>,
+      <a target="_blank" href="mailto:dvorakh1997@gmail.com">E-mail</a>
+     </p>
+     <p>
+      Další zajímavé projekty:<br />
+      <a target="_blank" href="https://btc-slovnik.cz/"
+       >Bitcoinový slovníček pro mírně pokročilé</a
+      >,
+      <a target="_blank" href="https://www.kryptodoupe.cz/">Kryptodoupě.cz</a>,
+      <a
+       target="_blank"
+       href="https://www.youtube.com/channel/UCCegl13nmUvxUKMJqng1S-A"
+       >Bitcoinovej kanál</a
+      >
+     </p>
+     <hr />
+    </div>
+   </footer>
+  </div>
+ </body>
+</html>
