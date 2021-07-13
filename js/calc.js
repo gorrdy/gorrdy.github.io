@@ -1,4 +1,16 @@
-function GetBtcPrice (name) {
+var myVar;
+$(document).ready(init())
+
+function init() {
+  GetCurrentBtcPrice();
+  myVar = setInterval(LoopBtcPrice, 60000);
+}
+
+function LoopBtcPrice() {
+  GetCurrentBtcPrice();
+}
+
+function GetBtcPrice () {
   var datum = document.getElementById("date").value
   var sats  = document.getElementById("amount").value
   var date = datum
@@ -13,19 +25,31 @@ function GetBtcPrice (name) {
       var price_btc = test.responseJSON.bpi[date]
 
       var price_btc_czk = price_btc * usdczk
-      price_btc = round(price_btc, 1)
-      price_btc_czk = round(price_btc_czk, 1)
+      price_btc = round(price_btc, 0)
+      price_btc_czk = round(price_btc_czk, 0)
       $("#btcprice").html(price_btc)
       $("#btcpriceczk").html(price_btc_czk)
 
       var price_sats = price_btc / 100000000 * sats
       var price_sats_czk = price_sats * usdczk
-      price_sats = round(price_sats, 1)
-      price_sats_czk = round(price_sats_czk, 1)
+      price_sats = round(price_sats, 0)
+      price_sats_czk = round(price_sats_czk, 0)
       $("#satscount").html(sats)
       $("#satsprice").html(price_sats)
       $("#satspriceczk").html(price_sats_czk)
     })
+  })
+}
+
+function GetCurrentBtcPrice () {
+	
+  var url = 'https://api.coindesk.com/v1/bpi/currentprice/CZK.json'
+  var response = $.getJSON( url , function() {
+    var price_btc_current_usd = round(response.responseJSON.bpi.USD.rate_float, 0)
+    var price_btc_current_czk = round(response.responseJSON.bpi.CZK.rate_float, 0)
+    $("#currentbtcpriceusd").html(price_btc_current_usd)
+    console.log(price_btc_current_usd)
+    $("#currentbtcpriceczk").html(price_btc_current_czk)
   })
 }
 

@@ -18,20 +18,34 @@
    <a href="o_projektu.html"> <li class="nav-item-right">O projektu</li> </a>
   
   </ul>
-    <p class="center-paragraph">Vypočti cenu např. 50,000 Satoshi v 03-31-2018 </p>
-  <form class="center-form" onsubmit="GetBtcPrice();return false;">
+  <div class="box">
+    <h2 class="center-paragraph">Aktuální cena BTC </h2>
+    <form class="center-form" onsubmit="GetCurrentBtcPrice(); myFunction();return false;">
+    </form>
+    <div class="center-paragraph">
+	    Bitcoin = <span id="currentbtcpriceusd">0</span> USD<br />
+	    Bitcoin = <span id="currentbtcpriceczk">0</span> CZK<br />
+
+    </div>
+  </div>
+  <div class="box">
+    <h2 class="center-paragraph">Historická cena </h2>
+    <form class="center-form" onsubmit="GetBtcPrice();return false;">
     <label for="date">Datum:</label><br>
     <input type="date" id="date" name="date" min="2010-07-18"><br><br>
     <label for="amount">Počet satoshi:</label><br>
     <input type="number" id="amount" name="amount"><br><br>
     <input type="submit" value="Vypočítat">
-  </form>
+    </form>
     <div class="center-paragraph">
 	    <p>Data ze dne <span id="den_datum">*zadejte datum*</span> </p>
 	    Bitcoin = $<span id="btcprice">0</span> (<span id="btcpriceczk">0</span> Kč)<br />
 	    <span id="satscount"></span> satoshi = $<span id="satsprice">0</span> (<span id="satspriceczk">0</span> Kč)
 
     </div>
+   </div>
+   
+   
    <hr />
 
    <footer>
