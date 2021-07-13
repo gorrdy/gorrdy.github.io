@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="./css/styles.css" />
   <link rel="icon" type="image/png" href="images/bitcoin-black.png"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+  <script src="js/calc.js" type="text/javascript"></script>
  </head>
  <body class="content">
  <h1><a href="index.html">Víte, že... <span style="color:orange">Bitcoin</span></a></h1>
@@ -492,10 +494,7 @@ PC v kavárně<br />
     PS: Uložte si URL odkaz peněženky, je to v podstatě váš přístupový kód.
    </p>
    <div class="center-div" style="width:250px">
-    <img
-     alt="QR platba"
-     src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&amp;data=LNURL1DP68GURN8GHJ7MRWVF5HGUEWVDHK6TMVDE6HYMRS9ASHQ6F0WCCJ7MRWW4EXCTENXSEQD0Z9ZY"
-    /><br />
+    <img alt="QR platba" src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&amp;data=LNURL1DP68GURN8GHJ7MRWVF5HGUEWVDHK6TMVDE6HYMRS9ASHQ6F0WCCJ7MRWW4EXCTENXSEQD0Z9ZY"/><br />
     <div class="center-text">Příklad QR kódu LNURL</div>
    </div>
    <div class="fact">
@@ -513,7 +512,7 @@ PC v kavárně<br />
    </div>
    <hr />
    <footer>
-    <div class="center-blok">
+    <div>
      © Gorrdy
      <p>
       Najdete mě zde:<br />
@@ -524,16 +523,15 @@ PC v kavárně<br />
      </p>
      <p>
       Další zajímavé projekty:<br />
-      <a target="_blank" href="https://btc-slovnik.cz/"
-       >Bitcoinový slovníček pro mírně pokročilé</a
-      >,
+      <a target="_blank" href="https://btc-slovnik.cz/">Bitcoinový slovníček pro mírně pokročilé</a>,
       <a target="_blank" href="https://www.kryptodoupe.cz/">Kryptodoupě.cz</a>,
-      <a
-       target="_blank"
-       href="https://www.youtube.com/channel/UCCegl13nmUvxUKMJqng1S-A"
-       >Bitcoinovej kanál</a
-      >
+      <a target="_blank" href="https://www.youtube.com/channel/UCCegl13nmUvxUKMJqng1S-A">Bitcoinovej kanál</a>
      </p>
+     <p>
+ 	<a href="" onclick="insertQr(); return false;">Příspěvek</button><br />
+	<div id="lnurl"></div>
+     </p>
+
      <hr />
     </div>
    </footer>

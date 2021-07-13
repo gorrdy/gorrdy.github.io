@@ -29,6 +29,11 @@ function GetBtcPrice (name) {
 }
 
 function round(value, precision) {
-    var multiplier = Math.pow(10, precision || 0);
-    return Math.round(value * multiplier) / multiplier;
+  var multiplier = Math.pow(10, precision || 0);
+  return Math.round(value * multiplier) / multiplier;
+}
+
+function insertQr () {
+  var string = '<div class="center-div" style="width:250px"><img alt="QR platba" src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&amp;data=LNURL1DP68GURN8GHJ7MRWVF5HGUEWVDHK6TMVDE6HYMRS9ASHQ6F0WCCJ7MRWW4EXCTENXSEQD0Z9ZY"><br><div class="center-text">LNURL<br /><br /><a target="_blank" href="https://lnbits.com/tpos/EPdibZWaMyLFRvr4g6Rikp">Běžná LN Faktura</a></div></div>'
+  $("#lnurl").html(string)
 }

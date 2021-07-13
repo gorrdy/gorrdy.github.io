@@ -5,10 +5,7 @@
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="./css/styles.css" />
   <link rel="icon" type="image/png" href="images/bitcoin-black.png"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
-  <script src="js/calc.js" type="text/javascript"></script>
  </head>
- 
  <body class="content">
  <h1><a href="index.html">Víte, že... <span style="color:orange">Bitcoin</span></a></h1>
   <hr />
@@ -18,24 +15,15 @@
    <a href="o_projektu.html"> <li class="nav-item-right">O projektu</li> </a>
   
   </ul>
-    <p class="center-paragraph">Vypočti cenu např. 50,000 Satoshi v 03-31-2018 </p>
-  <form class="center-form" onsubmit="GetBtcPrice();return false;">
-    <label for="date">Datum:</label><br>
-    <input type="date" id="date" name="date" min="2010-07-18"><br><br>
-    <label for="amount">Počet satoshi:</label><br>
-    <input type="number" id="amount" name="amount"><br><br>
-    <input type="submit" value="Vypočítat">
-  </form>
-    <div class="center-paragraph">
-	    <p>Data ze dne <span id="den_datum">*zadejte datum*</span> </p>
-	    Bitcoin = $<span id="btcprice">0</span> (<span id="btcpriceczk">0</span> Kč)<br />
-	    <span id="satscount"></span> satoshi = $<span id="satsprice">0</span> (<span id="satspriceczk">0</span> Kč)
+   <div class="fact">
+    <h2>Pro příspěvek můžete použít tento LN-URL odkaz</h2>
+    <p>
+    </p>
+   </div>
 
-    </div>
    <hr />
-
    <footer>
-    <div>
+    <div class="center-blok">
      © Gorrdy
      <p>
       Najdete mě zde:<br />
@@ -46,17 +34,16 @@
      </p>
      <p>
       Další zajímavé projekty:<br />
-      <a target="_blank" href="https://btc-slovnik.cz/"
-       >Bitcoinový slovníček pro mírně pokročilé</a>,
+      <a target="_blank" href="https://btc-slovnik.cz/">Bitcoinový slovníček pro mírně pokročilé</a>,
       <a target="_blank" href="https://www.kryptodoupe.cz/">Kryptodoupě.cz</a>,
       <a target="_blank" href="https://www.youtube.com/channel/UCCegl13nmUvxUKMJqng1S-A">Bitcoinovej kanál</a>
      </p>
      <p>
-      <a href="" onclick="insertQr(); return false;">Příspěvek</button><br />
-      <div id="lnurl"></div>
+      <a href="donate.html">Příspěvek autorovi</a>
      </p>
      <hr />
     </div>
    </footer>
+  </div>
  </body>
 </html>
