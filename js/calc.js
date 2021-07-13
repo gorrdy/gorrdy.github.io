@@ -4,7 +4,7 @@ $(document).ready(init())
 
 function init() {
   GetCurrentBtcPrice();
-  myVar = setInterval(LoopBtcPrice, 2000);
+  myVar = setInterval(LoopBtcPrice, 60000);
 }
 
 function LoopBtcPrice() {
