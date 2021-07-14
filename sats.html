@@ -21,12 +21,12 @@
     <form class="center-form" onsubmit="GetCurrentBtcPrice(); myFunction();return false;">
     </form>
     <div class="center-paragraph">
-      Bitcoin = <span id="currentbtcprice">0</span> CZK<br />
+      Bitcoin = <span id="currentbtcprice">0</span> <span id="cur4"></span><br />
     </div>
   </div>
 
   <div class="box">
-    <h2 class="center-paragraph">Konverze <span id="currencySelected">CZK</span> <span onclick="ChangeCurrency(); GetCurrentBtcPrice();" id="currencySelectionButton">⇄</span></h2> 
+    <h2 class="center-paragraph">Konverze do <span id="currencySelected">CZK</span> <span onclick="ChangeCurrency(); GetCurrentBtcPrice();detectLastActionAndUpdate()" id="currencySelectionButton">⇄</span></h2> 
     <form class="center-form">
       <label>Přirážka/Sleva</label><br />
       <input id="premiumPercent" type="number" placeholder="premium/sleva v %" value="" oninput="detectLastActionAndUpdate(this.value)" onchange="detectLastActionAndUpdate(this.value)"> <br />
@@ -34,17 +34,17 @@
       <label>Sats</label><br />
       <input id="inputSatoshi" type="number" placeholder="počet satoshi" oninput="kryptoConverter(this.value)" onchange="kryptoConverter(this.value)"> <br />
 
-      <label>Czk</label><br />
+      <label id="currencySelected2">CZK</label><br />
       <input id="inputCzk" type="number" placeholder="počet czk" oninput="kryptoConverter2(this.value)" onchange="kryptoConverter2(this.value)"> <br />
       <div id="outputSatoshi" style="display:none">
       S přirážkou: <span id="inputSatoshiPlus" type="number" placeholder="počet satoshi plus"></span> Sat<br />
       Střed: <span id="inputSatoshiMiddle" type="number" placeholder="počet satoshi plus"></span> Sat<br />
       Se slevou: <span id="inputSatoshiMinus" type="number" placeholder="počet satoshi minus"></span> Sat<br />
       </div>
-      <div id="outputCzk" style="display:none">
-      S přirážkou: <span id="inputCzkPlus" type="number" placeholder="počet czk plus"></span> Kč <br />
-      Střed: <span id="inputCzkMiddle" type="number" placeholder="počet czk plus"></span> Kč<br />
-      Se slevou: <span id="inputCzkMinus" type="number" placeholder="počet czk minus"></span> Kč<br />
+      <div id="outputCurrency" style="display:none">
+      S přirážkou: <span id="inputCurrencyPlus" type="number" placeholder="počet Currency plus"></span> <span id="cur1"></span><br />
+      Střed: <span id="inputCurrencyMiddle" type="number" placeholder="počet Currency plus"></span> <span id="cur2"></span><br />
+      Se slevou: <span id="inputCurrencyMinus" type="number" placeholder="počet Currency minus"></span> <span id="cur3"></span><br />
       </div>
     </form>
   </div>

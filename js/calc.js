@@ -64,7 +64,7 @@ function GetCurrentBtcPrice () {
 	  if (currency === "USD"){
 		price_btc_current = usdp
 	  }
-      $("#currentbtcprice").html(price_btc_current)
+      $("#currentbtcprice").html(round(price_btc_current,0))
     })
   })
 }
@@ -78,38 +78,90 @@ function kryptoConverter(valNum) {
   var url = 'https://api.coindesk.com/v1/bpi/currentprice/CZK.json'
   var response = $.getJSON( url , function() {
     var price_btc_current_czk = round(response.responseJSON.bpi.CZK.rate_float, 0)
-    var premiumPlus = (1 + (document.getElementById("premiumPercent").value / 100));
-    var premiumMinus = (1 - (document.getElementById("premiumPercent").value / 100));
-    valNum = parseFloat(valNum)
-    valNum = valNum * price_btc_current_czk / 100000000
-    var valNumPlus = valNum * premiumPlus;
-    var valNumMinus = valNum * premiumMinus;
-    valNum = round(valNum, 1)
-    document.getElementById("inputCzk").value="";
-    Show("outputSatoshi")
-    Hide("outputCzk")
-    $("#inputCzkPlus").html(round(valNumPlus, 0));
-    $("#inputCzkMiddle").html(round(valNum, 0));
-    $("#inputCzkMinus").html(round(valNumMinus, 0));
+    var price_btc_current_usd = round(response.responseJSON.bpi.USD.rate_float, 0)
+    
+    var url2 = 'https://api.coindesk.com/v1/bpi/currentprice/EUR.json'
+    var eur = $.getJSON( url2 , function() {
+	  var currency = document.getElementById("currencySelected").value
+      var price_btc_current_czk = round(response.responseJSON.bpi.CZK.rate_float, 0)
+      var price_btc_current_eur = round(eur.responseJSON.bpi.EUR.rate_float, 0)
+      var premiumPlus = (1 + (document.getElementById("premiumPercent").value / 100));
+      var premiumMinus = (1 - (document.getElementById("premiumPercent").value / 100));
+      valNum = parseFloat(valNum)
+      var price_btc_current
+      if (!currency) {
+		price_btc_current = price_btc_current_czk
+		$("#cur1").html("Kč");$("#cur2").html("Kč");$("#cur3").html("Kč");$("#cur4").html("Kč")
+	  }
+	  if (currency === "CZK"){
+		price_btc_current = price_btc_current_czk
+		$("#cur1").html("Kč");$("#cur2").html("Kč");$("#cur3").html("Kč");$("#cur4").html("Kč")
+	  }
+	  if (currency === "EUR"){
+		price_btc_current = price_btc_current_eur
+		$("#cur1").html("EUR");$("#cur2").html("EUR");$("#cur3").html("EUR");$("#cur4").html("EUR")
+	  }
+	  if (currency === "USD"){
+		price_btc_current = price_btc_current_usd
+		$("#cur1").html("USD");$("#cur2").html("USD");$("#cur3").html("USD");$("#cur4").html("USD")
+	  }
+      valNum = valNum * price_btc_current / 100000000
+      var valNumPlus = valNum * premiumPlus;
+      var valNumMinus = valNum * premiumMinus;
+      valNum = round(valNum, 1)
+      document.getElementById("inputCzk").value="";
+      Show("outputSatoshi")
+      Hide("outputCurrency")        
+      $("#inputCurrencyPlus").html(round(valNumPlus, 0));
+      $("#inputCurrencyMiddle").html(round(valNum, 0));
+      $("#inputCurrencyMinus").html(round(valNumMinus, 0));
+    })
   })
 }
 function kryptoConverter2(valNum) {
   var url = 'https://api.coindesk.com/v1/bpi/currentprice/CZK.json'
   var response = $.getJSON( url , function() {
     var price_btc_current_czk = round(response.responseJSON.bpi.CZK.rate_float, 0)
-    var premiumPlus = (1 + (document.getElementById("premiumPercent").value / 100));
-    var premiumMinus = (1 - (document.getElementById("premiumPercent").value / 100));
-    valNum = parseFloat(valNum);
-    valNum = valNum / price_btc_current_czk * 100000000
-    var valNumPlus = valNum * premiumPlus;
-    var valNumMinus = valNum * premiumMinus;
-    valNum = round(valNum, 1)
-    document.getElementById("inputSatoshi").value="";
-    Hide("outputSatoshi")
-    Show("outputCzk")
-    $("#inputSatoshiPlus").html(round(valNumPlus, 0));
-    $("#inputSatoshiMiddle").html(round(valNum, 0));
-    $("#inputSatoshiMinus").html(round(valNumMinus, 0));
+    var price_btc_current_usd = round(response.responseJSON.bpi.USD.rate_float, 0)
+    var url2 = 'https://api.coindesk.com/v1/bpi/currentprice/EUR.json'
+    var eur = $.getJSON( url2 , function() {
+	  var currency = document.getElementById("currencySelected").value
+      var price_btc_current_eur = round(eur.responseJSON.bpi.EUR.rate_float, 0)
+      var premiumPlus = (1 + (document.getElementById("premiumPercent").value / 100));
+      var premiumMinus = (1 - (document.getElementById("premiumPercent").value / 100));
+      valNum = parseFloat(valNum);
+      
+      var price_btc_current
+      console.log("test")
+      console.log(currency)
+      if (!currency) {
+		price_btc_current = price_btc_current_czk
+		
+	  }
+	  if (currency === "CZK"){
+		price_btc_current = price_btc_current_czk
+		
+	  }
+	  if (currency === "EUR"){
+		price_btc_current = price_btc_current_eur
+		
+	  }
+	  if (currency === "USD"){
+		price_btc_current = price_btc_current_usd
+		
+	  }
+       
+      valNum = valNum / price_btc_current * 100000000
+      var valNumPlus = valNum * premiumPlus;
+      var valNumMinus = valNum * premiumMinus;
+      valNum = round(valNum, 1)
+      document.getElementById("inputSatoshi").value="";
+      Hide("outputSatoshi")
+      Show("outputCurrency")
+      $("#inputSatoshiPlus").html(round(valNumPlus, 0));
+      $("#inputSatoshiMiddle").html(round(valNum, 0));
+      $("#inputSatoshiMinus").html(round(valNumMinus, 0));
+     })
   })
 }
 
@@ -149,19 +201,26 @@ function detectLastActionAndUpdate(){
 function ChangeCurrency(){
   if (!document.getElementById("currencySelected").value){
 	document.getElementById("currencySelected").value = "CZK"
+	document.getElementById("currencySelected2").value = "CZK"
   }
   var current=document.getElementById("currencySelected").value
   if (current === "CZK"){
     $("#currencySelected").html("EUR")
+    $("#currencySelected2").html("EUR")
     document.getElementById("currencySelected").value = "EUR"
+    document.getElementById("currencySelected2").value = "EUR"
   }
   if (current === "EUR"){
     $("#currencySelected").html("USD")
+    $("#currencySelected2").html("USD")
     document.getElementById("currencySelected").value = "USD"
+    document.getElementById("currencySelected2").value = "USD"
   }
   if (current === "USD"){
     $("#currencySelected").html("CZK")
+    $("#currencySelected2").html("CZK")
     document.getElementById("currencySelected").value = "CZK"
+    document.getElementById("currencySelected2").value = "CZK"
   }
   
 }
