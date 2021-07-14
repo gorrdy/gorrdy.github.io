@@ -15,6 +15,18 @@
   <hr />
   <div id="navigation"></div>
   <div class="box">
+    <h2 class="center-paragraph">Konverze</h2>
+    <form class="center-form">
+      <label>Sats</label><br />
+      <input id="inputSatoshi" type="number" placeholder="počet satoshi" oninput="kryptoConverter(this.value)" onchange="kryptoConverter(this.value)"> <br />
+      <label>Czk</label><br />
+      <input id="intputCzk" type="number" placeholder="počet czk" oninput="kryptoConverter2(this.value)" onchange="kryptoConverter2(this.value)"> <br />
+    </form>
+  </div>
+
+
+  <div id="navigation"></div>
+  <div class="box">
     <h2 class="center-paragraph">Aktuální cena BTC </h2>
     <form class="center-form" onsubmit="GetCurrentBtcPrice(); myFunction();return false;">
     </form>

@@ -43,7 +43,6 @@ function GetBtcPrice () {
 }
 
 function GetCurrentBtcPrice () {
-	
   var url = 'https://api.coindesk.com/v1/bpi/currentprice/CZK.json'
   var response = $.getJSON( url , function() {
     var price_btc_current_usd = round(response.responseJSON.bpi.USD.rate_float, 0)
@@ -56,4 +55,23 @@ function GetCurrentBtcPrice () {
 function round(value, precision) {
   var multiplier = Math.pow(10, precision || 0);
   return Math.round(value * multiplier) / multiplier;
+}
+
+function kryptoConverter(valNum) {
+  var url = 'https://api.coindesk.com/v1/bpi/currentprice/CZK.json'
+  var response = $.getJSON( url , function() {
+    var price_btc_current_czk = round(response.responseJSON.bpi.CZK.rate_float, 0)
+    valNum = round(parseFloat(valNum),0);
+    valNum = round(valNum * price_btc_current_czk / 100000000, 0)
+    document.getElementById("intputCzk").value=valNum;
+  })
+}
+function kryptoConverter2(valNum) {
+  var url = 'https://api.coindesk.com/v1/bpi/currentprice/CZK.json'
+  var response = $.getJSON( url , function() {
+    var price_btc_current_czk = round(response.responseJSON.bpi.CZK.rate_float, 0)
+    valNum = round(parseFloat(valNum), 0);
+    valNum = round(valNum / price_btc_current_czk * 100000000, 0)
+    document.getElementById("inputSatoshi").value=valNum;
+  })
 }
