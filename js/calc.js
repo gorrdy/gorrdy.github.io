@@ -1,10 +1,9 @@
 var myVar;
 $(document).ready(init())
 
-
 function init() {
   GetCurrentBtcPrice();
-  myVar = setInterval(LoopBtcPrice, 60000);
+  myVar = setInterval(LoopBtcPrice, 60000)
 }
 
 function LoopBtcPrice() {
@@ -29,8 +28,6 @@ function GetBtcPrice () {
       price_btc_czk = round(price_btc_czk, 0)
       $("#btcprice").html(price_btc)
       $("#btcpriceczk").html(price_btc_czk)
-      
-
       var price_sats = price_btc / 100000000 * sats
       var price_sats_czk = price_sats * usdczk
       price_sats = round(price_sats, 0)
@@ -61,17 +58,58 @@ function kryptoConverter(valNum) {
   var url = 'https://api.coindesk.com/v1/bpi/currentprice/CZK.json'
   var response = $.getJSON( url , function() {
     var price_btc_current_czk = round(response.responseJSON.bpi.CZK.rate_float, 0)
-    valNum = round(parseFloat(valNum),0);
-    valNum = round(valNum * price_btc_current_czk / 100000000, 0)
-    document.getElementById("intputCzk").value=valNum;
+    var premiumPlus = (1 + (document.getElementById("premiumPercent").value / 100));
+    var premiumMinus = (1 - (document.getElementById("premiumPercent").value / 100));
+    valNum = parseFloat(valNum)
+    valNum = valNum * price_btc_current_czk / 100000000
+    var valNumPlus = valNum * premiumPlus;
+    var valNumMinus = valNum * premiumMinus;
+    valNum = round(valNum, 1)
+    document.getElementById("inputCzk").value="";
+    Show("outputSatoshi")
+    Hide("outputCzk")
+    $("#inputCzkPlus").html(round(valNumPlus, 0));
+    $("#inputCzkMiddle").html(round(valNum, 0));
+    $("#inputCzkMinus").html(round(valNumMinus, 0));
   })
 }
 function kryptoConverter2(valNum) {
   var url = 'https://api.coindesk.com/v1/bpi/currentprice/CZK.json'
   var response = $.getJSON( url , function() {
     var price_btc_current_czk = round(response.responseJSON.bpi.CZK.rate_float, 0)
-    valNum = round(parseFloat(valNum), 0);
-    valNum = round(valNum / price_btc_current_czk * 100000000, 0)
-    document.getElementById("inputSatoshi").value=valNum;
+    var premiumPlus = (1 + (document.getElementById("premiumPercent").value / 100));
+    var premiumMinus = (1 - (document.getElementById("premiumPercent").value / 100));
+    valNum = parseFloat(valNum);
+    valNum = valNum / price_btc_current_czk * 100000000
+    var valNumPlus = valNum * premiumPlus;
+    var valNumMinus = valNum * premiumMinus;
+    valNum = round(valNum, 1)
+    document.getElementById("inputSatoshi").value="";
+    Hide("outputSatoshi")
+    Show("outputCzk")
+    $("#inputSatoshiPlus").html(round(valNumPlus, 0));
+    $("#inputSatoshiMiddle").html(round(valNum, 0));
+    $("#inputSatoshiMinus").html(round(valNumMinus, 0));
   })
+}
+
+function NullAll1(){
+  document.getElementById("inputSatoshi").value="";
+  document.getElementById("inputCzk").value="";
+  $("#inputSatoshiPlus").html("");
+  $("#inputSatoshiMiddle").html("");
+  $("#inputSatoshiMinus").html("");
+  $("#inputCzkPlus").html("");
+  $("#inputCzkMiddle").html("");
+  $("#inputCzkMinus").html("");
+}
+
+function Show(id) {
+  var x = document.getElementById(id);
+  x.style.display = "none";
+}
+
+function Hide(id) {
+  var x = document.getElementById(id);
+  x.style.display = "block";
 }
