@@ -30,7 +30,7 @@ $(document).ready(function(){
 })
 
 function insertQr () {
-  var string = '<div class="center-div" style="width:250px"><img alt="QR platba" src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&amp;data=lnurl1dp68gurn8ghj7mrwvf5hguewvdhk6tmvde6hymrs9ashq6f0wccj7mrww4excte5xvcs69akg9"><br></div><div class="center-text">lnurl1dp68gurn8ghj7mrwvf5hguewvdhk6tmvde6hymrs9ashq6f0wccj7mrww4exctenxseqd0z9zy<br /><br /><a target="_blank" href="https://lnbits.com/tpos/EPdibZWaMyLFRvr4g6Rikp">Běžná LN Faktura</a></div></div>'
+  var string = '<div class="center-div" style="width:250px"><img alt="QR platba" src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&amp;data=lnurl1dp68gurn8ghj7mrwvf5hguewvdhk6tmvde6hymrs9ashq6f0wccj7mrww4excte5xvcs69akg9"><br></div><div class="center-text">lnurl1dp68gurn8ghj7mrwvf5hguewvdhk6tmvde6hymrs9ashq6f0wccj7mrww4exctenxseqd0z9zy<br /><br /><a id="donate2" onclick="CreateInvoice()" href="#donate2">Běžná LN Faktura</a></div></div>'
   $("#lnurl").html(string)
   $('html,body').animate({scrollTop: document.body.scrollHeight},"slow");
 }
