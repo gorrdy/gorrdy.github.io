@@ -113,3 +113,15 @@ function Hide(id) {
   var x = document.getElementById(id);
   x.style.display = "block";
 }
+
+function detectLastActionAndUpdate(){
+  var in_sat = document.getElementById("inputSatoshi").value;
+  var in_czk = document.getElementById("inputCzk").value;
+  console.log(in_sat)
+  console.log(in_czk)
+  if(in_sat){
+    kryptoConverter(in_sat)
+  } else {
+    kryptoConverter2(in_czk)
+  }
+}

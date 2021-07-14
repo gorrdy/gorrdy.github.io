@@ -30,7 +30,7 @@
     <h2 class="center-paragraph">Konverze</h2>
     <form class="center-form">
       <label>Přirážka/Sleva</label><br />
-      <input id="premiumPercent" type="number" placeholder="premium/sleva v %" value=""> <br />
+      <input id="premiumPercent" type="number" placeholder="premium/sleva v %" value="" oninput="detectLastActionAndUpdate(this.value)" onchange="detectLastActionAndUpdate(this.value)"> <br />
       
       <label>Sats</label><br />
       <input id="inputSatoshi" type="number" placeholder="počet satoshi" oninput="kryptoConverter(this.value)" onchange="kryptoConverter(this.value)"> <br />
