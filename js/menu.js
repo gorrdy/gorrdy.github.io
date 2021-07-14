@@ -9,6 +9,10 @@ $(document).ready(function(){
   var footerString = `<div>
      © Gorrdy
      <p>
+ 	  <a id="donate" href="#donate" onclick="insertQr(); return false;">Podpořit projekt</a><br />
+	  <div id="lnurl"></div>
+     </p>    
+     <p>
       Najdete mě zde:<br />
       <a target="_blank" href="https://discord.gg/8KPPRCj">Discord</a>,
       <a target="_blank" href="https://twitter.com/_Honza_Dvorak">Twitter</a>,
@@ -21,10 +25,6 @@ $(document).ready(function(){
       <a target="_blank" href="https://www.kryptodoupe.cz/">Kryptodoupě.cz</a>,
       <a target="_blank" href="https://www.youtube.com/channel/UCCegl13nmUvxUKMJqng1S-A">Bitcoinovej kanál</a>
      </p>
-     <p>
- 	  <a id="donate" href="#donate" onclick="insertQr(); return false;">Příspěvek</a><br />
-	  <div id="lnurl"></div>
-     </p>    
      </div>`
    $("#footer").html(footerString)
 })

@@ -13,9 +13,7 @@ function CreateInvoice(){
     if (xhr.readyState === 4 && xhr.status === 201) {
       var jsonobject = JSON.parse(xhr.responseText)
       var invoice = jsonobject.payment_request
-      console.log(invoice)
       insertQr2(invoice)
-      return invoice
     }
   };
 
