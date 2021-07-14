@@ -93,7 +93,7 @@ function kryptoConverter2(valNum) {
   })
 }
 
-function NullAll1(){
+function NullAll(){
   document.getElementById("inputSatoshi").value="";
   document.getElementById("inputCzk").value="";
   $("#inputSatoshiPlus").html("");
