@@ -21,13 +21,12 @@
     <form class="center-form" onsubmit="GetCurrentBtcPrice(); myFunction();return false;">
     </form>
     <div class="center-paragraph">
-      Bitcoin = <span id="currentbtcpriceusd">0</span> USD<br />
-      Bitcoin = <span id="currentbtcpriceczk">0</span> CZK<br />
+      Bitcoin = <span id="currentbtcprice">0</span> CZK<br />
     </div>
   </div>
 
   <div class="box">
-    <h2 class="center-paragraph">Konverze</h2>
+    <h2 class="center-paragraph">Konverze <span id="currencySelected">CZK</span> <span onclick="ChangeCurrency(); GetCurrentBtcPrice();" id="currencySelectionButton">⇄</span></h2> 
     <form class="center-form">
       <label>Přirážka/Sleva</label><br />
       <input id="premiumPercent" type="number" placeholder="premium/sleva v %" value="" oninput="detectLastActionAndUpdate(this.value)" onchange="detectLastActionAndUpdate(this.value)"> <br />

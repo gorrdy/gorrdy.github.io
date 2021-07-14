@@ -42,10 +42,30 @@ function GetBtcPrice () {
 function GetCurrentBtcPrice () {
   var url = 'https://api.coindesk.com/v1/bpi/currentprice/CZK.json'
   var response = $.getJSON( url , function() {
-    var price_btc_current_usd = round(response.responseJSON.bpi.USD.rate_float, 0)
-    var price_btc_current_czk = round(response.responseJSON.bpi.CZK.rate_float, 0)
-    $("#currentbtcpriceusd").html(price_btc_current_usd)
-    $("#currentbtcpriceczk").html(price_btc_current_czk)
+	currency = document.getElementById("currencySelected").value
+	var usd = response.responseJSON.bpi.USD.rate_float
+	var czk = response.responseJSON.bpi.CZK.rate_float
+	var url2 ='https://api.kb.cz/openapi/v1/exchange-rates/EUR'
+	var eur = $.getJSON( url2 , function() {
+	  var eurczk = eur.responseJSON.middle
+      var usdp = response.responseJSON.bpi.USD.rate_float
+	  var czkp = response.responseJSON.bpi.CZK.rate_float
+	  var eurp = czk / eurczk
+	  var price_btc_current
+	  if (!currency) {
+		price_btc_current = czkp  
+	  }
+	  if (currency === "CZK"){
+		price_btc_current = czkp
+	  }
+	  if (currency === "EUR"){
+		price_btc_current = eurp
+	  }
+	  if (currency === "USD"){
+		price_btc_current = usdp
+	  }
+      $("#currentbtcprice").html(price_btc_current)
+    })
   })
 }
 
@@ -124,4 +144,24 @@ function detectLastActionAndUpdate(){
   } else {
     kryptoConverter2(in_czk)
   }
+}
+
+function ChangeCurrency(){
+  if (!document.getElementById("currencySelected").value){
+	document.getElementById("currencySelected").value = "CZK"
+  }
+  var current=document.getElementById("currencySelected").value
+  if (current === "CZK"){
+    $("#currencySelected").html("EUR")
+    document.getElementById("currencySelected").value = "EUR"
+  }
+  if (current === "EUR"){
+    $("#currencySelected").html("USD")
+    document.getElementById("currencySelected").value = "USD"
+  }
+  if (current === "USD"){
+    $("#currencySelected").html("CZK")
+    document.getElementById("currencySelected").value = "CZK"
+  }
+  
 }
