@@ -73,6 +73,6 @@ function round(value, precision) {
 
 function insertQrToDiv (data, id){
   var div = document.getElementById( id )
-  var qr = '<div class="center-div" style="width:250px"><img alt="QR platba" src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&amp;data=' + data + '">'
-  $(id).html(qr) 
+  var QR = QRCode({msg:data, pal : ["#000000", "#f2f4f8"]});
+  $(id).html(QR) 
 }
