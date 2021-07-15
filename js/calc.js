@@ -64,7 +64,7 @@ function GetCurrentBtcPrice () {
 	  if (currency === "USD"){
 		price_btc_current = usdp
 	  }
-      $("#currentbtcprice").html(round(price_btc_current,0))
+      $("#currentbtcprice").html(formatNumber(round(price_btc_current,0)))
     })
   })
 }
@@ -99,11 +99,11 @@ function kryptoConverter(valNum) {
 	  }
 	  if (currency === "EUR"){
 		price_btc_current = price_btc_current_eur
-		$("#cur1").html("EUR");$("#cur2").html("EUR");$("#cur3").html("EUR");$("#cur4").html("EUR")
+		$("#cur1").html("€");$("#cur2").html("€");$("#cur3").html("€");$("#cur4").html("€")
 	  }
 	  if (currency === "USD"){
 		price_btc_current = price_btc_current_usd
-		$("#cur1").html("USD");$("#cur2").html("USD");$("#cur3").html("USD");$("#cur4").html("USD")
+		$("#cur1").html("$");$("#cur2").html("$");$("#cur3").html("$");$("#cur4").html("$")
 	  }
       valNum = valNum * price_btc_current / 100000000
       var valNumPlus = valNum * premiumPlus;
@@ -112,9 +112,9 @@ function kryptoConverter(valNum) {
       document.getElementById("inputCzk").value="";
       Show("outputSatoshi")
       Hide("outputCurrency")        
-      $("#inputCurrencyPlus").html(round(valNumPlus, 0));
-      $("#inputCurrencyMiddle").html(round(valNum, 0));
-      $("#inputCurrencyMinus").html(round(valNumMinus, 0));
+      $("#inputCurrencyPlus").html(formatNumber(round(valNumPlus, 0)));
+      $("#inputCurrencyMiddle").html(formatNumber(round(valNum, 0)));
+      $("#inputCurrencyMinus").html(formatNumber(round(valNumMinus, 0)));
     })
   })
 }
@@ -158,9 +158,9 @@ function kryptoConverter2(valNum) {
       document.getElementById("inputSatoshi").value="";
       Hide("outputSatoshi")
       Show("outputCurrency")
-      $("#inputSatoshiPlus").html(round(valNumPlus, 0));
-      $("#inputSatoshiMiddle").html(round(valNum, 0));
-      $("#inputSatoshiMinus").html(round(valNumMinus, 0));
+      $("#inputSatoshiPlus").html(formatNumber(round(valNumPlus, 0)));
+      $("#inputSatoshiMiddle").html(formatNumber(round(valNum, 0)));
+      $("#inputSatoshiMinus").html(formatNumber(round(valNumMinus, 0)));
      })
   })
 }
@@ -222,5 +222,8 @@ function ChangeCurrency(){
     document.getElementById("currencySelected").value = "CZK"
     document.getElementById("currencySelected2").value = "CZK"
   }
+}
   
+function formatNumber(num) {
+  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
 }
