@@ -57,6 +57,7 @@ function CallSatsPay(){
         $("#myidlabel").show();
         $("#myid2label").show();
         insertQrToDiv(invoice, "#myid")
+	      console.log(invoice)
         insertQrToDiv(btcaddress, "#myid2")
       }
     };
@@ -73,6 +74,17 @@ function round(value, precision) {
 
 function insertQrToDiv (data, id){
   var div = document.getElementById( id )
-  var QR = QRCode({msg:data, pal : ["#000000", "#f2f4f8"]});
+  var QR = QRCode({
+
+    msg :  data
+    ,dim :  256 
+    ,pad :   6
+    ,mtx :  -1 
+    ,ecl :  "L"
+    ,ecb :   0
+    ,pal : ["#000000", "#f2f4f8"]
+    ,vrb :   1
+
+  });
   $(id).html(QR) 
 }
