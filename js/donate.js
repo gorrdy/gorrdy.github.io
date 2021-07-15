@@ -31,3 +31,48 @@ function insertQr2 (lninvoice) {
   $("#lnurl").html(str2)
   $('html,body').animate({scrollTop: document.body.scrollHeight},"slow");
 }
+
+
+function CallSatsPay(){
+  amount = document.getElementById("satspaynumberczk").value
+  var btcrateurl='https://api.coindesk.com/v1/bpi/currentprice/CZK.json'
+  var response = $.getJSON( btcrateurl , function() {
+    var czk = response.responseJSON.bpi.CZK.rate_float
+    amount = amount * 100000000 / czk
+    amount = round(amount, 0)
+    let JsonStringWithAmount = '{"onchainwallet": "QdzqnLnSqNgmcvMf7foubg", "description": "Muj byznys - HODLeri s.r.o.", "webhook":"false", "time": 60, '+
+    '"amount":' + amount +
+    ', "lnbitswallet":"a698f79f97f94a0f80baad5a98586913"}';
+
+    var xhr = new XMLHttpRequest();
+    var url = "https://lnbits.com/satspay/api/v1/charge";
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.setRequestHeader("X-Api-Key", "7c3956ad17b44ce2927b3d33de03e744");
+    xhr.onreadystatechange = function (invoice) {
+      if (xhr.readyState === 4 && xhr.status === 201) {
+        var jsonobject = JSON.parse(xhr.responseText)
+        var invoice = jsonobject.payment_request
+        var btcaddress = jsonobject.onchainaddress
+        $("#myidlabel").show();
+        $("#myid2label").show();
+        insertQrToDiv(invoice, "#myid")
+        insertQrToDiv(btcaddress, "#myid2")
+      }
+    };
+
+    const data = JSON.stringify(JSON.parse(JsonStringWithAmount));
+    xhr.send(data);
+  })
+}
+
+function round(value, precision) {
+  var multiplier = Math.pow(10, precision || 0);
+  return Math.round(value * multiplier) / multiplier;
+}
+
+function insertQrToDiv (data, id){
+  var div = document.getElementById( id )
+  var qr = '<div class="center-div" style="width:250px"><img alt="QR platba" src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&amp;data=' + data + '">'
+  $(id).html(qr) 
+}
