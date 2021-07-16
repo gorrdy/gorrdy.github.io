@@ -14,6 +14,14 @@
   <hr />
   <div id="navigation"></div>
   <div class="fact">
+	  <h2>Proč je v bitcoinové adrese vždy bc1 na začátku?</h2>
+	  <p>Pokud používáte nejnovější standard (native segwit), což byste měli, pak jste si všimli, že každá adresa začíná znaky "bc1". Jde o lidsky čitelnou část adresy, aby bylo zřejmé, že se jedná o adresu Bitcoinu. Litecoin např. používá začátek adresy ltc1. Ale to sem nepatří.</p>
+	  <p>Začátek je tedy jasný, jen nám ukazuje, že se jedná o bitcoin. Ale ukážeme si kouzlo. Vygenerujte si novou "bc1" adresu. Jaká je šance, že tipnu další znak právě ve vaší adrese? Je to malé "q"? Rád bych tvrdil, že mám jasnovidecké schopnosti, ale asi vám došlo, že to "q" je tam zatím vždy a tak všechny aktuální adresy začínají vlastně "bc1q". Dvojice znaků "bc" tedy značí Bitcoin, následuje "1", což je jen pouhý oddělovač, nezastává žádnou funkci, a poslední ze čtveřice je písmeno "q", označuje verzi adresy. Aktuálně používáme adresy "verze segwitu 0" zastávanou právě písmenem "q".</p>
+	  <p>S blížícím se softforkem Taproot, a taky "verzí segwitu 1", budeme jako čtvrtý znak v adrese používat písmeno "p" (zástupce pro číslo 1). Budoucí bitcoinové adresy se tedy budou lišit opravdu minimálně:</p>
+	  <p>Aktuální: <b>bc1q</b>w3kky508zj7eytzsfu3t2kc047x5cn02mg2c5n</p>
+	  <p>Taproot: <b>bc1p</b>n5c2gm20nc5x740ck2t3ufsztye7jz805ykk3w</p>
+  </div>
+  <div class="fact">
 	  <h2>99.5 % bitcoinů se vytěží už za tři půlení</h2>
 
 <p>Každé cca 4 roky probíhá bitconové půlení, krácení odměn těžařů na polovinu. V začátcích odměňovala síť těžaře 50 BTC za blok, následně 25, 12.5 až dnes odměna klesla k 6.25 BTC za blok.</p>
@@ -52,8 +60,6 @@
 
 <p>Přesný postup pro fajnšmekry, kteří si to chtějí vyzkoušet: <a target="_blank" href="https://btc-slovnik.cz/pages/wallet.html">btc-slovnik.cz</a></p>
   </div>
-	 
-	 
   <div class="fact">
 	  <h2>Blok <a target="_blank" href="https://mempool.space/block/000000000000000003dd2fdbb484d6d9c349d644d8bbb3cbfa5e67f639a465fe">364292</a> obsahoval transakci tak velkou, že se tam už žádná další nevlezla</h2>
     <p>Popravdě, blok obsahoval transakce dvě, coinbase (mincetvornou, za kterou si připsal F2Pool 25 BTC) a k tomu mega-transakci, která zaplnila zbytek bloku. Uzlům trvalo neuvěřitelných 25 sekund ověřit jenom tuto transakci. Zde se můžete podívat na tento blok a jeho 2 transakce. <br /> 
@@ -517,7 +523,6 @@ PC v kavárně<br />
    <p><a target="_blank" href="https://lnbits.com/">lnbits.com</a></p>
    
   </div>
-   
    <div class="fact">
     <h2>Jsou tu limity pro bitcoinové účty a adresy, ale jsou obrovské</h2>
     <p>
