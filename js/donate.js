@@ -41,7 +41,7 @@ function CallSatsPay(){
     var czk = response.responseJSON.bpi.CZK.rate_float
     amount = amount * 100000000 / czk
     amount = round(amount, 0)
-    let JsonStringWithAmount = '{"onchainwallet": "QdzqnLnSqNgmcvMf7foubg", "description": "Muj byznys - HODLeri s.r.o.", "webhook":"false", "time": 60, '+
+    let JsonStringWithAmount = '{"onchainwallet": "J847B58HsKWvVBSLHbwDrw", "description": "Muj byznys - HODLeri s.r.o.", "webhook":"false", "time": 60, '+
     '"amount":' + amount +
     ', "lnbitswallet":"582a09484c874f67b3c6dc28907b61e3"}';
 
