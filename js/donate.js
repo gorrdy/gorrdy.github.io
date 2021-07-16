@@ -5,10 +5,10 @@ function CreateInvoice(){
   ', "memo": "Donate", "webhook": "false"}';
 
   var xhr = new XMLHttpRequest();
-  var url = "https://lnbits.com/api/v1/payments";
+  var url = "https://pay.sats.cz/api/v1/payments";
   xhr.open("POST", url, true);
   xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.setRequestHeader("X-Api-Key", "561ab0f0829f4d2395e3cad011990613");
+  xhr.setRequestHeader("X-Api-Key", "314e434877574b88b78c300df79d02ec");
   xhr.onreadystatechange = function (invoice) {
     if (xhr.readyState === 4 && xhr.status === 201) {
       var jsonobject = JSON.parse(xhr.responseText)
@@ -43,13 +43,13 @@ function CallSatsPay(){
     amount = round(amount, 0)
     let JsonStringWithAmount = '{"onchainwallet": "QdzqnLnSqNgmcvMf7foubg", "description": "Muj byznys - HODLeri s.r.o.", "webhook":"false", "time": 60, '+
     '"amount":' + amount +
-    ', "lnbitswallet":"a698f79f97f94a0f80baad5a98586913"}';
+    ', "lnbitswallet":"582a09484c874f67b3c6dc28907b61e3"}';
 
     var xhr = new XMLHttpRequest();
-    var url = "https://lnbits.com/satspay/api/v1/charge";
+    var url = "https://pay.sats.cz/satspay/api/v1/charge";
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-Type", "application/json");
-    xhr.setRequestHeader("X-Api-Key", "7c3956ad17b44ce2927b3d33de03e744");
+    xhr.setRequestHeader("X-Api-Key", "91c2958299dc4ff787ec9c63f7eae6f5");
     xhr.onreadystatechange = function (invoice) {
       if (xhr.readyState === 4 && xhr.status === 201) {
         var jsonobject = JSON.parse(xhr.responseText)
