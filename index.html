@@ -39,7 +39,7 @@
   <div class="fact">
    <h2>V začátcích Bitcoinu někdo vytěžil 184 miliard bitcoinů </h2>
 
-<p>Odehrálo se to celé v bloku č. <a target="_blank" href="https://mempool.space/block/000000000069e1affe7161ab4bcbeacebb4ddf155b50e807f42de971b688a09b">74638</a>, kdy se v blockchainu objevila transakce se dvěma výstupy, každým po 92 miliardách bitcoinů. Tuto skutečnost se podařilo zjistit až teprve po ~90 minutách. V ten okamžik začalo pátrání, co se vlastně stalo. Bug byl způsoben technickou záležitostí, útočník nastavil takový poplatek, aby součet vstupů, výstupů vyšel záporně, a vyústilo to v nesmyslný efekt, připsání miliard bitcoinů na dvě adresy.</p>
+<p>Odehrálo se to celé v bloku č. <a target="_blank" href="https://mempool.sats.cz/block/000000000069e1affe7161ab4bcbeacebb4ddf155b50e807f42de971b688a09b">74638</a>, kdy se v blockchainu objevila transakce se dvěma výstupy, každým po 92 miliardách bitcoinů. Tuto skutečnost se podařilo zjistit až teprve po ~90 minutách. V ten okamžik začalo pátrání, co se vlastně stalo. Bug byl způsoben technickou záležitostí, útočník nastavil takový poplatek, aby součet vstupů, výstupů vyšel záporně, a vyústilo to v nesmyslný efekt, připsání miliard bitcoinů na dvě adresy.</p>
 
 <p>Kritická chyba byla opravena  asi po dvou hodinách dvojicí Gavin Andresen a Satoshi Nakamoto, a tato 184 miliardová transakce byla zneplatněna, což vyústilo v soft fork. Tehdy bylo celkem obtížné kontaktovat přes 50 % provozovatelů nodů, ale nakonec většina upgradovala své nody na Bitcoin Core 0.3.10 a vytvořila tak delší chain, tu větev, kterou používáme i dnes.</p>
 
@@ -61,9 +61,9 @@
 <p>Přesný postup pro fajnšmekry, kteří si to chtějí vyzkoušet: <a target="_blank" href="https://btc-slovnik.cz/pages/wallet.html">btc-slovnik.cz</a></p>
   </div>
   <div class="fact">
-	  <h2>Blok <a target="_blank" href="https://mempool.space/block/000000000000000003dd2fdbb484d6d9c349d644d8bbb3cbfa5e67f639a465fe">364292</a> obsahoval transakci tak velkou, že se tam už žádná další nevlezla</h2>
+	  <h2>Blok <a target="_blank" href="https://mempool.sats.cz/block/000000000000000003dd2fdbb484d6d9c349d644d8bbb3cbfa5e67f639a465fe">364292</a> obsahoval transakci tak velkou, že se tam už žádná další nevlezla</h2>
     <p>Popravdě, blok obsahoval transakce dvě, coinbase (mincetvornou, za kterou si připsal F2Pool 25 BTC) a k tomu mega-transakci, která zaplnila zbytek bloku. Uzlům trvalo neuvěřitelných 25 sekund ověřit jenom tuto transakci. Zde se můžete podívat na tento blok a jeho 2 transakce. <br /> 
-    <a target="_blank" href="https://mempool.space/block/000000000000000003dd2fdbb484d6d9c349d644d8bbb3cbfa5e67f639a465fe">mempool.space</a></p>
+    <a target="_blank" href="https://mempool.sats.cz/block/000000000000000003dd2fdbb484d6d9c349d644d8bbb3cbfa5e67f639a465fe">mempool.sats.cz</a></p>
 
 <p>Mega-transakce měla neuvěřitelných 5570 vstupů (neutracených UTXO z předchozích transakcí), všechny tyto vstupy pochází ze 3 adres. Protože si ji F2Pool vytěžil sám, nemusel zaplatit žádný poplatek za její zpracování. Otázkou je, jestli se to vyplatilo. Objem, který takto F2Pool zachránil byl 0.0556 BTC, tehdy asi $15, v dnešní hodnotě je to sice asi $2,000, ale připravil se tak o "běžné" poplatky z běžných transakcí. Bloky s odměnou z poplatků přes 0.5 BTC (dnes přes $17,000) nebyly výjimkou. Pokud bychom kalkulovali s tímto rozdílem, připravil se tehdy F2Pool o dnešních asi $15,000.</p>
 
@@ -195,7 +195,7 @@ PC v kavárně<br />
     BTC je zabetonováno na adrese
     <a
      target="_blank"
-     href="https://mempool.space/address/1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
+     href="https://mempool.sats.cz/address/1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa"
      >1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa</a
     >, protože nody by blok s transakcí, jejíž předchůdce není v databázi,
     odmítnuly.
@@ -441,8 +441,8 @@ PC v kavárně<br />
     1) Ztracený Satoshi -
     <a
      target="_blank"
-     href="https://mempool.space/tx/5d80a29be1609db91658b401f85921a86ab4755969729b65257651bb9fd2c10d"
-     >mempool.space</a
+     href="https://mempool.sats.cz/tx/5d80a29be1609db91658b401f85921a86ab4755969729b65257651bb9fd2c10d"
+     >mempool.sats.cz</a
     ><br />
     2) Hodně spálených bitcoinů v jednom bloku -
     <a target="_blank" href="https://bitcointalk.org/index.php?topic=50206.0"
@@ -451,8 +451,8 @@ PC v kavárně<br />
     3) Skoro 500 spálených bitcoinů v jedné transakci -
     <a
      target="_blank"
-     href="https://mempool.space/tx/03acfae47d1e0b7674f1193237099d1553d3d8a93ecc85c18c4bec37544fe386"
-     >mempool.space</a
+     href="https://mempool.sats.cz/tx/03acfae47d1e0b7674f1193237099d1553d3d8a93ecc85c18c4bec37544fe386"
+     >mempool.sats.cz</a
     ><br />
     4) Celkový pošet spálených bitcoinů -
     <a
