@@ -13,6 +13,20 @@
  <h1><a href="index.html">Víte, že... <span style="color:orange">Bitcoin</span></a></h1>
   <hr />
   <div id="navigation"></div>
+  
+  <div class="fact">
+  <h2>Pasphrase není jen tak nějaké heslo</h2>
+
+<p>Pokud používáte passphrase (a já věřím, že používáte), tak passphrase se v algoritmu, jakým se generuje celá peněženka (soukrmé klíče, adresy apod) projeví ze začátku procesu jako parametr, který kompletně změní a znáhodní výsledek funkce (PBKDF2_HMAC, abych byl konkrétní), takže bez vaší passphrase se začnou generovat úplně, ale úplně jiné adresy a k nim soukromé klíče (hesla).</p>
+
+<p>Docílíte tak vyšší bezpečnosti, protože případnému útočníkovi, který by získal nebo nějak odposlechl váš seed (online phishing, vaší chybou apod.) bude naprosto k ničemu, protože není možnost reprodukovat vaše adresy a klíče právě bez vaší passphrase (pokud vaši passphrase zapomenete nebo špatně opíšete, tak se k prostředkům nedostanete, i když máte svůj seed!). Takovýchto passphrase můžete mít spousty. Útočník by zcizil jen prostředky, které si pošlete na "Standardní peněženku", bez passphrase. Ve skutečnosti i obyčejná peněženka, bez passphrase obsahuje tento passphrase parameter.</p>
+
+<p>Samotný parametr té funkce je slovo "mnemonic" následovaný hned vaší passphrase. Pokud bych měl passphrase "GorrdyhoTajnáPeněženka", bitcoin si to zpracuje jako "mnemonicGorrdyhoTajnáPeněženka", kdežto bez passphrase se předá pouze "mnemonic".</p>
+
+<p><a href="https://btc-slovnik.cz/pages/wallet.html">btc-slovnik.cz</a></p>
+  </div>
+  
+  
   <div class="fact">
   <h2>Nejmenší bitcoinové jednotce se říká satoshi</h2>
 
