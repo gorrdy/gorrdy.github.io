@@ -5,6 +5,7 @@ $(document).ready(function(){
    <a href="pay_sats.html"><li class="nav-item">SatsPay</li></a>
    <a target="_blank" href="https://mempool.sats.cz"><li class="nav-item">Mempool</li></a>
    <a target="_blank" href="https://pay.sats.cz"><li class="nav-item">LNBits</li></a>
+   <a target="_blank" href="https://explorer.sats.cz"><li class="nav-item">Explorer</li></a>
    <a href="o_projektu.html"> <li class="nav-item-right">O projektu</li></a>
   </ul>`
   $("#navigation").html(menuString)
