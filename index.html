@@ -15,6 +15,17 @@
   <div id="navigation"></div>
   
   <div class="fact">
+  <h2>Transakční poplatek lze zvýšit</h2>
+  <p>Spousta dnešních peněženek (já vycházím z Trezor Suite) již podporuje zvýšení poplatku bitcoinové transakce. Při odesílání akorát zatrhnete možnost RBF (Replace by fee), a pokud transakce z důvodu nízkého poplatku zůstane "viset", tak můžete jednoduše navýšit poplatek ve své peněžence.</p>
+
+<p>Replace by fee by se do kontextu v češtině dalo přeložit jako "nahraď transakci a zvyš poplatek". V peněžence tuto funkcionalitu aktivujete jedním kliknutím, ale na pozadí se vlastně vytvoří úplně nová transakce, ve které je nastavené akorát vyšší fee. Tato transakce přepíše v mempoolu (shromaždišti nepotvrzených transakcí) původní transakci a uzly s tou původní již přestanou počítat. I kdyby ji uzly nevyřadily z mempoolu, pak stejně bude vytěžena jen jedna, protože obě najednou platit nemohou. Ve většině případů si těžař vybere tu s vyšším poplatkem. Původní se potom ztratí, jakoby neexistovala.</p>
+
+<p>Dobré je připomenout, že tato funkcionalita musí být explicitně povolená v prvotní transakci. Trezor Suite ji má zapnutou ve výchozím stavu. Pokud tato funkcionalita není zapnutá u původní transakce, není možné již zvýšit poplatek a musíte tak počkat, než projde, případně až ji uzly "zapomenou" po delší době a odeslat ji znovu.</p>
+<p><a href="https://wiki.trezor.io/Replace-by-fee_(RBF)">wiki.trezor.io</a></p>
+  </div>
+  
+  
+  <div class="fact">
   <h2>Passphrase není jen tak nějaké heslo</h2>
 
 <p>Pokud používáte passphrase (a já věřím, že používáte), tak passphrase se v algoritmu, jakým se generuje celá peněženka (soukrmé klíče, adresy apod) projeví ze začátku procesu jako parametr, který kompletně změní a znáhodní výsledek funkce (PBKDF2_HMAC, abych byl konkrétní), takže bez vaší passphrase se začnou generovat úplně, ale úplně jiné adresy a k nim soukromé klíče (hesla).</p>
