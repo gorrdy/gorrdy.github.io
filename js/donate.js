@@ -1,5 +1,5 @@
 function CreateInvoice(){
-  amount = parseInt(prompt("Zadejte počet satoshi", "0"), 10);
+  amount = parseInt(prompt("Zadejte počet satoshi", "1000"), 10);
   let JsonStringWithAmount = '{"out":false,'+
   '"amount":' + amount +
   ', "memo": "Donate", "webhook": "false"}';
