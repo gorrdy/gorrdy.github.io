@@ -1,8 +1,10 @@
 function CreateInvoice(){
   amount = parseInt(prompt("Zadejte počet satoshi", "1000"), 10);
-  let JsonStringWithAmount = '{"out":false,'+
-  '"amount":' + amount +
-  ', "memo": "Donate", "webhook": "false"}';
+  message = prompt("Zadejte vzkaz", "Díky!");
+  let JsonStringWithAmount = '{"out":false'+
+  ', "amount":' + amount +
+  ', "memo":' + '"' + message + '"' +
+  ', "webhook": "false"}';
 
   var xhr = new XMLHttpRequest();
   var url = "https://pay.sats.cz/api/v1/payments";
