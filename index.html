@@ -15,6 +15,22 @@
   <hr />
   <div id="navigation"></div>
   <div class="fact">
+	  <h2>Vyzrazení xPub a libovolného soukromého klíče může vést ke ztrátě všech prostředků na peněžence</h2>
+
+<p>Privátní neboli soukromé klíče jsou opravdu velice soukromá záležitost, o to víc, pokud jde o peníze (o Bitcoin). To, že nikomu neukazujete váš seed, beru jako samozřejmost, to byste opravdu dělat neměli, pokud nechcete o své prostředky přijít. Seed je ale takový "rodič" vašich dalších privátních klíčů (ke každé adrese je právě jeden), a chránit byste měli i tyhle "potomky", aby je nikdo neznal (aby se ani jediný nedostal na veřejnost). Dokonce je žádoucí, abyste ho vůbec sami neznali, to zajišťují hardwarové peněženky, které tyto klíče nikdy neopustí a dokonce je neukáží ani vám. Vám stačí znát "rodiče", seed, který na ně dohlíží. Softwarové peněženky by vám tyhle klíče ukázat mohly (např. pro import do jiné peněženky).</p>
+
+<p>V žádném případě nikomu nesdělujte ani jediný privátní klíč. Tento úkon sám o sobě by nebyla taková pohroma. Pohroma by mohla nastat, pokud používáte svůj rozšířený veřejný klíč (xpub, ypub nebo zpub ... odteď jen jako "xpub") pro "watch only" peněženku a uniknul vám společně s libovolným privátním klíčem. Samotný xpub není problém, pokud se jej někdo dozví, v nejhorším případě se může koukat na vaše transakce, ale neudělá žádnou škodu tím, že by vám vaše mince ukradnul.</p>
+
+<p>Ve spojení xpub s jakýmkoliv privátním klíčem ale přichází na řadu matematika. Pokud máte tyto dva údaje, jste schopní dopočítat všechny další privátní klíče, a tudíž vybrat celý účet (jen adresy, které se sledují stejným xpub). Je proto důležité nikomu neposílat soukromý klíč k jedné adrese, ani kdyby na adrese nebyly žádné bitcoiny. Prostředky na jiných účtech nebo dokonce pod jinými passphrase v žádném ohrožení nejsou.</p>
+
+<p>Pokud používáte Ledger nebo Trezor, nemusíte se bát. Není způsob, jak je z toho hardwaru dostat jako běžný uživatel. Nicméně pokud používáte nějaké softwarové peněženky, myslete na to, že privátní klíč se nikam neposílá, za žádných okolností.</p>
+
+<p>
+<a href="https://www.ztohoven.cz/?p=798">ztohoven.cz</a> <br />
+<a href="https://btc-slovnik.cz/pages/wallet.html">btc-slovnik.cz</a></p>
+  </div>
+
+  <div class="fact">
   <h2>Půlení není přesně každé čtyři roky</h2>
 
 <p>Půlení je událost v bitcoinové síti, kdy se těžařům sníží odměna z vytěženého bloku na polovinu (tím jsou myšleny nové bitcoiny, co se dostávají do oběhu, odměny z poplatků se tohle netýká). Tohle se děje tedy cca každé 4 roky, ale to je jen důsledek toho, jak je bitcoin nastaven. Blok by se měl vytěžit jednou za deset minut, v průměru. Půlední nastává jednou za 210,000 bloků, což když si správně roznásobíme a podělíme, dostaneme se ke výsledku cca 4 let. Nicméně jestli to bude třeba týden dřív nebo později opravdu nejde odhadnout.</p>
