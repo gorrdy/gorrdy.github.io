@@ -15,6 +15,15 @@
   <hr />
   <div id="navigation"></div>
   <div class="fact">
+  <h2>Tweet od Elona Muska "In retrospect, it was inevitable" najdete zapsaný v blockchainu</h2>
+
+<p>Krátce předtím, než Tesla oznámila nákup bitcoinů, Elon Musk si v profilu nastavil pouze "#Bitcoin"  a tweetnul právě tento tweet, jež znamená "Vlastně to bylo nevyhnutelné". V tu chvíli tím pravděpodobně myslel ještě tehdy neveřejný nákup.</p>
+
+<p>V transakci <a target="_blank" href="https://mempool.sats.cz/tx/88349380e1f6be0eaefcad8f5abe3303769596caeed63d5de6150bf420e8b0f0">883493...e8b0f0</a> zvěčnil F2Pool tento tweet, když ho zapsal do coinbase transakce bloku č. <a href="https://mempool.sats.cz/block/000000000000000000023c31edf49adb2306d0db74e6f1f032ef76deaa7a464a">668197</a>. Ať už si o Elonovi myslíme cokoliv, tak tohle byl důležitý okamžit pro Bitcoin, jenž rozšířil povědomí o kryptoměnách k davům, jenž by o ně jinak nezavadili. </p>
+
+<p><a target="_blank" href="https://explorer.sats.cz/block/000000000000000000023c31edf49adb2306d0db74e6f1f032ef76deaa7a464a">explorer.sats.cz</a></p>
+  </div>
+  <div class="fact">
 	  <h2>Vyzrazení xPub a libovolného soukromého klíče může vést ke ztrátě všech prostředků na peněžence</h2>
 
 <p>Privátní neboli soukromé klíče jsou opravdu velice soukromá záležitost, o to víc, pokud jde o peníze (o Bitcoin). To, že nikomu neukazujete váš seed, beru jako samozřejmost, to byste opravdu dělat neměli, pokud nechcete o své prostředky přijít. Seed je ale takový "rodič" vašich dalších privátních klíčů (ke každé adrese je právě jeden), a chránit byste měli i tyhle "potomky", aby je nikdo neznal (aby se ani jediný nedostal na veřejnost). Dokonce je žádoucí, abyste ho vůbec sami neznali, to zajišťují hardwarové peněženky, které tyto klíče nikdy neopustí a dokonce je neukáží ani vám. Vám stačí znát "rodiče", seed, který na ně dohlíží. Softwarové peněženky by vám tyhle klíče ukázat mohly (např. pro import do jiné peněženky).</p>
@@ -26,8 +35,8 @@
 <p>Pokud používáte Ledger nebo Trezor, nemusíte se bát. Není způsob, jak je z toho hardwaru dostat jako běžný uživatel. Nicméně pokud používáte nějaké softwarové peněženky, myslete na to, že privátní klíč se nikam neposílá, za žádných okolností.</p>
 
 <p>
-<a href="https://www.ztohoven.cz/?p=798">ztohoven.cz</a> <br />
-<a href="https://btc-slovnik.cz/pages/wallet.html">btc-slovnik.cz</a></p>
+<a target="_blank" href="https://www.ztohoven.cz/?p=798">ztohoven.cz</a> <br />
+<a target="_blank" href="https://btc-slovnik.cz/pages/wallet.html">btc-slovnik.cz</a></p>
   </div>
 
   <div class="fact">
@@ -52,7 +61,7 @@ Podpis z e-mailu: "I/Xp1dLgQWx+omnMq49QucfF8wVO+2G1qDZ1KHp6f7zgHwFOA9UcmLAf6h3a/
 Podpis z e-mailu: "JDAU/7Kf7QEMB+AdgRsu+deO7oRiE9jUx4isDoKMTkYMIxP9QlazIgX2sz25kpegkL5W43hbo4Ykqb5XrAGri+0="</p>
 
 <p>Tyto údaje teď ověříme spolu s "3FsJKPVA2kJKwLhpXNjzckd1T3txEdRgCY" adresou, ze které nám přišel bitcoin (zkuste si sami na odkazu níže, zadejte <b>všechno</b> uvnitř uvozovek, můžete použít i trezor wallet na webu nebo electrum).<br />
-<a href="https://www.verifybitcoinmessage.com/">verifybitcoinmessage.com</a></p>
+<a target="_blank" href="https://www.verifybitcoinmessage.com/">verifybitcoinmessage.com</a></p>
 
 <p>Pro zprávu č.1 peněženka hlásí neplatný podpis (červené pozadí), ale pro zprávu č.2 hlásí "Podpis úspěšně ověřen" (zeleně). Podpis, otisk původní zprávy tedy byl podepsán stejným klíčem, jakým byl odeslán příspěvek na tuto adresu. Můžu si být tedy 100% jistý, že dotyčný, který poslal zprávu č.2 je majitelem adresy, ze které mi příspěvek došel.</p>
   </div>
@@ -65,7 +74,7 @@ Podpis z e-mailu: "JDAU/7Kf7QEMB+AdgRsu+deO7oRiE9jUx4isDoKMTkYMIxP9QlazIgX2sz25k
 <p>Replace by fee by se do kontextu v češtině dalo přeložit jako "nahraď transakci a zvyš poplatek". V peněžence tuto funkcionalitu aktivujete jedním kliknutím, ale na pozadí se vlastně vytvoří úplně nová transakce, ve které je nastavené akorát vyšší fee. Tato transakce přepíše v mempoolu (shromaždišti nepotvrzených transakcí) původní transakci a uzly s tou původní již přestanou počítat. I kdyby ji uzly nevyřadily z mempoolu, pak stejně bude vytěžena jen jedna, protože obě najednou platit nemohou. Ve většině případů si těžař vybere tu s vyšším poplatkem. Původní se potom ztratí, jakoby neexistovala.</p>
 
 <p>Dobré je připomenout, že tato funkcionalita musí být explicitně povolená v prvotní transakci. Trezor Suite ji má zapnutou ve výchozím stavu. Pokud tato funkcionalita není zapnutá u původní transakce, není možné již zvýšit poplatek a musíte tak počkat, než projde, případně až ji uzly "zapomenou" po delší době a odeslat ji znovu.</p>
-<p><a href="https://wiki.trezor.io/Replace-by-fee_(RBF)">wiki.trezor.io</a></p>
+<p><a target="_blank" href="https://wiki.trezor.io/Replace-by-fee_(RBF)">wiki.trezor.io</a></p>
   </div>
   
   
@@ -78,7 +87,7 @@ Podpis z e-mailu: "JDAU/7Kf7QEMB+AdgRsu+deO7oRiE9jUx4isDoKMTkYMIxP9QlazIgX2sz25k
 
 <p>Samotný parametr té funkce je slovo "mnemonic" následovaný hned vaší passphrase. Pokud bych měl passphrase "GorrdyhoTajnáPeněženka", bitcoin si to zpracuje jako "mnemonicGorrdyhoTajnáPeněženka", kdežto bez passphrase se předá pouze "mnemonic".</p>
 
-<p><a href="https://btc-slovnik.cz/pages/wallet.html">btc-slovnik.cz</a></p>
+<p><a target="_blank" href="https://btc-slovnik.cz/pages/wallet.html">btc-slovnik.cz</a></p>
   </div>
   
   
@@ -86,15 +95,15 @@ Podpis z e-mailu: "JDAU/7Kf7QEMB+AdgRsu+deO7oRiE9jUx4isDoKMTkYMIxP9QlazIgX2sz25k
   <h2>Nejmenší bitcoinové jednotce se říká satoshi</h2>
 
 <p>Jednu stomiliontinu bitcoinu nazýváme satoshi (zkr. sat). V češtině používáme "štosovat saty", "kupovat satoshi", v angličtině "stack sats". Návrh na pojmenování různých částeček bitcoinu se objevil na bitcointal.org už v roce 2010. Tehdy šlo v peněženkách zobrazovat zůstatky s přesností na 0.01 BTC (i když bitcoinová síť uměla i tehdy pracovat s osmi desetinnými místy), a tak uživatel ribuck navrhul pojmenovat satoshi právě část bitcoinu 0.01. S tím ale neuspěl, a tak o 4 měsíce později přichází s nápadem pojmenovat tak jednotku nejmenší, tedy jednu stomiliontinu (0.00000001 BTC). <br />
-<a href="https://bitcointalk.org/index.php?topic=407442.0">bitcointalk.org</a> - návrh na pojmenování 0.01 satoshi<br />
-<a href="https://bitcointalk.org/index.php?topic=3311.msg46648#msg46648">bitcointalk.org</a> - návrh na pojmenování nejmenší jednotky satoshi</p>
+<a target="_blank" href="https://bitcointalk.org/index.php?topic=407442.0">bitcointalk.org</a> - návrh na pojmenování 0.01 satoshi<br />
+<a target="_blank" href="https://bitcointalk.org/index.php?topic=3311.msg46648#msg46648">bitcointalk.org</a> - návrh na pojmenování nejmenší jednotky satoshi</p>
 
 <p>Rozhodující post, jak nejmenší jednotce napsal na fórum uživatel marcus_of_augustus 18.02.2011 a název se ujal.<br />
-<a href="https://bitcointalk.org/index.php?topic=3574.msg50647#msg50647">bitcointalk.org</a></p>
+<a target="_blank" href="https://bitcointalk.org/index.php?topic=3574.msg50647#msg50647">bitcointalk.org</a></p>
 
 <p>V historii i dnes se občas používají i další jednotky jako 'bitcent', 'milicent', 'microcent', 'milibitcoin', 'microbitcoin', ale osobně jejich význam nějak nespatřuji a už dnes je přemýšlení v základní, nejmenší, bitcoinové jednotce vlastně standardem v bitcoinové komunitě. K dnešnímu dni je hodnota 150 sat = 1 Kč. Pokud cena celého bitcoinu vystoupá zpět na 1 milion korun, nastane parita 1 haléř = 1 satoshi a tedy 100 sat = 1 Kč. </p>
 
-<p><a href="https://twitter.com/btcslovnik/status/1391049471321063427">twitter.com/btcslovnik</a></p>
+<p><a target="_blank" href="https://twitter.com/btcslovnik/status/1391049471321063427">twitter.com/btcslovnik</a></p>
   </div>
   <div class="fact">
 	  <h2>Proč je v bitcoinové adrese vždy bc1 na začátku?</h2>
