@@ -15,6 +15,30 @@
   <hr />
   <div id="navigation"></div>
   <div class="fact">
+  <h2>Vstup na Lightning je dražší než jedna on-chain transakce. Jak přesně funguje vyvážení kanálů ve Phoenix?</h2>
+
+<p>Provozovatelé peněženek, jako je <a href="https://phoenix.acinq.co/">Phoenix</a> (teď rozebíráme non-custodial peněženky) si vezmou např. 1 % z platby, která je tak velká, že už se nevejde do vašich stávajících kanálů (nebo pokud žádný nemáte). A je to správně! Phoenix musí otevřít platební kanál, což stojí on-chain poplatek, který musí zaplatit (toto břemeno tedy převede na vás formou poplatku). </p>
+
+<p>Otevřením kanálu tedy Phoenix zamkne svoje bitcoiny a okamžitě vám je vzniknutým kanálem přepošle na vaši stranu. Na vaši stranu už se tedy více nevejde. Funguje to jako např. injekční stříkačka, která má nějaký objem (kapacita kanálu) a víc už do ní nenaberete, není kam. To je případ, když si dobijete Phoenix. Pro opětovné přijmutí do kanálu musíte z kanálu poslat ven, abyste uvolnili místo pro příjem (jako když stlačíte píst stříkačky, vznikne místo pro další nabrání tekutiny). Pokud to neuděláte a budete se snažit přijmout znovu, Phoenix nemůže připsat prostředky do existujícího kanálu (ten je plný), tak musí vytvořit nový. Vezme si tedy opět 1 % poplatek.</p>
+
+<p>Není tedy žádoucí štosovat do "nepřipravené" peněženky (ze které průběžně neutrácíte), protože s každou další platbou se otevře další kanál, což je zbytečné a ve výsledku dražší, než jen poslání on-chain (logicky, je to on-chain + poplatek Phoenixu).</p>
+
+<p>Jak tedy peněženku připravit na průběžné štosování? Jenoduše. Převeďte si na Phoenix první platbou větší částku (klidně i větší, než vůbec chcene na LN mít) a jakmile k vám Phoenix otevře kanál (kterým teď nejde příjmat), pošlete ty prostředky ven z peněženky (Android aplikace to umí nativně, iOS využijte nějaké směnárny jako <a href="https://boltz.exchange">boltz.exchange</a> ) zpět na Trezor nebo kamkoliv jinam. Doporučuji minimálně takovou částku, aby vám to dávalo smysl. Minimálně bych doporučil vyšší stovky tisíc satoshi, spíš miliony satoshi.</p>
+<p>V tuhle chvíli jste vašim kanálem "poslali ven" a jste ready už jen příjmat po LN bez problému (samozřejmě můžete i utrácet, to vám zase dělá prostor pro další přijmání) i malé částky. Je to trochu k zamyšlení, ale investice v zaplacení 1% poplatku se časem vyplatí. Vstup na LN je záměrně dražší. Pokud byste tohle chtěli obejít, museli byste používat custodial peněnžeky a potom si to jednou za čas vybrat. Řešení popsané v odstavcích výše vyžaduje zanedbatelnou důvěru ve Phoenix a spravujete si svoje prostředky pod vlastními klíči.</p>
+<p>Velký lightningový kanál je INVESTICE!</p>
+  </div>
+  
+  <div class="fact">
+  <h2>Darovat bitcoiny je dnes velice jednoduché díky Lightning network</h2>
+  
+<p>Nejen Kicom se kdysi zamýšlel, jak jednoduše někomu darovat část bitcoinu tak, aby si to dejme tomu kamarád opravdu vybral a aby nebyl kompromitovaný seed (mnou, když bych si pro jistotu nechal kopii).</p>
+
+<p>Dnes už je možné vytvořit tzv. LNURL withdrawal odkaz (odkaz pro vybrání prostředků z vaší peněženky), který stačí kamarádovi dát. On jej může až za několik týdnů, měsíců nascanovat svojí peněženkou a obnos si převést na svoji peněženku, až uzná za vhodné. Do té doby leží bitcoiny na vaší peněžence, takže kdyby ztratil váš "voucher", můžete mu jednoduše vystavit nový.</p>
+<p><a href="https://pay.sats.cz/withdraw/CmfkZwFT7CQxQ6tqM5qYc9">pay.sats.cz</a></p>
+
+</div>
+  
+  <div class="fact">
   <h2>Tweet od Elona Muska "In retrospect, it was inevitable" najdete zapsaný v blockchainu</h2>
 
 	<p>Krátce předtím, než Tesla oznámila nákup bitcoinů, Elon Musk si v profilu nastavil pouze "#Bitcoin"  a tweetnul právě tento tweet, jež znamená "Vlastně to bylo nevyhnutelné". V tu chvíli tím pravděpodobně myslel ještě tehdy neveřejný nákup.</p>
@@ -23,6 +47,7 @@
 
 	<p><a target="_blank" href="https://explorer.sats.cz/block/000000000000000000023c31edf49adb2306d0db74e6f1f032ef76deaa7a464a">explorer.sats.cz</a></p>
   </div>
+  
   
   <div class="fact">
     <h2>Vyzrazení xPub a libovolného soukromého klíče může vést ke ztrátě všech prostředků na peněžence</h2>
