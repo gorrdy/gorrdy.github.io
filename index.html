@@ -16,6 +16,24 @@
   <div id="navigation"></div>
   
   <div class="fact">
+  <h2>Víte, že slova bitcoinového seedu jsou jen převedená čísla do čitelného textu pomocí jednoduchého "slovníku"? Peněženky je ale vnímají jen jako Jedničky a nuly za sebou.</h2>
+  
+
+<p>Váš 12slovný nebo 24slovný seed máte jistě bezpečně zapsaný a víte, že ta slova jsou velice důležitá. Ve skutečnosti ale jen každé slovo reprezentuje číslo od 1 do 2048 a není za tím žádná velká věda. Např. slovo "amazing" je v anglickém bitcoinovém "<a target="_blank" href="https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt">slovníku</a>" na pozici 63. </p>
+
+<p>Příkladem může být seed "song wreck display sniff possible manage camp crack guilt junior bomb trust". Nikdy tenhle seed na nic nepoužívejte, ale pro ukázku nám poslouží.</p>
+
+<p>Každé slovo najdeme ve slovníku a podíváme se na jeho index. 1658 (song), 2034 (wreck) ... Od indexů odečteme jedničku a zapíšeme:
+1657, 2033, 508, 1643, 1348, 1079, 262, 398, 829, 969, 201,1869.</p>
+
+<p>Pokud je převedeme do binární soustavy, ve které pracují sw i hw peněženky a poskládáme za sebe, dostáváme číslo, což je náš seed v birnární podobě. Jako byste házeli korunou 128x dokola a zapisovali si buď 1 nebo 0 (poslední slovo je odvozené z předchozích jedenácti).</p>
+11001111001 11111110001 00111111100 11001101011 10101000100 10000110111 00100000110 00110001110 01100111101 01111001001 00011001001 1110100</p>
+
+<p>Pokud by někdo chtěl uhodnout váš seed, je to tedy téměř nemožné, protože by musel 128x hodit kostkou a hodit naprosto stejné číslo jako vy.</p>
+  
+  </div>
+  
+  <div class="fact">
 	  
 	  <h2>Bitcoinová síť má neuvěřitelný uptime přes 99.98 %</h2>
 
