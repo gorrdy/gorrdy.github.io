@@ -16,6 +16,14 @@
   <div id="navigation"></div>
   
   <div class="fact">
+  <h2>Bitcoinová transakce neobsahuje žádnou informaci o nastaveném poplatku</h2>
+
+<p>Každá bitcoinová transakce se skládá ze vstupů (odkud bitcoiny posíláme) a výstupů (kam bitcoiny posíláme). V peněžence si také nastavujeme výši poplatku v sat/B nebo sat/vB. Protože peněženka ví, jak bude transakce veliká (v bajtech), ukáže nám i přesně, kolik bude poplatek, ale kam se tedy zadává?</p>
+
+<p>No vlastně nikam. Poplatek je jen rozdíl mezi tím, co do transakce vstupuje a tím, co z ní vystupuje. Obvykle je tento rozdíl celkem minimální, ale každý tento minimální "poplatek" si může utratit pouze těžař, který vytěží daný blok. V transakci tedy specifikuji, že posílám třeba 1 BTC a pokud chci, aby moje transakce byla vytěžena v dalším bloku, v transakci pošlu třeba jen 0.99 BTC. Rozdíl mezi těmito částkami si tedy "připíše" těžař.</p>
+  </div>
+  
+  <div class="fact">
   <h2>Nepoužívejte brainwallets!</h2>
 
 <p>Brainwallet je způsob uložení, kdy nemáte nikde zapsaný seed. Buď si ho pamatujete a nebo (většinou) jsou to nějaká snadno zapamatovatelná slova v jistém pořadí. Pokud si takto sám vytvořím peněženku (brainwallet, jednu adresu, jeden klíč), je skoro jisté, že mi ji někdo vykrade. Princip např. hardwarových nebo i softwarových peněženek je takový, že generují (pseudo)náhodné číslo, které slouží jako výchozí bod pro generování adres (a soukromých klíčů). Takovouhle vlastnost, generování náhodného čísla nemá dokonalou ani sám počítač, natož člověk a náš mozek.</p>
