@@ -16,7 +16,20 @@
   <div id="navigation"></div>
   
   <div class="fact">
-  <h2>Víte, že slova bitcoinového seedu jsou jen převedená čísla do čitelného textu pomocí jednoduchého "slovníku"? Peněženky je ale vnímají jen jako Jedničky a nuly za sebou.</h2>
+  <h2>Nepoužívejte brainwallets!</h2>
+
+<p>Brainwallet je způsob uložení, kdy nemáte nikde zapsaný seed. Buď si ho pamatujete a nebo (většinou) jsou to nějaká snadno zapamatovatelná slova v jistém pořadí. Pokud si takto sám vytvořím peněženku (brainwallet, jednu adresu, jeden klíč), je skoro jisté, že mi ji někdo vykrade. Princip např. hardwarových nebo i softwarových peněženek je takový, že generují (pseudo)náhodné číslo, které slouží jako výchozí bod pro generování adres (a soukromých klíčů). Takovouhle vlastnost, generování náhodného čísla nemá dokonalou ani sám počítač, natož člověk a náš mozek.</p>
+
+<p>Pokud by někdo použil třeba slova "satoshi sakamoto" pro vytvoření bitcoinové adresy, je obrovská šance, že to již někdo zkusil a nebo minimálně někdo takovou adresu sleduje a čeká, jestli tam někdo něco nepošle, aby ji mohl "vybrat". Počítače mohou zkoušet miliardy takových kombinací slov za sekundu a věřte, že se za chvíli trefí.</p>
+
+<p>Příklad:<br />
+"satoshi nakamoto" ➔ <a target="_blank" href="https://mempool.sats.cz/address/1Q7f2rL2irjpvsKVys5W2cmKJYss82rNCy">1Q7f2rL2irjpvsKVys5W2cmKJYss82rNCy</a></p>
+
+<p>Ke generování adres tedy používejte Trezor a nebo důvěryhodné softwarové peněženky.</p>
+  </div>
+  
+  <div class="fact">
+  <h2>Víte, že slova bitcoinového seedu jsou jen převedená čísla do čitelného textu pomocí jednoduchého "slovníku"? Peněženky je ale vnímají jen jako jedničky a nuly za sebou.</h2>
   
 
 <p>Váš 12slovný nebo 24slovný seed máte jistě bezpečně zapsaný a víte, že ta slova jsou velice důležitá. Ve skutečnosti ale jen každé slovo reprezentuje číslo od 1 do 2048 a není za tím žádná velká věda. Např. slovo "amazing" je v anglickém bitcoinovém "<a target="_blank" href="https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt">slovníku</a>" na pozici 63. </p>
