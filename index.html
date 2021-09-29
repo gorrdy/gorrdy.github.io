@@ -9,8 +9,17 @@
   <script src="js/menu.js" type="text/javascript"></script>
   <script src="js/donate.js" type="text/javascript"></script>
   <script src="js/qrcode.min.js" type="text/javascript"></script>
+    <script>
+    function onload() {
+		const queryString = window.location.search;
+	    if (queryString == '?some=satoshis')
+		{
+			window.location.replace('lightning:LNURL1DP68GURN8GHJ7URP0YH8XCT5WVHXX730D3H82UNVWQHKZURF9AMRZTMVDE6HYMP0XG6SAV8662');
+		}
+	}
+  </script>
  </head>
- <body class="content">
+ <body class="content" onload="onload()">
  <h1><a href="index.html">Víte, že... <span style="color:orange">Bitcoin</span></a></h1>
   <hr />
   <div id="navigation"></div>
