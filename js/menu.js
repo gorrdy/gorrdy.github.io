@@ -50,6 +50,7 @@ $(document).ready(function(){
      </p>
      <p>
       Další zajímavé projekty:<br />
+      <a target="_blank" href="https://adopcebtc.cz/">Adopce BTC, firmy, živnostníci</a>,
       <a target="_blank" href="https://btc-slovnik.cz/">Bitcoinový slovníček pro mírně pokročilé</a>,
       <a target="_blank" href="https://www.kryptodoupe.cz/">Kryptodoupě.cz</a>,
       <a target="_blank" href="https://www.youtube.com/channel/UCCegl13nmUvxUKMJqng1S-A">Bitcoinovej kanál</a>
