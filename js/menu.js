@@ -7,6 +7,7 @@ $(document).ready(function(){
    <a target="_blank" href="https://btcpay.sats.cz"><li class="nav-item">Eshop</li></a>
    <a href="o_projektu.html"> <li class="nav-item">O projektu</li></a>
    <a href="apps.html"> <li class="nav-item">Aplikace</li></a>
+   <a href="pay_sats.html"> <li class="nav-item">Aplikace</li></a>
   </ul>`
   $("#navigation").html(menuString)
   
