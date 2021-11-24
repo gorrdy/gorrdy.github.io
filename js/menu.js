@@ -1,9 +1,8 @@
 $(document).ready(function(){
   var menuString = `<ul class="nav">
    <a href="index.html"><li class="nav-item">Domů</li></a>
+   <a target="_blank" href="https://btcplatby.cz"><li class="nav-item">BTC Platby do firem</li></a>
    <a href="sats.html"><li class="nav-item">Cena BTC</li></a>
-   <a href="pay_sats.html"><li class="nav-item">SatsPay</li></a>
-   <a target="_blank" href="https://btcplatby.cz"><li class="nav-item">BTC Platby</li></a>
    <a target="_blank" href="https://btcpay.sats.cz"><li class="nav-item">Eshop</li></a>
    <a href="o_projektu.html"> <li class="nav-item">O projektu</li></a>
    <a href="apps.html"> <li class="nav-item">Aplikace</li></a>
