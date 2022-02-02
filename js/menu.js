@@ -37,7 +37,7 @@ $(document).ready(function(){
   </div>
 <a href="/">
 <button type="submit" class="submit" name="submit" style="min-width:146px;min-height:40px;border-radius:4px;border-style:none;background-color:#0f3b21;" title="Zaplatit pres BTCPayServer">
-<span style="color:#fff">Podpořit</span>
+<span style="color:#fff"><a href="/">Podpořit</a></span>
 
 <img src="https://btcplatby.cz/wp-content/uploads/2022/01/bp_logo_01.png" style="height:40px;display:inline-block;padding:5% 0 5% 5px;vertical-align:middle;">
 </button></a></form>
