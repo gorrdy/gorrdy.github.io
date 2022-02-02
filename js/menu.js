@@ -35,12 +35,13 @@ $(document).ready(function(){
     </select>
     <input type="range" class="btcpay-input-range" min="10" max="1000" step="10" value="10" style="width:146px;margin-bottom:15px;" oninput="handleSliderInput(event);return false" />
   </div>
-<a href="/">
+<a href="#">
+<div>
 <button type="submit" class="submit" name="submit" style="min-width:146px;min-height:40px;border-radius:4px;border-style:none;background-color:#0f3b21;" title="Zaplatit pres BTCPayServer">
-<span style="color:#fff"><a href="/">Podpořit</a></span>
+<span style="color:#fff">Podpořit</span>
 
 <img src="https://btcplatby.cz/wp-content/uploads/2022/01/bp_logo_01.png" style="height:40px;display:inline-block;padding:5% 0 5% 5px;vertical-align:middle;">
-</button></a></form>
+</button></div></a></form>
 <script>
     if (!window.btcpay) {
         var script = document.createElement('script');
