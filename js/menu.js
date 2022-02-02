@@ -35,7 +35,7 @@ $(document).ready(function(){
     </select>
     <input type="range" class="btcpay-input-range" min="10" max="1000" step="10" value="10" style="width:146px;margin-bottom:15px;" oninput="handleSliderInput(event);return false" />
   </div>
-<a href="#">
+<a href="/">
 <button type="submit" class="submit" name="submit" style="min-width:146px;min-height:40px;border-radius:4px;border-style:none;background-color:#0f3b21;" title="Zaplatit pres BTCPayServer">
 <span style="color:#fff">Podpořit</span>
 
