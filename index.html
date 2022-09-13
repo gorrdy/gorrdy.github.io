@@ -57,7 +57,7 @@
 
 <p>Tento problém řeší Lightning network. Pomocí ní nebudeme do blockchainu zapisovat každé kafe, každé pivo, každý jeden nákup. Můžeme udělat vyrovnání na základní vrstvu třeba jednou za rok. Pokud tohle bude používat většina lidí, technologie budou růst rychleji a nebude tak problém blockchain pořád ukládat i v domácích podmínkách. </p>
 
-<p>Velký blockchain by znamenal, že jej budou moci uchovávat jen velké společnosti, čímž by výrazně utrpěla decentralizace. Čím menší bude, tím snažší pro lidi bude mít vlastní full node (celý blockchain) doma a tím bude vyřešená i decentralizace.</p>
+<p>Velký blockchain by znamenal, že jej budou moci uchovávat jen velké společnosti, čímž by výrazně utrpěla decentralizace. Čím menší bude, tím snazší pro lidi bude mít vlastní full node (celý blockchain) doma a tím bude vyřešená i decentralizace.</p>
   </div>
 
   <div class="fact" id="proof-of-work-adam-back">
@@ -119,7 +119,7 @@
 
 <p>Slush těžil bitcoiny na svém laptopu, ale jak se hashrate zvyšoval, čekal pak už měsíce na plnou odměnu 50 BTC.</p>
 
-<p>Přišel tak s nápadem spojit málo výkoné počítače, aby mohl spolu s ostatními konkurovat těm, kteří už pro těžbu používali výkonější grafické karty.</p>
+<p>Přišel tak s nápadem spojit málo výkoné počítače, aby mohl spolu s ostatními konkurovat těm, kteří už pro těžbu používali výkonnější grafické karty.</p>
 
 <p>Vzniknul tak SlushPool, první těžební pool, který měl v jednu chvíli přes 30 % hashratu celé sítě. </p>
 
@@ -179,7 +179,7 @@
 <p>Každé slovo najdeme ve slovníku a podíváme se na jeho index. 1658 (song), 2034 (wreck) ... Od indexů odečteme jedničku a zapíšeme:
 1657, 2033, 508, 1643, 1348, 1079, 262, 398, 829, 969, 201,1869.</p>
 
-<p>Pokud je převedeme do binární soustavy, ve které pracují sw i hw peněženky a poskládáme za sebe, dostáváme číslo, což je náš seed v birnární podobě. Jako byste házeli korunou 128x dokola a zapisovali si buď 1 nebo 0 (poslední slovo je odvozené z předchozích jedenácti).</p>
+<p>Pokud je převedeme do binární soustavy, ve které pracují sw i hw peněženky a poskládáme za sebe, dostáváme číslo, což je náš seed v binární podobě. Jako byste házeli korunou 128x dokola a zapisovali si buď 1 nebo 0 (poslední slovo je odvozené z předchozích jedenácti).</p>
 11001111001 11111110001 00111111100 11001101011 10101000100 10000110111 00100000110 00110001110 01100111101 01111001001 00011001001 1110100</p>
 
 <p>Pokud by někdo chtěl uhodnout váš seed, je to tedy téměř nemožné, protože by musel 128x hodit kostkou a hodit naprosto stejné číslo jako vy.</p>
@@ -262,7 +262,7 @@
 <p>Není tedy žádoucí štosovat do "nepřipravené" peněženky (ze které průběžně neutrácíte), protože s každou další platbou se otevře další kanál, což je zbytečné a ve výsledku dražší, než jen poslání on-chain (logicky, je to on-chain + poplatek Phoenixu).</p>
 
 <p>Jak tedy peněženku připravit na průběžné štosování? Jenoduše. Převeďte si na Phoenix první platbou větší částku (klidně i větší, než vůbec chcene na LN mít) a jakmile k vám Phoenix otevře kanál (kterým teď nejde příjmat), pošlete ty prostředky ven z peněženky (Android aplikace to umí nativně, iOS využijte nějaké směnárny jako <a href="https://boltz.exchange">boltz.exchange</a> ) zpět na Trezor nebo kamkoliv jinam. Doporučuji minimálně takovou částku, aby vám to dávalo smysl. Minimálně bych doporučil vyšší stovky tisíc satoshi, spíš miliony satoshi.</p>
-<p>V tuhle chvíli jste vašim kanálem "poslali ven" a jste ready už jen příjmat po LN bez problému (samozřejmě můžete i utrácet, to vám zase dělá prostor pro další přijmání) i malé částky. Je to trochu k zamyšlení, ale investice v zaplacení 1% poplatku se časem vyplatí. Vstup na LN je záměrně dražší. Pokud byste tohle chtěli obejít, museli byste používat custodial peněnžeky a potom si to jednou za čas vybrat. Řešení popsané v odstavcích výše vyžaduje zanedbatelnou důvěru ve Phoenix a spravujete si svoje prostředky pod vlastními klíči.</p>
+<p>V tuhle chvíli jste vašim kanálem "poslali ven" a jste ready už jen příjmat po LN bez problému (samozřejmě můžete i utrácet, to vám zase dělá prostor pro další přijímání) i malé částky. Je to trochu k zamyšlení, ale investice v zaplacení 1% poplatku se časem vyplatí. Vstup na LN je záměrně dražší. Pokud byste tohle chtěli obejít, museli byste používat custodial peněženky a potom si to jednou za čas vybrat. Řešení popsané v odstavcích výše vyžaduje zanedbatelnou důvěru ve Phoenix a spravujete si svoje prostředky pod vlastními klíči.</p>
 <p>Velký lightningový kanál je INVESTICE!</p>
   </div>
   
@@ -302,7 +302,7 @@
   <div class="fact" id="puleni">
   <a href="#puleni"><h2>Půlení není přesně každé čtyři roky</a></h2>
 
-<p>Půlení je událost v bitcoinové síti, kdy se těžařům sníží odměna z vytěženého bloku na polovinu (tím jsou myšleny nové bitcoiny, co se dostávají do oběhu, odměny z poplatků se tohle netýká). Tohle se děje tedy cca každé 4 roky, ale to je jen důsledek toho, jak je bitcoin nastaven. Blok by se měl vytěžit jednou za deset minut, v průměru. Půlední nastává jednou za 210,000 bloků, což když si správně roznásobíme a podělíme, dostaneme se ke výsledku cca 4 let. Nicméně jestli to bude třeba týden dřív nebo později opravdu nejde odhadnout.</p>
+<p>Půlení je událost v bitcoinové síti, kdy se těžařům sníží odměna z vytěženého bloku na polovinu (tím jsou myšleny nové bitcoiny, co se dostávají do oběhu, odměny z poplatků se tohle netýká). Tohle se děje tedy cca každé 4 roky, ale to je jen důsledek toho, jak je bitcoin nastaven. Blok by se měl vytěžit jednou za deset minut, v průměru. Půlení nastává jednou za 210,000 bloků, což když si správně roznásobíme a podělíme, dostaneme se ke výsledku cca 4 let. Nicméně jestli to bude třeba týden dřív nebo později opravdu nejde odhadnout.</p>
 
 <p>Stejně se počítá například úprava obtížnosti. Ta probíhá každých 2016 bloků (každých 14 dní). Pokud by tedy hashrate spadnul např. o 90 % a nevrátil se na svoji úroveň do nějaké doby, trvalo by 2016 bloků, než by se obtížnost upravila, a každý blok by trvalo vytěžit zásadně delší dobu než normálně. Způsobilo by to určitě krátkodobé "zasekání" sítě, transakce by zdražily a chvíli byste se museli spoléhat pouze na Lightning network. Ta bude fungovat, i když by se těžba na nějakou dobu úplně zastavila.</p>
   </div>
@@ -312,7 +312,7 @@
 
 <p>Uveďme příklad, že mi někdo pošle donate např. 1 BTC. Následně v e-mailu najdu dvě zprávy. Jedna bude obsahovat "Vrat mi to prosim na adresu XXX." a druhá "Diky za tvoji praci, pokracuj v tom co delas!". Jak poznám, kterému člověku mám věřit? Vrátit platbu nebo si ji mám nechat?</p>
 
-<p>Protože adresa je jen hash veřejného klíče, stačí, aby dárce podepsal svoji zprávu soukromým klíčem (kterým se bitcoiny odesílají) a poslal mi tento podpis. To můžete každý udělat ve webovém rozhraní Treozru nebo třeba Electru. Adresa, ze které bitcoin přišel je 3FsJKPVA2kJKwLhpXNjzckd1T3txEdRgCY. Pro ověření nám tedy stačí zpráva, podpis a adresa, ze které donate přišel.</p>
+<p>Protože adresa je jen hash veřejného klíče, stačí, aby dárce podepsal svoji zprávu soukromým klíčem (kterým se bitcoiny odesílají) a poslal mi tento podpis. To můžete každý udělat ve webovém rozhraní Trezoru nebo třeba Electru. Adresa, ze které bitcoin přišel je 3FsJKPVA2kJKwLhpXNjzckd1T3txEdRgCY. Pro ověření nám tedy stačí zpráva, podpis a adresa, ze které donate přišel.</p>
 
 <p>Zpráva 1: "Vrat mi to prosim na adresu XXX." <br />
 Podpis z e-mailu: "I/Xp1dLgQWx+omnMq49QucfF8wVO+2G1qDZ1KHp6f7zgHwFOA9UcmLAf6h3a/U+ZldwgeeierXVkNH4HLfRbAXg="</p>
@@ -341,7 +341,7 @@ Podpis z e-mailu: "JDAU/7Kf7QEMB+AdgRsu+deO7oRiE9jUx4isDoKMTkYMIxP9QlazIgX2sz25k
   <div class="fact" id="passphrase">
   <a href="#passphrase"><h2>Passphrase není jen tak nějaké heslo</a></h2>
 
-<p>Pokud používáte passphrase (a já věřím, že používáte), tak passphrase se v algoritmu, jakým se generuje celá peněženka (soukrmé klíče, adresy apod) projeví ze začátku procesu jako parametr, který kompletně změní a znáhodní výsledek funkce (PBKDF2_HMAC, abych byl konkrétní), takže bez vaší passphrase se začnou generovat úplně, ale úplně jiné adresy a k nim soukromé klíče (hesla).</p>
+<p>Pokud používáte passphrase (a já věřím, že používáte), tak passphrase se v algoritmu, jakým se generuje celá peněženka (soukromé klíče, adresy apod) projeví ze začátku procesu jako parametr, který kompletně změní a znáhodní výsledek funkce (PBKDF2_HMAC, abych byl konkrétní), takže bez vaší passphrase se začnou generovat úplně, ale úplně jiné adresy a k nim soukromé klíče (hesla).</p>
 
 <p>Docílíte tak vyšší bezpečnosti, protože případnému útočníkovi, který by získal nebo nějak odposlechl váš seed (online phishing, vaší chybou apod.) bude naprosto k ničemu, protože není možnost reprodukovat vaše adresy a klíče právě bez vaší passphrase (pokud vaši passphrase zapomenete nebo špatně opíšete, tak se k prostředkům nedostanete, i když máte svůj seed!). Takovýchto passphrase můžete mít spousty. Útočník by zcizil jen prostředky, které si pošlete na "Standardní peněženku", bez passphrase. Ve skutečnosti i obyčejná peněženka, bez passphrase obsahuje tento passphrase parameter.</p>
 
@@ -384,7 +384,7 @@ Podpis z e-mailu: "JDAU/7Kf7QEMB+AdgRsu+deO7oRiE9jUx4isDoKMTkYMIxP9QlazIgX2sz25k
 
 <p>Spousta lidí se obává roku 2140 kvůli tomu, že odměna za bloky klesne k nule, ale reálně už za 12 let bude naprosto minimální a místo aktuálních 6.25 BTC se sníží postupně až na cca 0.78 BTC.</p>
 
-<p>Nicméně se není čeho obávat, odměny těžarů jsou dvousložkové a místo block subsidy zaplatíme těžařům vyššími poplatky za transakce.</p>
+<p>Nicméně se není čeho obávat, odměny těžařů jsou dvousložkové a místo block subsidy zaplatíme těžařům vyššími poplatky za transakce.</p>
 
 <p>Používejte Lightning.</p>
 </div>
@@ -446,13 +446,13 @@ PC v kavárně<br />
 
 <p>Opačně to taky smysl nedává. Seed vygenerovaný v HW peněžence nesmím zadat do jakéhokoliv méně bezpečného zařízení (maximálně do jiné HW peněženky, to je ok), třeba právě počítače někde v kavárně (sestoupit na žebříku níž). Ve chvíli, co bych to udělal není sice zvýšená šance, že mi někdo hackne můj Trezor/Ledger, ten je stále stejně bezpečný, ale ten útočník nepotřebuje. Mu stačí pouze seed, který jste zadali na počítači, kde číhá jeho virus a hledá.</p>
 
-<p>Takže seed ze SW peněženky nezádáváme do Trezoru, protože tím ztrácí pořízení Trezoru smysl (to už jsem mohl používat rovnou tu SW peněženku). A nikdy nezadáváme seed z Trezoru do jakékoliv SW peněženky (android, ios, pc...), protože tak sestoupíme na žebříku bezpečnosti dolů a v tu chvíli je Trezor opět naprosto neužitečný, protože šance na prozrazení seedu se ohromně zvýšila.</p>
+<p>Takže seed ze SW peněženky nezadáváme do Trezoru, protože tím ztrácí pořízení Trezoru smysl (to už jsem mohl používat rovnou tu SW peněženku). A nikdy nezadáváme seed z Trezoru do jakékoliv SW peněženky (android, ios, pc...), protože tak sestoupíme na žebříku bezpečnosti dolů a v tu chvíli je Trezor opět naprosto neužitečný, protože šance na prozrazení seedu se ohromně zvýšila.</p>
   </div>
   <div class="fact" id="100blokovy-limit-pro-utratu-novych-bitcoinu">
                 <a href="#100blokovy-limit-pro-utratu-novych-bitcoinu"><h2>Nově vytvořené bitcoiny, po vytěžení, nejdou utratit dřív než po 100 blocích</a></h2>
                 <p>Jakmile se těžaři povede uhodnout blok, může si odměnu nechat vyplatit na svoji adresu. Nemůže ji však utratit po 100 bloků, což je asi 17 hodin. Zabraňuje to komplikacím, kdyby se v bitcoinové síti odehrála reorganizace vrcholu blockchainu, což není úplně výjimečný úkaz, občas se to prostě stane (když dva těžaři vytěží stejný blok ve stejnou chvíli).</p>
                 <p>Komplikací by byly právě již utracené nově vytvořené mince, protože není jednoduché vzít coinbase transakci a jen ji přesunout do jiného bloku, což s klasickými transakcemi, které utrácejí dávno vytisknuté mince, není problém.</p>
-                <p>Nejčastější reogranizace jsou 1-2 bloky, vyjímečně se stane, že je reorganizace většího rozsahu, takže vypadá, že 100 bloků bohatě dostačuje jako rezerva.</p>
+                <p>Nejčastější reorganizace jsou 1-2 bloky, výjimečně se stane, že je reorganizace většího rozsahu, takže vypadá, že 100 bloků bohatě dostačuje jako rezerva.</p>
     </div>
   <div class="fact" id="sha256-mining-bruteforce">
    <a href="#sha256-mining-bruteforce"><h2>Těžení je jen hádání, není to žádný složitý matematický výpočet</a></h2>
@@ -567,7 +567,7 @@ PC v kavárně<br />
      href="https://bitcoinexplorer.org/tx/54e48e5f5c656b26c3bca14a8c95aa583d07ebe84dde3b7dd4a78f4e4186e713"
      >54e48e...86e713</a
     >
-    byl zapsál kompletní bitcoinový whitepaper tak, jak ho publikoval Satoshi
+    byl zapsán kompletní bitcoinový whitepaper tak, jak ho publikoval Satoshi
     Nakamoto. Tato transakce stála neuvěřitelných 0.596 BTC na poplatku, ale
     výsledkem je absolutně decentralizované uložení významného dokumentu. Nemůže
     se tedy stát, že by jej někdo úspěšně zcenzuroval, protože kdokoliv s
@@ -713,7 +713,7 @@ PC v kavárně<br />
     zaplatit.
    </p>
    <p>
-    Nicméně platí, že transakce opravdu obsahuje celé vaše jmnění. Rozdíl mezi
+    Nicméně platí, že transakce opravdu obsahuje celé vaše jmění. Rozdíl mezi
     placenou částkou a celkovým zůstatkem se vám vrátí nazpět do peněženky, na
     novou, tzv. change adresu, kde opět bude tento výstup (zůstatek) čekat na
     další utracení. Tomuto zůstatku se říká neutracený výstup, který má na první
@@ -761,7 +761,7 @@ PC v kavárně<br />
     transakcím, které odeslaly nějaké bitcoiny na neplatné nebo neznámé adresy.
    </p>
    <p>
-    Uživatel MidnightMagic si zámerně vyplatil odměnu za vytěžený blok č. 124724
+    Uživatel MidnightMagic si záměrně vyplatil odměnu za vytěžený blok č. 124724
     o 1 satoshi nižší, než mohl (1). V bloku 501,726 zase jiný těžař špatným
     vytvořením transakce spálil celou odměnu za tento blok, což bylo 12.5 BTC.
     Těchto transakcí lze po internetu dohledat spousta, např. blok č. 150,951
@@ -771,7 +771,7 @@ PC v kavárně<br />
    </p>
    <p>Celkový počet takto spálených bitcoinů je asi 2,733.9. (4)</p>
    <p>
-    Ztracné bitcoiny, kterými myslím opravdu ztracené privátní klíče, tudíž také
+    Ztracené bitcoiny, kterými myslím opravdu ztracené privátní klíče, tudíž také
     bez možnosti obnovy se odhaduje, že by mohlo být spousta. Satoshiho mince,
     začátky Bitcoinu nikdo nebral vážně, bude tam spousta mincí ležet do konce
     věků. Studie uvádějí, že těch ztracených mincí bude něco okolo 2,304,824
@@ -786,7 +786,7 @@ PC v kavárně<br />
    <p>
     Čísla mohou být trochu nepřesná, ale řádově to takto bude. Každý milion
     ztracených mincí by se měl projevit jako 4-5% nárůst hodnoty bitcoinů
-    zbývajích. Můžete tyhle mince tedy vnímat jako donate všem.
+    zbývajících. Můžete tyhle mince tedy vnímat jako donate všem.
    </p>
    <p>
     Zdroje:<br />
@@ -806,7 +806,7 @@ PC v kavárně<br />
      href="https://mempool.sats.cz/tx/03acfae47d1e0b7674f1193237099d1553d3d8a93ecc85c18c4bec37544fe386"
      >mempool.sats.cz</a
     ><br />
-    4) Celkový pošet spálených bitcoinů -
+    4) Celkový počet spálených bitcoinů -
     <a
      target="_blank"
      href="https://bitcoinwhoswho.com/blog/2016/12/21/btc-burn-addresses/"
